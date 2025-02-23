@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: FogtwoNo5;
-    src: url(/assets/fonts/FogtwoNo5/FogtwoNo5.otf)
+    src: url(../assets/fonts/FogtwoNo5/FogtwoNo5.otf)
     format('opentype');
     font-weight: 100;
 }
@@ -66,7 +66,7 @@ header{ transition: 0.6s all ease-in-out; }
     position: absolute;
     right: 0;
     top: 0;
-    background-image: url(/assets/gifs/lettering.gif);
+    background-image: url(../assets/gifs/lettering.gif);
     width: 45vw;
     height: 300px;
     z-index: -1;
