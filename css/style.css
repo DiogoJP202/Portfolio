@@ -13,6 +13,7 @@
     --color1: #16F751;
     --color2: #0C862C;
     --color3: #B1BBB3;
+    --color4: #ffffff80; 
 }
 
 *{
@@ -23,7 +24,7 @@
 
 body{
     font-family: 'Darker Grotesque';
-    background-image: url(../assets/images/grid.png);
+    background-image: url(../assets/images/grid.webp);
     background-position: center center;
     background-repeat: repeat;
     background-size: contain;
@@ -90,4 +91,75 @@ nav{
 nav a{
     color: #fff;
     text-decoration: none;
+}
+
+#Video{
+    position: relative;
+    width: 90vw;
+    max-width: 800px;
+    height: 50vw;
+    max-height: 500px;
+    margin: 40px auto;
+    background-color: #B1BBB3;
+    border-radius: 20px;
+}
+
+.rocker{
+    position: relative;
+    right: -85%;
+    bottom: -85%;
+}
+
+#SobreMim {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#SobreMim .foto{
+    max-width: 400px;
+    width: 90%;
+}
+
+#SobreMim #text{
+    width: 50%;
+}
+
+#SobreMim p{
+    color: var(--color4);
+    font-size: 1.8em;
+    line-height: 1.5em;
+}
+
+#SobreMim h2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 4.5em;
+    font-weight: 400;
+    color: var(--color1);
+}
+
+#SobreMim h2::after{
+    content: "";
+    display: block;
+    background-image: url(../assets/images/atomo_icon.webp);
+    width: 75px;
+    height: 75px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#LabelLine{
+    display: flex;
+    gap: 2em;
+    color: #000;
+    background-color: #fff;
+    width: 100%;
+    text-wrap: nowrap;
+    font-size: 2em;
+    padding: 5px 0;
 }

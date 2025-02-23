@@ -25,5 +25,8 @@ window.addEventListener('resize', () => {
         document.querySelector('#GreenLine').classList.remove('GreenBlock');
         MenuHState = false;
         document.querySelector('header').style.display = 'block';
+        document.querySelector('nav').style.display = 'flex';
+    } else {
+        document.querySelector('nav').style.display = 'none';
     }
 })
