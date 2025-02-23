@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+#underline{
+    animation: piscando 0.9s infinite ease-in;
+}
+
+@keyframes piscando {
+    from{
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
