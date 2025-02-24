@@ -218,6 +218,7 @@ nav a{
     left: 20%;
     bottom: -50px;
     width: 50%;
+    height: 255px;
     transform-style: preserve-3d;
     transition: transform 1s;
     transform: rotateX(-15deg);
@@ -288,4 +289,262 @@ nav a{
     right: 10%;
     width: 400px;
     z-index: 1;
+}
+
+#Academico{
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px;
+}
+
+#Academico h2{
+    color: var(--color1);
+    text-align: center;
+    font-size: 5em;
+}
+
+.ExpCad{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 50px;
+    width: 410px;
+    height: 180px;
+    background-color: #0c862d7b;
+    border-radius: 0 30px;
+}
+
+.ExpCad:nth-of-type(odd){
+    align-self: flex-end;
+}
+
+.ExpCad h3{
+    font-size: 1.5em;
+    color: var(--color1);
+}
+
+.ExpCad p{
+    color: #ffffff85;
+    font-size: 1.5em;
+}
+
+.ExpCad .data{
+    color: #fff;
+    font-weight: 700;
+}
+
+.iconsExpCad{
+    width: 75px;
+    position: absolute;
+}
+
+.iconsExpCad:nth-of-type(odd){ transform: translate(-80px, -50px); }
+
+.iconsExpCad:nth-of-type(even){ transform: translate(305px, 100px); }
+
+#mature{ transform: translate(305px, 80px) rotate(15deg); }
+
+#aim { transform: translate(-85px, -65px) rotate(-15deg) scale(0.9); }
+
+#disc { transform: translate(305px, 115px) scale(1.1); }
+
+#premio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    gap: 20px;
+}
+
+#txts h3{
+    color: var(--color1);
+    font-size: 2.5em;
+    font-weight: 400;
+    letter-spacing: 12px;
+}
+
+#txts h4{
+    color: var(--color1);
+    font-size: 3.5em;
+    line-height: 50px;
+}
+
+#trofeu{
+    width: 100%;
+    max-width: 300px;
+}
+
+#ExpProfissionais{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#ExpProfissionais h2{
+    font-size: 5em;
+    color: var(--color1);
+    text-align: center;
+}
+
+.ExpProf{
+    max-width: 650px;
+    text-align: justify;
+}
+
+.ExpProf::before{
+    content: '';
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    top: 45px;
+    left: -60px;
+    border-radius: 50%;
+    background-color: var(--color1);
+}
+
+.ExpProf:first-of-type:after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 1120px;
+    transform: translate(-45px, -340px);
+    background-color: var(--color1);
+}
+
+.ExpProf > span{
+    color: var(--color1);
+    font-size: 2em;
+}
+
+.ExpProf h3{
+    color: var(--color1);
+    font-size: 2.5em;
+}
+
+.ExpProf p{
+    color: #ffffff75;
+    font-size: 1.4em;
+}
+
+#Curiosidades h2{
+    color: var(--color1);
+    text-align: center;
+    font-size: 6em;
+    margin-top: 30px;
+}
+
+.curiosidades {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Games . Linguas"
+        ". FotoDiogo ."
+        "Musica . Esportes";
+    justify-items: center;
+    align-items: center;
+}
+
+.Games { grid-area: Games; }
+
+.Linguas { grid-area: Linguas; }
+
+.Musica { grid-area: Musica; }
+
+.Esportes { grid-area: Esportes; }
+
+.FotoDiogo { grid-area: FotoDiogo; }
+
+.curiosidade h3{
+    display: block;
+    color: var(--color1);
+    font-size: 2.1em;
+    background-color: rgba(12, 134, 44, 0.41);
+    padding: 1px 10px;
+    width: 200px;
+    border-radius: 15px 39px 0 0;
+}
+  
+.curiosidade p{
+    display: block;
+    color: #fff;
+    font-size: 1.5em;
+    background-color: rgba(12, 134, 44, 13%);
+    padding: 15px;
+    width: 400px;
+    border-radius: 0 30px 0 30px;
+}
+
+#EntrarEmContato{
+    display: flex;    
+    align-items: center;
+    flex-direction: column;
+}
+
+#EntrarEmContato h2{
+    color: #fff;
+    font-size: 4em;
+    text-align: center;
+}
+
+#EntrarEmContato a{
+    display: block;
+    font-size: 4em;
+    font-weight: 600;
+    color: var(--color1);
+    text-decoration: none;
+    text-align: center;
+    background-color: rgba(12, 134, 44, 0.41);
+    width: 550px;
+    padding: 10px 30px;
+    margin: 30px;
+    border-radius: 35px;
+    box-shadow: 0px 0px 20px #000;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #05250D;
+    padding: 10px;   
+}
+
+#FooterPrincipal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer li{
+    list-style-type: none;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#FooterPrincipal > img{
+    width: 200px;
+}
+
+#contatos img{
+    width: 40px;
+}
+
+footer p{
+    font-size: 1em;
+    font-family: FogtwoNo5;
+    color: #ffffff7c;
+    padding: 10px;
 }

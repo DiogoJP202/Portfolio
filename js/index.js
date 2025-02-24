@@ -32,9 +32,9 @@ function MenuHamburger(){
 }
 
 function LabelLine(){
-    let ideograma1 = '样式';
-    let ideograma2 = '样式表';
-    let ideogramsSize = 232;
+    let ideograma1 = '全栈';
+    let ideograma2 = '电脑';
+    let ideogramsSize = 230;
     let line = document.querySelector('#inside');
 
     for(let i = 1; i < (Number.parseInt((window.innerWidth / ideogramsSize) * 4)); i++){
@@ -89,5 +89,5 @@ function delay(ms) {
 }
 
 MenuHamburger();
-LabelLine();
+// LabelLine();
 WritingEffect();

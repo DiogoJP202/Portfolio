@@ -22,6 +22,8 @@
     animation: floating 2s infinite alternate-reverse ease-in-out;
 }
 
+#trofeu{ animation: floating 2s infinite alternate-reverse ease-in-out; }
+
 @keyframes floating {
     from {
         transform: translateY(0);
@@ -195,5 +197,34 @@
         transform: rotateY(330deg) translateZ(250px);
     } to {
         transform: rotateY(690deg) translateZ(250px);
+    }
+}
+
+.linkA{ 
+    text-decoration: none;
+    animation: linkAnimation 1s alternate-reverse infinite ease-in-out; 
+}
+
+.linkA:hover{
+    text-decoration: underline;
+}
+
+@keyframes linkAnimation {
+    from {
+        color: var(--color1);
+    } to {
+        color: #16f75254;
+    }
+}
+
+#EntrarEmContato a{
+    animation: pulse 2s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.95);
+    } to {
+        transform: scale(1);
     }
 }
