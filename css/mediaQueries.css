@@ -102,6 +102,8 @@
         right: -75%;
         bottom: -70%;
     }
+
+    #letterEffect { background-size: contain; }
 }
 
 @media screen and (max-width: 485px){
