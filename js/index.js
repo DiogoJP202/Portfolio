@@ -54,5 +54,40 @@ function LabelLine(){
     window.addEventListener('resize', () => LabelLine());
 }
 
+async function WritingEffect() {
+    const words = ['JAVASCRIPT', 'C#', 'PYTHON', 'JAVA', 'HTML', 'CSS', 'NODEJS', 'REACT', 'NODEJS', 'BOOTSTRAP', 'ASP .NET', 'FIGMA', 'GIT', 'POSTGRESQL', 'MONGODB', 'SQL SERVER', 'REGEX', 'POSTMAN'];
+    const location = document.querySelector('#screenTxt');
+    const speed = 100; // Typing speed in milliseconds
+
+    while (true) {
+        for (const word of words) {
+            location.innerHTML = ''; // Clear the content
+            await typeWriter(word, location, speed); // Type the word
+            await delay(3000); // Wait 3 seconds before moving to the next word
+        }
+    }
+}
+
+// Helper function to type out a word letter by letter
+function typeWriter(word, location, speed) {
+    return new Promise((resolve) => {
+        let i = 0;
+        const interval = setInterval(() => {
+            if (i < word.length) {
+                location.innerHTML += word.charAt(i);
+                i++;
+            } else {
+                clearInterval(interval);
+                resolve(); // Resolve the promise when done
+            }
+        }, speed);
+    });
+}
+
+function delay(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 MenuHamburger();
 LabelLine();
+WritingEffect();

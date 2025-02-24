@@ -175,18 +175,15 @@ nav a{
 
 #skills{
     display: flex;
+    justify-content: space-evenly;
     flex-direction: row;
     width: 100%;
     padding: 100px 0;
     background-color: var(--color5);
 }
 
-#techsCarrosel {
-    width: 60%;
-}
-
 #display{
-    width: 40%;
+    width: 50%;
 }
 
 #display > h2{
@@ -219,6 +216,8 @@ nav a{
 #techsCarrosel{
     position: relative;
     left: 20%;
+    bottom: -50px;
+    width: 50%;
     transform-style: preserve-3d;
     transition: transform 1s;
     transform: rotateX(-15deg);
@@ -229,13 +228,64 @@ nav a{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
-    background-color: #fff;
-    filter: brightness(1.2);
+    border: 5px solid #fff;
+    background-color: #ffffff6a;
 }
 
 .tech > img{
-    width: 100%;
-    height: 100%;
+    width: 50%;
+}
+
+.tech > .heigher{
+    width: 35%;
+}
+
+#projetos{
+    background-color: var(--color5);
+    display: flex;
+}
+
+.projeto{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.projeto .projTxt{
+    width: 50%;
+}
+
+.projeto h3{
+    color: var(--color1);
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.projeto p{
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.projeto .tecs{
+    color: var(--color1);
+    font-size: 1.7em;
+}
+
+.projeto .projImg{
+    width: 50%;
+}
+
+.imgProjetos{
+    position: relative;
+    z-index: 2;
+}
+
+.fundoProjetos{
+    position: absolute;
+    right: 10%;
+    width: 400px;
+    z-index: 1;
 }

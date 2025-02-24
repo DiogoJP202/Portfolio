@@ -4,11 +4,29 @@
     animation: piscando 0.9s infinite ease-in;
 }
 
+#screenTxt::after{
+    content: "_";
+    animation: piscando 0.9s infinite ease-in;
+}
+
 @keyframes piscando {
     from{
         opacity: 0;
     } to {
         opacity: 1;
+    }
+}
+
+.foto{
+    filter: drop-shadow(0 0 8px var(--color1));
+    animation: floating 2s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes floating {
+    from {
+        transform: translateY(0);
+    } to {
+        transform: translateY(20px);
     }
 }
 
@@ -26,62 +44,62 @@
 
 .tech:nth-of-type(1){
     transform: rotateY(0deg) translateZ(250px);
-    animation: tech1 10s infinite linear;
+    animation: tech1 20s infinite linear;
 }
 
 .tech:nth-of-type(2){
     transform: rotateY(30deg) translateZ(250px);
-    animation: tech2 10s infinite linear;
+    animation: tech2 20s infinite linear;
 }
 
 .tech:nth-of-type(3){
     transform: rotateY(60deg) translateZ(250px);
-    animation: tech3 10s infinite linear;
+    animation: tech3 20s infinite linear;
 }
 
 .tech:nth-of-type(4){
     transform: rotateY(90deg) translateZ(250px);
-    animation: tech4 10s infinite linear;
+    animation: tech4 20s infinite linear;
 }
 
 .tech:nth-of-type(5){
     transform: rotateY(120deg) translateZ(250px);
-    animation: tech5 10s infinite linear;
+    animation: tech5 20s infinite linear;
 }
 
 .tech:nth-of-type(6){
     transform: rotateY(150deg) translateZ(250px);
-    animation: tech6 10s infinite linear;
+    animation: tech6 20s infinite linear;
 }
 
 .tech:nth-of-type(7){
     transform: rotateY(180deg) translateZ(250px);
-    animation: tech7 10s infinite linear;
+    animation: tech7 20s infinite linear;
 }
 
 .tech:nth-of-type(8){
     transform: rotateY(210deg) translateZ(250px);
-    animation: tech8 10s infinite linear;
+    animation: tech8 20s infinite linear;
 }
 
 .tech:nth-of-type(9){
     transform: rotateY(240deg) translateZ(250px);
-    animation: tech9 10s infinite linear;
+    animation: tech9 20s infinite linear;
 }
 
 .tech:nth-of-type(10){
     transform: rotateY(270deg) translateZ(250px);
-    animation: tech10 10s infinite linear;
+    animation: tech10 20s infinite linear;
 }
 
 .tech:nth-of-type(11){
     transform: rotateY(300deg) translateZ(250px);
-    animation: tech11 10s infinite linear;
+    animation: tech11 20s infinite linear;
 }
 
 .tech:nth-of-type(12){
     transform: rotateY(330deg) translateZ(250px);
-    animation: tech12 10s infinite linear;
+    animation: tech12 20s infinite linear;
 }
 
 @keyframes tech1 {
