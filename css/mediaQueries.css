@@ -190,7 +190,7 @@
     
 }
 
-@media screen and (max-width: 485px){
+@media screen and (max-width: 500px){
     #line h1, #line{ font-size: 1.2em; }
 
     #line h2 { font-size: 1em; }
@@ -201,5 +201,50 @@
         position: relative;
         right: -70%;
         bottom: -65%;
+    }
+
+    #skills{
+        padding: 50px;
+    }
+
+    #techsCarrosel {
+        bottom: -115px;
+    }
+
+    .ExpCad{
+        width: 100%;
+        height: auto;
+    }
+    
+    .ExpCad .iconsExpCad:last-child{
+        display: none;
+    }
+
+    #Curiosidades h2, #ExpProfissionais h2, #Academico h2{
+        font-size: 4em !important;
+    }
+
+    .curiosidade {
+        width: 80%;
+    }
+
+    .Games p::before {
+        transform: translate(235px, 35px) rotate(20deg);
+    }
+
+    .Linguas p::before {
+        transform: translate(215px, -60px) rotate(20deg);
+    }
+
+    .Musica::before {
+        transform: translate(275px, 27px) rotate(30deg);
+    }
+
+    .Musica p::before {
+        transform: translate(240px, 90px) rotate(-15deg);
+    }
+
+    .Esportes p::before {
+        transform: translate(230px, 80px) rotate(30deg);
     }
 }

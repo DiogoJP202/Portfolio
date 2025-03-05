@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diogo Antonny</title>
+    <link rel="stylesheet" href="../../css/button.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/carrossel.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/sliders.css">
+    <link rel="shortcut icon" href="../../assets/images/star_icon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/mediaQueries.css">
+    <style>
+        .rocker{
+            top: unset !important;
+            bottom: 5% !important;
+        }
+
+        .ExpProf:first-of-type:after {
+            height: 1130px;
+            transform: translate(-45px, -325px);
+        }
+
+        @media screen and (max-width:1110px) {
+            .rocker{
+                top: unset !important;
+                bottom: 20% !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="menuH">
+        <div class="lines"></div>
+        <div class="lines"></div>
+        <div class="lines"></div>
+    </div>
+    <header>
+       <div id="line">
+            <div>HELLO WORLD<span id="underline">_</span> 你好世界</div>
+            <h1>I'M DIOGO ANTONNY</h1>
+            <h2 class="fade-in">FULL-STACK DEVELOPER</h2>
+       </div>
+       <div id="letterEffect">
+       </div>
+    </header>   
+    <div id="GreenLine">
+        <nav>
+            <a href="#SobreMim">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#projetos">PROJECTS</a>
+            <a href="#Academico">EDUCATION</a>
+            <a href="#ExpProfissionais">EXPERIENCE</a>
+            <a href="#Curiosidades">CURIOSITIES</a>
+            <a href="../../index.html"><img id="flag" src="../images/flag_brasil.png" alt="United States flag." width="50px" style="margin-top: 5px;"></a>
+        </nav>
+    </div>
+    <main>
+        <section id="Video" >
+            <iframe src="https://www.youtube.com/embed/Hj91rm8miLk?si=iNvD2fo-2zACUyvt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <label class="rocker">
+                <input id="languageVideoButton" type="checkbox" checked>
+                <span class="switch-left">BR</span>
+                <span class="switch-right">EN</span>
+            </label>
+        </section>
+        <section id="SobreMim">
+            <img class="foto" src="../images/DiogoImage1.webp" alt="Photo of Diogo Antonny">
+            <div id="text">
+                <h2>About me</h2>
+                <p>Hello! My name is Diogo Antonny, and I am a software developer with over three years of experience in technology. I am currently studying Systems Analysis and Development at Impacta College. I am fluent in Brazilian Portuguese and English.</p>
+                <p>Passionate about technology, I am always improving my skills and looking for projects where I can contribute and continuously grow.</p>
+            </div>
+        </section>
+        <div id="LabelLine">
+            <div id="inside"> </div>
+        </div>
+        <section id="skills">
+            <div id="techsCarrosel">
+                <div class="tech"><img class="heigher" src="../images/figma.webp" alt="Figma icon"></div>
+                <div class="tech"><img src="../images/react.webp" alt="React icon"></div>
+                <div class="tech"><img src="../images/bootstrap.webp" alt="Bootstrap icon"></div>
+                <div class="tech"><img src="../images/js.webp" alt="JavaScript icon"></div>
+                <div class="tech"><img src="../images/postgresql.webp" alt="PostgreSQL icon"></div>
+                <div class="tech"><img src="../images/postman.webp" alt="Postman icon"></div>
+                <div class="tech"><img src="../images/python.webp" alt="Python icon"></div>
+                <div class="tech"><img src="../images/java.webp" alt="Java icon"></div>
+                <div class="tech"><img class="heigher" src="../images/mongodb.webp" alt="MongoDB icon"></div>
+                <div class="tech"><img src="../images/git.webp" alt="Git icon"></div>
+                <div class="tech"><img src="../images/csharp.webp" alt="C# icon"></div>
+                <div class="tech"><img src="../images/aspdotnet.webp" alt="ASP .NET icon"></div>
+            </div>
+            <div id="display">
+                    <h2>Skills</h2>
+                    <div id="screen">
+                        <img src="../images/display.webp" alt="Display image.">
+                        <span id="screenTxt">JAVASCRIPT</span>
+                    </div>
+            </div>
+        </section>
+        <section id="projetos">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="projeto">
+                        <div class="projTxt">
+                            <h3><a href="https://diogojp202.github.io/ProjetoAmparoAoRS/" target="_blank" class="projLink">Projeto Amparo Ao RS</a></h3>
+                            <p>This web platform was developed to assist the population of Rio Grande do Sul during the floods that affected the state, as well as to provide an information channel for those who want to help.</p>
+                            <span class="tecs">HTML, CSS, NodeJS</span>
+                        </div>
+                        <div class="projImg">
+                            <img class="imgProjetos" src="../images/AMPARO AO RS.webp" alt="Notebook and Phone displaying a project cover called 'Projeto Amparo Ao RS'.">
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <div class="projTxt">
+                            <h3><a href="https://vel-desktop.vercel.app/" target="_blank" class="projLink">VEL</a></h3>
+                            <p>A platform dedicated to improving the management of fast delivery companies, helping couriers and restaurants better control their businesses. Our goal is to offer a smoother road and clear directions to success!</p>
+                            <span class="tecs">React, AWS, JAVA, Spring Boot, MySQL, and Docker.</span>
+                        </div>
+                        <div class="projImg">
+                            <img class="imgProjetos" src="../images/VEL.webp" alt="VEL Project.">
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <div class="projTxt">
+                            <h3><a href="https://cemiterioszonasulsp.com.br/" target="_blank" class="projLink">Cemiterios e Crematorios Zona Sul</a></h3>
+                            <p>Landing page for a website about burial plots and crematoriums. Ranked first in searches for cemeteries or crematoriums in the southern zone.</p>
+                            <span class="tecs">HTML, CSS, Javascript, and SEO.</span>
+                        </div>
+                        <div class="projImg">
+                            <img class="imgProjetos" src="../images/CEMITERIOS.webp" alt="Cemiterios e Crematorios Zona Sul.">
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <div class="projTxt">
+                            <h3><a href="https://diogojp202.github.io/CuboBank/" target="_blank" class="projLink">CuboBank</a></h3>
+                            <p>Project focused on adjustments and improvements for an ATM with many functionalities and data caching.</p>
+                            <span class="tecs">HTML, CSS, and Javascript.</span>
+                        </div>
+                        <div class="projImg">
+                            <img class="imgProjetos" src="../images/CUBO BANK.webp" alt="CuboBank Project.">
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <div class="projTxt">
+                            <h3><a href="https://diogojp202.github.io/FreedonLents/" target="_blank" class="projLink">FreedonLents</a></h3>
+                            <p>Landing page with a design aimed at capturing user attention for a purchase, ensuring responsiveness across multiple screens and platforms.</p>
+                            <span class="tecs">HTML, CSS, and Javascript.</span>
+                        </div>
+                        <div class="projImg">
+                            <img class="imgProjetos" src="../images/FREEDOM LENS.webp" alt="FreedonLents Project.">
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <div class="projTxt">
+                            <h3><a href="https://projeto-dark-souls-3.vercel.app/" target="_blank" class="projLink">Dark Souls 3 Project</a></h3>
+                            <p>The website displays all the bosses from the game, providing a brief introduction and some of their characteristics.</p>
+                            <span class="tecs">HTML, CSS, and Javascript.</span>
+                        </div>
+                        <div class="projImg">
+                            <img class="imgProjetos" src="../images/DARK_SOULS_3.webp" alt="Dark Souls 3 Project.">
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <div class="projTxt">
+                            <h3><a href="https://diogojp202.github.io/MultiversoNews/" target="_blank" class="projLink">Old School Comics</a></h3>
+                            <p>News website with a design inspired by old-school black and white cartoons, ensuring responsiveness across multiple screens and platforms.</p>
+                            <span class="tecs">HTML, CSS, and Javascript.</span>
+                        </div>
+                        <div class="projImg">
+                            <img class="imgProjetos" src="../images/MULTIVERSO NEWS.webp" alt="MultiversoNews Project.">
+                        </div>
+                    </div>
+                </div>
+                <img src="../images/GREEN_ARROW.webp" class="prev" alt="Arrow" onclick="moveSlide(-1)">
+                <img src="../images/GREEN_ARROW.webp" class="next" alt="Arrow" onclick="moveSlide(1)">
+            </div>
+        </section>   
+        <section id="Academico"> 
+            <h2>Academic Life</h2>
+            <div class="ExpCad">
+                <img src="../images/GLOBE_icon.webp" alt="Globe icon" class="iconsExpCad"> 
+                <h3>SYSTEMS ANALYSIS AND DEVELOPMENT</h3>
+                <P>Impacta College</P>
+                <p class="data">08/2024 to 12/2026</p>
+                <img src="../images/mature_esr_icon.webp" alt="Mature ESR icon" class="iconsExpCad" id="mature">
+            </div>
+            <div class="ExpCad" id="ad1">
+                <img src="../images/Triangulo_Warning_icon.webp" alt="Warning icon" class="iconsExpCad">
+                <h3>FULL-STACK JAVA DEVELOPER</h3>
+                <P>Senac São Paulo - Instituto Proa</P>
+                <p class="data">08/2024 to 12/2026</p>
+                <img src="../images/atomo_icon.webp" alt="Atom icon" class="iconsExpCad">
+            </div>
+            <div class="ExpCad">
+                <img src="../images/AIM_Icon.webp" alt="Target icon" class="iconsExpCad" id="aim">
+                <h3>ELECTRONICS TECHNICIAN</h3>
+                <P>Etec Aprígio Gonzaga</P>
+                <p class="data">01/2020 to 12/2022</p>
+                <img src="../images/CD-AUDIO_icon.webp" alt="CD-AUDIO icon" class="iconsExpCad" id="disc">
+            </div>
+            <div id="premio">
+                <img id="trofeu" src="../images/Trofeu_Proa.webp" alt="Image of the PROA 2024 Outstanding Student trophy">
+                <div id="txts">
+                    <h3>Award</h3>
+                    <h4>Outstanding Student <br> PROA 2024</h4>
+                </div>
+            </div>
+        </section>
+        
+        <section id="ExpProfissionais">
+            <h2>Professional Experiences</h2>
+            <div class="ExpProf">
+                <span>12/2024 - Present</span>
+                <h3>Software Development Intern - <a class="linkA" href="https://www.rbinvestimentos.com/">RB Investimentos</a></h3>
+                <p>I worked in the company's development area, handling SQL queries, data scheduling, analyzing large volumes of information, and generating reports from SQL requests. Additionally, I participated in software and web application development, utilizing the MVC architecture and Microsoft technologies such as .NET and C#. I also contributed to implementing artificial intelligence in the company's processes, focusing on automation and innovation.</p>
+            </div>
+            <div class="ExpProf">
+                <span>02/2024 - 07/2024</span>
+                <h3>Full Stack Developer and Scrum Master - <a class="linkA" href="https://vel-desktop.vercel.app/sobrenos">VEL</a></h3>
+                <p>I worked as a Scrum Master in the Instituto PROA Demoday Project, organizing tasks, motivating the team, and using agile methodologies such as Scrum and the GUT Matrix. I managed information on Trello, conducted daily meetings in English, and promoted activities to strengthen the group. Besides management, I developed the front-end in React, assisted in creating APIs in Java with Spring Boot, and worked with MySQL databases.</p>
+            </div>
+            <div class="ExpProf">
+                <span>01/2022 - Present</span>
+                <h3>Freelance Developer</h3>
+                <p>Throughout my journey, I have worked directly with clients, developing landing pages and web pages that not only impress visually but also deliver results. I created 100% responsive, fast, and SEO-optimized websites, ensuring an exceptional user experience and high conversion rates.</p>
+            </div>
+            <div class="ExpProf">
+                <span>01/2023 - 12/2023</span>
+                <h3>IT Apprentice - <a class="linkA" href="https://www.concentrix.com/pt-br/">Concentrix</a></h3>
+                <p>I was responsible for VLAN management via DHCP, network point verification, and IT infrastructure organization. I worked on computer and user management, hardware and software maintenance, as well as task automation. I participated in bilingual meetings and handled tickets, formatting, and system installations.</p>
+            </div>
+        </section>
+        <section id="Curiosidades">
+            <h2>Curiosities</h2>
+            <div class="curiosidades">
+                <div class="Games curiosidade">
+                    <h3>Games</h3>
+                    <p>I am passionate about challenging games and I am a game developer. I intend to publish my own games one day.</p>
+                </div>
+                <div class="Linguas curiosidade">
+                    <h3>Languages</h3>
+                    <p>I love studying and speaking foreign languages such as English and Mandarin. I dream of exploring the world.</p>  
+                </div>
+                <div class="FotoDiogo curiosidade">
+                    <img class="foto" src="../images/FotoDiogo2.webp" alt="Photo of Diogo">
+                </div>
+                <div class="Musica curiosidade">
+                    <h3>Music</h3>
+                    <p>Music is a part of my life; I love listening to and playing music. It inspires and stimulates me.</p>
+                </div>
+                <div class="Esportes curiosidade">
+                    <h3>Sports</h3>
+                    <p>I love practicing sports such as skateboarding, calisthenics, and swimming. It is an essential part of my life.</p>
+                </div>
+              </div>
+        </section>
+        <section id="EntrarEmContato">
+            <h2>Contact me and let's build something amazing!</h2>
+            <a target="_blank" href="https://www.linkedin.com/in/diogo-antonny/">Get in Touch</a>
+        </section>
+    </main>
+    <footer>
+        <div id="FooterPrincipal">
+            <div id="contatos">
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/diogo-antonny/">
+                            <img src="../images/linkedin.webp" alt="LinkedIn Icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://github.com/DiogoJP202/">
+                            <img src="../images/github.webp" alt="GitHub Icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://linktr.ee/diogoantonny">
+                            <img src="../images/linktree.webp" alt="Linktree Icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://judge.beecrowd.com/pt/profile/1039293">
+                            <img src="../images/beecrowd.webp" alt="Beecrowd Icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <img src="../images/git_character.webp" alt="GitHub character based on Diogo.">
+        </div>
+        <p>&copy; Diogo Antonny - 2025. All rights reserved.</p>
+    </footer>
+    <script src="../../js/index.js"></script>
+</body>
+</html>

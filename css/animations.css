@@ -53,6 +53,11 @@
     text-decoration: underline;
 }
 
+.projLink{
+    text-decoration: none;
+    animation: linkAnimation 1s alternate-reverse infinite ease-in-out !important; 
+}
+
 @keyframes linkAnimation {
     from {
         color: var(--color1);
@@ -76,7 +81,7 @@
 .fade-in {
     opacity: 0; /* Start invisible */
     clip-path: inset(0 100% 0 0); /* Clip the text from the left */
-    animation: fadeInLeft 5s ease-in forwards; /* Apply the animation */
+    animation: fadeInLeft 3s ease-in forwards; /* Apply the animation */
 }
 
 @keyframes fadeInLeft {

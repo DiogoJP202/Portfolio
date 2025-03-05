@@ -215,10 +215,10 @@ nav a{
 #display > #screen > img{
     display: block;
     position: relative;
-    bottom: 10px;
+    bottom: 15px;
     left: -3%;
     width: 100%;
-    max-width: 410px;
+    max-width: 430px;
     min-width: 350px;
 }
 
@@ -272,6 +272,11 @@ nav a{
     color: var(--color1);
     font-size: 3em;
     font-weight: 500;
+}
+
+.projLink {
+    text-decoration: none;
+    color: var(--color1);
 }
 
 .projeto p{
@@ -677,7 +682,8 @@ nav a{
     text-decoration: none;
     text-align: center;
     background-color: rgba(12, 134, 44, 0.41);
-    width: 550px;
+    max-width: 550px;
+    width: 95%;
     padding: 10px 30px;
     margin: 30px;
     border-radius: 35px;
