@@ -87,7 +87,16 @@ function typeWriter(word, location, speed) {
 function delay(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
+let languageButton = document.querySelector('#languageVideoButton');
+languageButton.addEventListener('click', e => {
+    console.log('okay');
+    let iframeVideo = document.querySelector('#Video iframe');
+    if (languageButton.checked)
+        iframeVideo.src = 'https://www.youtube.com/embed/Hj91rm8miLk?si=iNvD2fo-2zACUyvt';
+    else
+        iframeVideo.src = 'https://www.youtube.com/embed/qytG1HXkmC0?si=qJGnvN8X5DDw54OV';
+});
 
 MenuHamburger();
-// LabelLine();
+LabelLine();
 WritingEffect();

@@ -99,6 +99,7 @@ nav a{
 }
 
 #Video{
+    z-index: 0;
     position: relative;
     width: 90vw;
     max-width: 800px;
@@ -109,10 +110,17 @@ nav a{
     border-radius: 20px;
 }
 
+#Video iframe{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+
+}
+
 .rocker{
-    position: relative;
-    right: -85%;
-    bottom: -85%;
+    z-index: 1;
+    position: absolute;
+    top: -20%;
 }
 
 #SobreMim {
@@ -211,6 +219,7 @@ nav a{
     left: -3%;
     width: 100%;
     max-width: 410px;
+    min-width: 350px;
 }
 
 #techsCarrosel{
@@ -391,6 +400,7 @@ nav a{
 }
 
 .ExpProf{
+    padding: 10px;
     max-width: 650px;
     text-align: justify;
 }
@@ -412,7 +422,7 @@ nav a{
     display: block;
     position: absolute;
     width: 10px;
-    height: 1120px;
+    height: 1150px;
     transform: translate(-45px, -340px);
     background-color: var(--color1);
 }
@@ -441,27 +451,190 @@ nav a{
 
 .curiosidades {  
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "Games . Linguas"
-        ". FotoDiogo ."
-        "Musica . Esportes";
-    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     align-items: center;
+    justify-items: center
 }
 
-.Games { grid-area: Games; }
+.Games { grid-area: 1 / 1 / 2 / 2; }
 
-.Linguas { grid-area: Linguas; }
+.Games::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url(../assets/images/terraria.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(0px, -49px);
+}
 
-.Musica { grid-area: Musica; }
+.Games h3::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-image: url(../assets/images/Ashen_Estus_Flask.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(90px, -85px);
+}
 
-.Esportes { grid-area: Esportes; }
+.Games p::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url(../assets/images/isaac.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(-45px, -45px) rotate(-15deg);
+}
 
-.FotoDiogo { grid-area: FotoDiogo; }
+.Games p::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url(../assets/images/skyrim.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(290px, 65px) rotate(30deg);
+}
+
+.Linguas { grid-area: 1 / 2 / 2 / 3; }
+
+.Linguas p::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url(../assets/images/duolingo.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(-40px, -20px) rotate(-15deg);
+}
+
+.Linguas p::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    background-image: url(../assets/images/Flags.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(300px, -55px) rotate(20deg);
+}
+
+.Musica { grid-area: 3 / 1 / 4 / 2; }
+
+.Musica::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 45px;
+    height: 40px;
+    background-image: url(../assets/images/semicolcheia_icon.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(339px, 27px) rotate(30deg);
+}
+
+.Musica h3::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background-image: url(../assets/images/drum.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(100px, -55px);
+}
+
+.Musica p::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-image: url(../assets/images/guitar.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(-60px, -35px) rotate(-75deg);
+}
+
+.Musica p::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url(../assets/images/NectarAlbum.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(310px, 75px) rotate(-15deg);
+}
+
+.Esportes { grid-area: 3 / 2 / 4 / 3; }
+
+.Esportes h3::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background-image: url(../assets/images/swim_icon.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(125px, -50px);
+}
+
+.Esportes p::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    background-image: url(../assets/images/skate.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(300px, 50px) rotate(20deg);
+}
+
+
+.FotoDiogo { 
+    width: 100% !important;
+    grid-area: 2 / 1 / 3 / 3; 
+    display: flex;
+    justify-content: center;
+}
+
+.curiosidade{
+    width: 90%;
+    max-width: 380px;
+}
 
 .curiosidade h3{
     display: block;
@@ -479,7 +652,7 @@ nav a{
     font-size: 1.5em;
     background-color: rgba(12, 134, 44, 13%);
     padding: 15px;
-    width: 400px;
+    width: 100%;
     border-radius: 0 30px 0 30px;
 }
 
