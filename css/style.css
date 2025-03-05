@@ -106,7 +106,6 @@ nav a{
     height: 50vw;
     max-height: 500px;
     margin: 40px auto;
-    background-color: #B1BBB3;
     border-radius: 20px;
 }
 
@@ -120,7 +119,8 @@ nav a{
 .rocker{
     z-index: 1;
     position: absolute;
-    top: -20%;
+    top: 85%;
+    right: 5%;
 }
 
 #SobreMim {
@@ -285,7 +285,8 @@ nav a{
 }
 
 .projeto .projImg{
-    width: 50%;
+    width: 40%;
+    text-align: center;
 }
 
 .imgProjetos{

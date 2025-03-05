@@ -13,11 +13,11 @@ See .rocker-small below as example.
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-    color: #888;
+    color: #454545;
     width: 7em;
     height: 4em;
     overflow: hidden;
-    border-bottom: 0.5em solid #eee;
+    border-bottom: 0.5em solid #000000;
 }
 
 
@@ -28,8 +28,8 @@ See .rocker-small below as example.
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #999;
-    border: 0.5em solid #eee;
+    background-color: #2e2e2e;
+    border: 0.5em solid #000000;
     border-bottom: 0;
 }
 
@@ -56,7 +56,7 @@ See .rocker-small below as example.
     width: 2.75em;
     left: 0.85em;
     bottom: 0.4em;
-    background-color: #ddd;
+    background-color: #1e1e1e;
     transform: rotate(15deg) skewX(15deg);
 }
 
@@ -74,7 +74,7 @@ See .rocker-small below as example.
     width: 0.4em;
     height: 2.45em;
     bottom: -0.45em;
-    background-color: #ccc;
+    background-color: #363636;
     transform: skewY(-65deg);
 }
 
@@ -90,7 +90,7 @@ See .rocker-small below as example.
 
 input:checked + .switch-left {
     background-color: #57bd61;
-    color: #fff;
+    color: #1e1e1e;
     bottom: 0px;
     left: 0.5em;
     height: 2.5em;
@@ -104,8 +104,8 @@ input:checked + .switch-left::before {
 }
 
 input:checked + .switch-left + .switch-right {
-    background-color: #ddd;
-    color: #888;
+    background-color: #1e1e1e;
+    color: #3e3e3e;
     bottom: 0.4em;
     right: 0.8em;
     height: 2.4em;
@@ -114,7 +114,7 @@ input:checked + .switch-left + .switch-right {
 }
 
 input:checked + .switch-left + .switch-right::before {
-    background-color: #ccc;
+    background-color: #343434;
 }
 
 /* Keyboard Users */

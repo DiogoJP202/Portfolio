@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/mediaQueries.css">
     <link rel="stylesheet" href="css/carrossel.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/sliders.css">
+    <link rel="shortcut icon" href="assets/images/star_icon.webp" type="image/x-icon">
 </head>
 <body>
     <div id="menuH">
@@ -20,19 +22,19 @@
        <div id="line">
             <div>HELLO WORLD<span id="underline">_</span> 你好世界</div>
             <h1>I'M DIOGO ANTONNY</h1>
-            <h2>FULL-STACK DEVELOPER</h2>
+            <h2 class="fade-in">FULL-STACK DEVELOPER</h2>
        </div>
        <div id="letterEffect">
        </div>
     </header>   
     <div id="GreenLine">
         <nav>
-            <a href="#">SOBRE</a>
-            <a href="#">HABILIDADES</a>
-            <a href="#">PROJETOS</a>
-            <a href="#">FORMAÇÕES</a>
-            <a href="#">PROFISSIONAL</a>
-            <a href="#">CONTATO</a>
+            <a href="#SobreMim">SOBRE</a>
+            <a href="#skills">HABILIDADES</a>
+            <a href="#projetos">PROJETOS</a>
+            <a href="#Academico">FORMAÇÕES</a>
+            <a href="#ExpProfissionais">PROFISSIONAL</a>
+            <a href="#Curiosidades">CURIOSIDADES</a>
             <a href="#"><img id="flag" src="assets/images/UnitedStatesFlag.webp" alt="Bandeira dos Estados Unidos."></a>
         </nav>
     </div>
@@ -80,16 +82,82 @@
             </div>
         </section>
         <section id="projetos">
-            <div class="projeto">
-                <div class="projTxt">
-                    <h3>Projeto Amparo Ao RS</h3>
-                    <p>Esta plataforma web foi desenvolvida para auxiliar a população do Rio Grande do Sul durante as inundações que assolaram o estado, além de oferecer um canal de informações para aqueles que querem ajudar.</p>
-                    <span class="tecs">HTML, CSS, NodeJS</span>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="projeto">
+                        <div class="projTxt">
+                            <h3>Projeto Amparo Ao RS</h3>
+                            <p>Esta plataforma web foi desenvolvida para auxiliar a população do Rio Grande do Sul durante as inundações que assolaram o estado, além de oferecer um canal de informações para aqueles que querem ajudar.</p>
+                            <span class="tecs">HTML, CSS, NodeJS</span>
+                        </div>
+                        <div class="projImg">
+                            <img class="imgProjetos" src="assets/images/ProjetoAmparoRS.webp" alt="Notebook e Celular com capa de um projeto chamado 'Projeto Amparo Ao RS'.">
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <div class="projTxt">
+                            <h3>VEL</h3>
+                            <p>Uma plataforma dedicada à melhoria da gestão de empresas de entregas rápidas, ajudando entregadores e restaurantes a controlar melhor seus negócios. Nosso objetivo é oferecer uma estrada mais suave e direções claras para o sucesso! </p>
+                            <span class="tecs">React, AWS, JAVA, Springboot, MySQL e Docker.</span>
+                        </div>
+                        <div class="projImg">
+                            <img class="imgProjetos" src="assets/images/projeto2.webp" alt="Descrição da imagem do Projeto 2.">
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <div class="projTxt">
+                            <h3>Cemiterios e Crematorios Zona Sul
+                            </h3>
+                            <p>Landing Page de um site sobre jazigos e crematórios. Ficou em primeiro lugar de pesquisas de cemitérios ou crematórios da zona sul.</p>
+                            <span class="tecs">HTML, CSS, Javascript e SEO.</span>
+                        </div>
+                        <div class="projImg">
+                            <img class="imgProjetos" src="assets/images/projeto3.webp" alt="Descrição da imagem do Projeto 3.">
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <div class="projTxt">
+                            <h3>CuboBank</h3>
+                            <p>Projeto de ajustes e melhorias de um caixa eletrônico com muitas funcionalidades e armazenamento de dados em cache.</p>
+                            <span class="tecs">HTML, CSS e Javascript.</span>
+                        </div>
+                        <div class="projImg">
+                            <img class="imgProjetos" src="assets/images/projeto3.webp" alt="Descrição da imagem do Projeto 3.">
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <div class="projTxt">
+                            <h3>FreedonLents</h3>
+                            <p>Landing page com um design voltado a chamar a atenção do usuário para uma compra, visando responsividade em multiplas telas e plataformas.</p>
+                            <span class="tecs">HTML, CSS e Javascript.</span>
+                        </div>
+                        <div class="projImg">
+                            <img class="imgProjetos" src="assets/images/projeto3.webp" alt="Descrição da imagem do Projeto 3.">
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <div class="projTxt">
+                            <h3>Projeto Dark Souls 3</h3>
+                            <p>O site mostra todos os Bosses do game e mostra uma breve introdução e algumas de suas características.</p>
+                            <span class="tecs">HTML, CSS e Javascript.</span>
+                        </div>
+                        <div class="projImg">
+                            <img class="imgProjetos" src="assets/images/projeto3.webp" alt="Descrição da imagem do Projeto 3.">
+                        </div>
+                    </div>
+                    <div class="projeto">
+                        <div class="projTxt">
+                            <h3>Old School Comics</h3>
+                            <p>Sites de notícias com um design voltado a cartoons old school prento e branco, visando responsividade em multiplas telas e plataformas.</p>
+                            <span class="tecs">HTML, CSS e Javascript.</span>
+                        </div>
+                        <div class="projImg">
+                            <img class="imgProjetos" src="assets/images/projeto3.webp" alt="Descrição da imagem do Projeto 3.">
+                        </div>
+                    </div>
                 </div>
-                <div class="projImg">
-                    <img class="imgProjetos" src="assets/images/ProjetoAmparoRS.webp" alt="Notebook e Celucar com capa de um projeto chamado 'Projeto Amparo Ao RS'.">
-                    <!-- <img class="fundoProjetos" src="assets/images/FundoProjects.webp" alt="Fundo das imagens de projeto."> -->
-                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
             </div>
         </section>
         <section id="Academico">
