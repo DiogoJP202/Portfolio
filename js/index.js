@@ -89,8 +89,8 @@ function setupLanguageButton() {
 
     languageButton.addEventListener('click', () => {
         iframeVideo.src = languageButton.checked
-            ? 'https://youtu.be/YXwcNZW_7K8'
-            : 'https://www.youtube.com/embed/Hj91rm8miLk?si=iNvD2fo-2zACUyvt';
+            ? 'https://www.youtube.com/embed/YXwcNZW_7K8?si=LOBsdr6Fp05HxM7v'
+            : 'https://www.youtube.com/embed/DI8dNYUsfCQ?si=p5v7XkPKHoRvouSC';
     });
 }
 
