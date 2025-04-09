@@ -13,8 +13,23 @@
         align-items: center;
     }
 
-    #display #screen img{
-        left: -5%;
+    #display > #screen{
+        align-items: center;
+        justify-content: center;
+    }
+
+    #display > #screen > img{
+        width: 110%;
+        bottom: 0;
+        left: 0%;
+    }
+    #display > #screen #screenTxt{
+        text-align: center;
+    }
+
+    #techsCarrosel{
+        left: 17%;
+        bottom: -100px;
     }
 }
 
@@ -24,12 +39,6 @@
     #line h2 { font-size: 1.2em; }
 
     #letterEffect{ height: 240px;}
-
-    .rocker{
-        position: relative;
-        right: -85%;
-        bottom: -83%;
-    }
 
     #SobreMim{
         flex-direction: column;
@@ -133,6 +142,10 @@
 }
 
 @media screen and (max-width: 710px){
+    #skills{
+        padding: 0;
+    }
+
     #line h1, #line{ font-size: 1.7em; }
 
     #line h2 { font-size: 1em; }
@@ -140,8 +153,7 @@
     #letterEffect{ height: 180px;}
 
     .rocker{
-        right: -75%;
-        top: -30%;
+        transform: translateY(-20px);
         font-size: 0.7em;
     }
 
@@ -154,7 +166,7 @@
     #techsCarrosel{
         position: relative;
         left: 20%;
-        bottom: -50px;
+        bottom: -100px;
         width: 50%;
         height: 255px;
         transform-style: preserve-3d;
@@ -175,11 +187,6 @@
         width: 35%;
     }
 
-    #display > #screen > img{
-        width: 110%;
-        min-width: 250px;
-    }
-
     .projeto{
         flex-direction: column;
     }
@@ -196,12 +203,6 @@
     #line h2 { font-size: 1em; }
 
     #letterEffect{ height: 150px;}
-
-    .rocker{
-        position: relative;
-        right: -70%;
-        bottom: -65%;
-    }
 
     #skills{
         padding: 50px;
