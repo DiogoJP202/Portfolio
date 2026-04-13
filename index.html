@@ -18,10 +18,10 @@
     <link rel="shortcut icon" href="assets/images/star_icon.webp" type="image/x-icon">
 </head>
 <body>
-    <div id="menuH">
-        <div class="lines"></div>
-        <div class="lines"></div>
-        <div class="lines"></div>
+    <div id="menuH" role="button" tabindex="0" aria-controls="GreenLine" aria-expanded="false" aria-label="Abrir menu" data-i18n-attr="aria-label:nav.openMenuAria">
+        <div class="lines" aria-hidden="true"></div>
+        <div class="lines" aria-hidden="true"></div>
+        <div class="lines" aria-hidden="true"></div>
     </div>
     <header>
        <div id="line">
@@ -34,14 +34,26 @@
     </header>
     <div id="GreenLine">
         <nav>
-            <a href="#SobreMim" data-i18n="nav.about">SOBRE</a>
-            <a href="#skills" data-i18n="nav.skills">HABILIDADES</a>
-            <a href="#projetos" data-i18n="nav.projects">PROJETOS</a>
-            <a href="#Academico" data-i18n="nav.education">FORMAÇÕES</a>
-            <a href="#ExpProfissionais" data-i18n="nav.experience">PROFISSIONAL</a>
-            <a href="#Curiosidades" data-i18n="nav.curiosities">CURIOSIDADES</a>
+            <a class="nav-brand" href="#line" aria-label="Voltar ao topo" data-i18n-attr="aria-label:nav.homeAria">
+                <span>tonny</span>
+                <strong>.dev</strong>
+            </a>
+            <div class="nav-links">
+                <a href="#SobreMim" data-i18n="nav.about">SOBRE</a>
+                <a href="#skills" data-i18n="nav.skills">HABILIDADES</a>
+                <a href="#projetos" data-i18n="nav.projects">PROJETOS</a>
+                <a href="#Academico" data-i18n="nav.education">FORMAÇÕES</a>
+                <a href="#ExpProfissionais" data-i18n="nav.experience">PROFISSIONAL</a>
+                <a href="#Curiosidades" data-i18n="nav.curiosities">CURIOSIDADES</a>
+            </div>
             <button id="languageToggle" class="language-toggle" type="button" aria-label="Mudar para inglês" data-i18n-attr="aria-label:language.toggleAria">
-                <img id="flag" src="assets/images/UnitedStatesFlag.webp" alt="Bandeira dos Estados Unidos." data-i18n-attr="src:language.flagSrc; alt:language.flagAlt">
+                <span class="language-toggle-icon" aria-hidden="true">
+                    <img src="assets/images/GLOBE_icon.webp" alt="">
+                </span>
+                <span class="language-toggle-text">
+                    <span data-i18n="language.kicker">Idioma</span>
+                    <strong data-i18n="language.nextCode">EN</strong>
+                </span>
             </button>
         </nav>
     </div>
@@ -75,15 +87,36 @@
             </div>
         </section>
         <section id="SobreMim">
-            <img class="foto" src="assets/images/DiogoImage1.webp" alt="Foto do Diogo Antonny" data-i18n-attr="alt:images.profileAlt">
+            <div class="about-photo">
+                <img class="foto" src="assets/images/DiogoImage1.webp" alt="Foto do Diogo Antonny" data-i18n-attr="alt:images.profileAlt">
+            </div>
             <div id="text">
+                <span class="section-kicker" data-i18n="about.kicker">Sobre mim</span>
                 <h2 data-i18n="about.title">Sobre mim</h2>
-                <p data-i18n="about.intro">Olá! Meu nome é Diogo Antonny e sou desenvolvedor de software com mais de três anos de experiência em tecnologia. Atualmente, curso Análise e Desenvolvimento de Sistemas na faculdade Impacta. Tenho proficiência em Português (Brasil) e Inglês.</p>
-                <p data-i18n="about.description">Apaixonado por tecnologia, estou sempre aprimorando minhas habilidades e buscando projetos nos quais possa contribuir e evoluir continuamente.</p>
+                <p data-i18n="about.intro">Sou Diogo Antonny, desenvolvedor full-stack com mais de três anos no mercado de tecnologia e experiência criando soluções para o mercado financeiro.</p>
+                <p data-i18n="about.description">Gosto de estudar com constância, transformar problemas em automações úteis e criar experiências que unem tecnologia, lógica e criatividade. Também estudo idiomas, crio jogos e tenho a música como uma das minhas fontes de inspiração.</p>
+                <div class="about-highlights" aria-label="Destaques sobre Diogo" data-i18n-attr="aria-label:about.highlightsAria">
+                    <div class="about-highlight">
+                        <span data-i18n="about.highlights.finance.label">Mercado financeiro</span>
+                        <strong data-i18n="about.highlights.finance.value">Soluções, dados e automações</strong>
+                    </div>
+                    <div class="about-highlight">
+                        <span data-i18n="about.highlights.languages.label">Idiomas</span>
+                        <strong data-i18n="about.highlights.languages.value">Inglês avançado, japonês básico</strong>
+                    </div>
+                    <div class="about-highlight">
+                        <span data-i18n="about.highlights.creative.label">Criatividade</span>
+                        <strong data-i18n="about.highlights.creative.value">Jogos, música e interfaces</strong>
+                    </div>
+                    <div class="about-highlight">
+                        <span data-i18n="about.highlights.mindset.label">Mentalidade</span>
+                        <strong data-i18n="about.highlights.mindset.value">Estudo, melhoria contínua e entrega</strong>
+                    </div>
+                </div>
             </div>
         </section>
-        <div id="LabelLine">
-            <div id="inside"> </div>
+        <div id="LabelLine" aria-label="Letreiro de conceitos em japonês" data-i18n-attr="aria-label:labelLine.aria">
+            <div id="inside"></div>
         </div>
         <section id="skills">
             <div id="techsCarrosel">

@@ -11,6 +11,56 @@ const VIDEO_THUMBNAILS = {
     pt: 'https://img.youtube.com/vi/YXwcNZW_7K8/hqdefault.jpg',
     en: 'https://img.youtube.com/vi/DI8dNYUsfCQ/hqdefault.jpg'
 };
+const LABEL_LINE_WORDS = [
+    {
+        word: '開発',
+        reading: 'kaihatsu',
+        meaning: {
+            pt: 'desenvolvimento',
+            en: 'development'
+        }
+    },
+    {
+        word: '技術',
+        reading: 'gijutsu',
+        meaning: {
+            pt: 'tecnologia',
+            en: 'technology'
+        }
+    },
+    {
+        word: 'コード',
+        reading: 'kodo',
+        meaning: {
+            pt: 'código',
+            en: 'code'
+        }
+    },
+    {
+        word: '設計',
+        reading: 'sekkei',
+        meaning: {
+            pt: 'arquitetura / design técnico',
+            en: 'architecture / technical design'
+        }
+    },
+    {
+        word: '実装',
+        reading: 'jisso',
+        meaning: {
+            pt: 'implementação',
+            en: 'implementation'
+        }
+    },
+    {
+        word: '構築',
+        reading: 'kochiku',
+        meaning: {
+            pt: 'construção',
+            en: 'construction'
+        }
+    }
+];
 
 const translations = {
     pt: {
@@ -21,8 +71,8 @@ const translations = {
         },
         language: {
             toggleAria: 'Mudar para inglês',
-            flagSrc: 'assets/images/UnitedStatesFlag.webp',
-            flagAlt: 'Bandeira dos Estados Unidos.'
+            kicker: 'Idioma',
+            nextCode: 'EN'
         },
         video: {
             title: 'Vídeo de apresentação em português',
@@ -36,7 +86,16 @@ const translations = {
             openOnYouTube: 'Abrir no YouTube',
             previewAlt: 'Prévia do vídeo de apresentação em português'
         },
+        labelLine: {
+            aria: 'Letreiro de conceitos em japonês',
+            modalTitle: 'Significado',
+            readingLabel: 'Leitura',
+            meaningLabel: 'Tradução'
+        },
         nav: {
+            homeAria: 'Voltar ao topo',
+            openMenuAria: 'Abrir menu',
+            closeMenuAria: 'Fechar menu',
             about: 'SOBRE',
             skills: 'HABILIDADES',
             projects: 'PROJETOS',
@@ -45,9 +104,29 @@ const translations = {
             curiosities: 'CURIOSIDADES'
         },
         about: {
+            kicker: 'Sobre mim',
             title: 'Sobre mim',
-            intro: 'Olá! Meu nome é Diogo Antonny e sou desenvolvedor de software com mais de três anos de experiência em tecnologia. Atualmente, curso Análise e Desenvolvimento de Sistemas na faculdade Impacta. Tenho proficiência em Português (Brasil) e Inglês.',
-            description: 'Apaixonado por tecnologia, estou sempre aprimorando minhas habilidades e buscando projetos nos quais possa contribuir e evoluir continuamente.'
+            intro: 'Sou Diogo Antonny, desenvolvedor full-stack com mais de três anos no mercado de tecnologia e experiência criando soluções para o mercado financeiro.',
+            description: 'Gosto de estudar com constância, transformar problemas em automações úteis e criar experiências que unem tecnologia, lógica e criatividade. Também estudo idiomas, crio jogos e tenho a música como uma das minhas fontes de inspiração.',
+            highlightsAria: 'Destaques sobre Diogo',
+            highlights: {
+                finance: {
+                    label: 'Mercado financeiro',
+                    value: 'Soluções, dados e automações'
+                },
+                languages: {
+                    label: 'Idiomas',
+                    value: 'Inglês avançado, japonês básico'
+                },
+                creative: {
+                    label: 'Criatividade',
+                    value: 'Jogos, música e interfaces'
+                },
+                mindset: {
+                    label: 'Mentalidade',
+                    value: 'Estudo, melhoria contínua e entrega'
+                }
+            }
         },
         skills: {
             title: 'Skills'
@@ -201,8 +280,8 @@ const translations = {
         },
         language: {
             toggleAria: 'Switch to Portuguese',
-            flagSrc: 'assets/images/flag_brasil.png',
-            flagAlt: 'Brazilian flag.'
+            kicker: 'Language',
+            nextCode: 'PT'
         },
         video: {
             title: 'Presentation video in English',
@@ -216,7 +295,16 @@ const translations = {
             openOnYouTube: 'Open on YouTube',
             previewAlt: 'English presentation video preview'
         },
+        labelLine: {
+            aria: 'Japanese concepts marquee',
+            modalTitle: 'Meaning',
+            readingLabel: 'Reading',
+            meaningLabel: 'Translation'
+        },
         nav: {
+            homeAria: 'Back to top',
+            openMenuAria: 'Open menu',
+            closeMenuAria: 'Close menu',
             about: 'ABOUT',
             skills: 'SKILLS',
             projects: 'PROJECTS',
@@ -225,9 +313,29 @@ const translations = {
             curiosities: 'CURIOSITIES'
         },
         about: {
+            kicker: 'About me',
             title: 'About me',
-            intro: 'Hello! My name is Diogo Antonny, and I am a software developer with over three years of experience in technology. I am currently studying Systems Analysis and Development at Impacta College. I am fluent in Brazilian Portuguese and English.',
-            description: 'Passionate about technology, I am always improving my skills and looking for projects where I can contribute and continuously grow.'
+            intro: 'I am Diogo Antonny, a full-stack developer with over three years in the technology market and experience building solutions for the financial market.',
+            description: 'I enjoy studying consistently, turning problems into useful automations, and creating experiences that combine technology, logic, and creativity. I also study languages, create games, and see music as one of my sources of inspiration.',
+            highlightsAria: 'Highlights about Diogo',
+            highlights: {
+                finance: {
+                    label: 'Financial market',
+                    value: 'Solutions, data, and automations'
+                },
+                languages: {
+                    label: 'Languages',
+                    value: 'Advanced English, basic Japanese'
+                },
+                creative: {
+                    label: 'Creativity',
+                    value: 'Games, music, and interfaces'
+                },
+                mindset: {
+                    label: 'Mindset',
+                    value: 'Study, continuous improvement, and delivery'
+                }
+            }
         },
         skills: {
             title: 'Skills'
@@ -377,6 +485,7 @@ const translations = {
 
 let currentLanguage = DEFAULT_LANGUAGE;
 let currentVideoLanguage = DEFAULT_LANGUAGE;
+let activeLabelLineWord = null;
 
 function normalizeLanguage(language) {
     if (!language) {
@@ -405,6 +514,77 @@ function getTranslation(language, key) {
         .reduce((value, keyPart) => value?.[keyPart], dictionary);
 
     return findValue(languageDictionary) ?? findValue(fallbackDictionary) ?? '';
+}
+
+function getLabelLineWordMarkup(wordItem, index, isDuplicate = false) {
+    return `
+        <button class="label-word" type="button" data-label-word-index="${index}" aria-label="${wordItem.word}, ${wordItem.reading}"${isDuplicate ? ' tabindex="-1"' : ''}>
+            <span class="label-word-jp">${wordItem.word}</span>
+        </button>
+    `;
+}
+
+function getLabelLineGroupMarkup(repeatCount, isDuplicate = false) {
+    return Array.from({ length: repeatCount }, () => LABEL_LINE_WORDS
+        .map((wordItem, index) => getLabelLineWordMarkup(wordItem, index, isDuplicate))
+        .join(''))
+        .join('');
+}
+
+function updateLabelLineModal() {
+    const modal = document.querySelector('[data-label-line-modal]');
+
+    if (!modal || !activeLabelLineWord) {
+        return;
+    }
+
+    modal.querySelector('[data-label-modal-title]').textContent = getTranslation(currentLanguage, 'labelLine.modalTitle');
+    modal.querySelector('[data-label-modal-word]').textContent = activeLabelLineWord.word;
+    modal.querySelector('[data-label-modal-reading-label]').textContent = getTranslation(currentLanguage, 'labelLine.readingLabel');
+    modal.querySelector('[data-label-modal-reading]').textContent = activeLabelLineWord.reading;
+    modal.querySelector('[data-label-modal-meaning-label]').textContent = getTranslation(currentLanguage, 'labelLine.meaningLabel');
+    modal.querySelector('[data-label-modal-meaning]').textContent = activeLabelLineWord.meaning[currentLanguage] || activeLabelLineWord.meaning[DEFAULT_LANGUAGE];
+}
+
+function positionLabelLineModal() {
+    const labelLine = document.querySelector('#LabelLine');
+    const modal = document.querySelector('[data-label-line-modal]');
+
+    if (!labelLine || !modal || modal.hidden) {
+        return;
+    }
+
+    const labelLinePosition = labelLine.getBoundingClientRect();
+    const modalTop = Math.max(16, labelLinePosition.top - modal.offsetHeight - 12);
+
+    modal.style.setProperty('--label-modal-top', `${modalTop}px`);
+}
+
+function showLabelLineModal(wordItem) {
+    const labelLine = document.querySelector('#LabelLine');
+    const modal = document.querySelector('[data-label-line-modal]');
+
+    if (!labelLine || !modal) {
+        return;
+    }
+
+    activeLabelLineWord = wordItem;
+    updateLabelLineModal();
+    labelLine.classList.add('is-paused');
+    modal.hidden = false;
+    positionLabelLineModal();
+}
+
+function hideLabelLineModal() {
+    const labelLine = document.querySelector('#LabelLine');
+    const modal = document.querySelector('[data-label-line-modal]');
+
+    activeLabelLineWord = null;
+    labelLine?.classList.remove('is-paused');
+
+    if (modal) {
+        modal.hidden = true;
+    }
 }
 
 function shouldUseVideoPreview() {
@@ -537,6 +717,14 @@ function applyLanguage(language, options = {}) {
         });
     });
 
+    const menuButton = document.querySelector('#menuH');
+
+    if (menuButton) {
+        const menuIsOpen = document.body.classList.contains('menu-open');
+        menuButton.setAttribute('aria-label', getTranslation(nextLanguage, menuIsOpen ? 'nav.closeMenuAria' : 'nav.openMenuAria'));
+    }
+
+    updateLabelLineModal();
     syncVideoWithLanguage(nextLanguage);
 
     if (options.persist !== false) {
@@ -566,60 +754,127 @@ function setupSiteLanguage() {
 function setupHamburgerMenu() {
     const menuH = document.querySelector('#menuH');
     const greenLine = document.querySelector('#GreenLine');
-    const header = document.querySelector('header');
     const nav = document.querySelector('nav');
     let isMenuOpen = false;
 
-    if (!menuH || !greenLine || !header || !nav) {
+    if (!menuH || !greenLine || !nav) {
         return;
     }
 
-    menuH.addEventListener('click', () => {
-        isMenuOpen = !isMenuOpen;
+    const isMobileMenu = () => window.innerWidth <= 820;
+
+    const setMenuState = (nextState) => {
+        isMenuOpen = nextState;
         menuH.classList.toggle('menuHX', isMenuOpen);
         greenLine.classList.toggle('GreenBlock', isMenuOpen);
-        header.style.display = isMenuOpen ? 'none' : 'block';
-        nav.style.display = isMenuOpen ? 'flex' : 'none';
+        document.body.classList.toggle('menu-open', isMenuOpen);
+        menuH.setAttribute('aria-expanded', String(isMenuOpen));
+        menuH.setAttribute('aria-label', getTranslation(currentLanguage, isMenuOpen ? 'nav.closeMenuAria' : 'nav.openMenuAria'));
+        nav.style.display = isMobileMenu() ? (isMenuOpen ? 'flex' : 'none') : '';
+    };
+
+    menuH.addEventListener('click', () => setMenuState(!isMenuOpen));
+
+    menuH.addEventListener('keydown', (event) => {
+        if (!['Enter', ' '].includes(event.key)) {
+            return;
+        }
+
+        event.preventDefault();
+        setMenuState(!isMenuOpen);
+    });
+
+    nav.addEventListener('click', (event) => {
+        if (isMobileMenu() && event.target.closest('a')) {
+            setMenuState(false);
+        }
     });
 
     window.addEventListener('resize', () => {
         if (window.innerWidth > 820) {
-            menuH.classList.remove('menuHX');
-            greenLine.classList.remove('GreenBlock');
-            isMenuOpen = false;
-            header.style.display = 'block';
-            nav.style.display = 'flex';
+            setMenuState(false);
+            nav.style.display = '';
         } else {
-            nav.style.display = 'none';
+            nav.style.display = isMenuOpen ? 'flex' : 'none';
         }
     });
 }
 
 // Label Line Functionality
 function setupLabelLine() {
-    const ideograma1 = '全栈';
-    const ideograma2 = '电脑';
-    const ideogramsSize = 230;
     const line = document.querySelector('#inside');
+    const labelLine = document.querySelector('#LabelLine');
+    let currentRepeatCount = 1;
+    let resizeTimeout;
 
-    if (!line) {
+    if (!line || !labelLine) {
         return;
     }
 
-    const createIdeograms = () => {
-        line.innerHTML = '';
-        const count = Math.floor((window.innerWidth / ideogramsSize) * 4);
+    const bindWordEvents = () => {
+        labelLine.querySelectorAll('[data-label-word-index]').forEach((wordElement) => {
+            const wordItem = LABEL_LINE_WORDS[Number(wordElement.dataset.labelWordIndex)];
 
-        for (let i = 1; i < count; i++) {
-            const element = document.createElement('span');
-            element.innerHTML = i % 2 !== 0 ? ideograma1 : ideograma2;
-            element.classList.add(i % 2 !== 0 ? 'Ideograma1' : 'Ideograma2');
-            line.appendChild(element);
+            wordElement.addEventListener('mouseenter', () => showLabelLineModal(wordItem));
+            wordElement.addEventListener('focus', () => showLabelLineModal(wordItem));
+            wordElement.addEventListener('mouseleave', hideLabelLineModal);
+            wordElement.addEventListener('blur', hideLabelLineModal);
+        });
+    };
+
+    const renderLabelLine = (repeatCount) => {
+        currentRepeatCount = repeatCount;
+        hideLabelLineModal();
+
+        line.innerHTML = `
+            <div class="label-line-group">${getLabelLineGroupMarkup(repeatCount)}</div>
+            <div class="label-line-group" aria-hidden="true">${getLabelLineGroupMarkup(repeatCount, true)}</div>
+        `;
+
+        bindWordEvents();
+    };
+
+    const fitLabelLineToViewport = () => {
+        const firstGroup = line.querySelector('.label-line-group');
+
+        if (!firstGroup) {
+            return;
+        }
+
+        const singleSequenceWidth = firstGroup.scrollWidth / currentRepeatCount;
+
+        if (!singleSequenceWidth) {
+            return;
+        }
+
+        const targetRepeatCount = Math.max(2, Math.ceil((labelLine.offsetWidth * 1.6) / singleSequenceWidth));
+
+        if (targetRepeatCount !== currentRepeatCount) {
+            renderLabelLine(targetRepeatCount);
         }
     };
 
-    createIdeograms();
-    window.addEventListener('resize', createIdeograms);
+    if (!labelLine.querySelector('[data-label-line-modal]')) {
+        labelLine.insertAdjacentHTML('beforeend', `
+            <div class="label-line-modal" data-label-line-modal role="tooltip" hidden>
+                <span class="label-line-modal-title" data-label-modal-title></span>
+                <strong class="label-line-modal-word" data-label-modal-word></strong>
+                <p><span data-label-modal-reading-label></span>: <b data-label-modal-reading></b></p>
+                <p><span data-label-modal-meaning-label></span>: <b data-label-modal-meaning></b></p>
+            </div>
+        `);
+    }
+
+    renderLabelLine(currentRepeatCount);
+    fitLabelLineToViewport();
+
+    window.addEventListener('resize', () => {
+        window.clearTimeout(resizeTimeout);
+        resizeTimeout = window.setTimeout(() => {
+            fitLabelLineToViewport();
+            positionLabelLineModal();
+        }, 150);
+    });
 }
 
 // Typing Effect Functionality

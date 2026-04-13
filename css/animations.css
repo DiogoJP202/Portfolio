@@ -33,14 +33,14 @@
 }
 
 #inside{
-    animation: letreiro 20s infinite linear alternate-reverse;
+    animation: letreiro 50s infinite linear;
 }
 
 @keyframes letreiro {
     from{
-        transform: translateX(0%);
+        transform: translateX(0);
     } to {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 

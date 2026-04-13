@@ -1,6 +1,23 @@
 @charset "UTF-8";
 
 @media screen and (max-width: 1150px) {
+    nav{
+        gap: 10px;
+        font-size: 0.95em;
+    }
+
+    .nav-links{
+        gap: 2px;
+    }
+
+    .nav-links a{
+        padding: 6px 7px;
+    }
+
+    .language-toggle{
+        padding: 6px 8px;
+    }
+
     #skills{
         display: flex;
         flex-direction: column-reverse;
@@ -41,12 +58,18 @@
     #letterEffect{ height: 240px;}
 
     #SobreMim{
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
+        gap: 34px;
+        width: min(760px, 90vw);
     }
 
     #SobreMim #text{
-        width: 90%;
+        width: 100%;
+    }
+
+    .about-photo{
+        justify-self: center;
+        max-width: 340px;
     }
 }
 
@@ -71,69 +94,138 @@
 }
 
 @media screen and (max-width: 820px){
+    body.menu-open{
+        overflow: hidden;
+    }
+
     nav{ display: none; }
-    
-    #GreenLine{ height: 40px; }
+
+    #GreenLine{
+        position: fixed;
+        inset: 0;
+        z-index: 20;
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+    }
 
     #menuH{
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 10px;
-        padding: 10px;
+        position: fixed;
+        top: 12px;
+        right: 12px;
+        z-index: 30;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        width: 80px;
-        height: 65px;
-        border-radius: 10px;
+        width: 58px;
+        height: 52px;
+        padding: 12px;
+        border: 1px solid #16f75188;
+        border-radius: 8px;
+        background-color: #05250de6;
+        box-shadow: 0 10px 24px #0000007a;
         cursor: pointer;
     }
 
     #menuH > .lines{
         width: 100%;
-        height: 25%;
-        border: 3px solid #000;
-        border-radius: 15px;
+        height: 4px;
+        border: 0;
+        border-radius: 8px;
         background-color: var(--color1);
         transition: 0.6s all ease-in-out;
     }
 
-    .menuHX{ z-index: 3; }
+    #menuH:focus-visible{
+        outline: 3px solid #fff;
+        outline-offset: 4px;
+    }
+
+    .menuHX{ z-index: 30; }
 
     .menuHX > .lines{
-        border-color: var(--color2) !important;
         background-color: #fff !important; 
     }
 
     .menuHX > .lines:nth-of-type(1){
-        transform: rotate(45deg);
-        position: relative;
-        top: 17px;
+        transform: translateY(12px) rotate(45deg);
     }
 
     .menuHX > .lines:nth-of-type(2){
-        width: 0 !important;
-        height: 0 !important;
-        border: none !important;
+        opacity: 0;
+        transform: scaleX(0);
     }
 
     .menuHX > .lines:nth-of-type(3){
-        transform: rotate(-45deg);
-        position: relative;
-        top: -16px;
+        transform: translateY(-12px) rotate(-45deg);
     }
 
     .GreenBlock{
-        height: 350px !important;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100vh !important;
+        padding: 86px 18px 28px !important;
+        background: radial-gradient(circle at top right, #16f75133, transparent 36%), linear-gradient(160deg, #031307f7, #0c862cf2);
     }
 
     .GreenBlock > nav{
+        display: flex;
         flex-direction: column;
-        padding: 20px 20px;
-        gap: 4px;
-        font-size: 1.8em;
+        align-items: stretch;
+        gap: 14px;
+        width: min(420px, 100%);
+        margin: 0;
+        padding: 18px;
+        border: 1px solid #16f75188;
+        border-radius: 8px;
+        background-color: #061c0bcc;
+        box-shadow: 0 20px 40px #00000085;
+        font-size: 1.15em;
+    }
+
+    .GreenBlock .nav-brand{
+        justify-content: center;
+        width: 100%;
+        min-height: 50px;
+    }
+
+    .GreenBlock .nav-links{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .GreenBlock .nav-links a{
+        justify-content: flex-start;
+        width: 100%;
+        min-height: 50px;
+        padding: 10px 14px;
+        border-color: #16f75130;
+        background-color: #05250d80;
+        font-size: 0.86em;
+    }
+
+    .GreenBlock .nav-links a::before{
+        content: '>';
+        color: var(--color1);
+        margin-right: 8px;
+    }
+
+    .GreenBlock .language-toggle{
+        width: 100%;
+        min-height: 54px;
+    }
+
+    .GreenBlock .language-toggle-text{
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        text-align: center;
     }
 
     #premio{
@@ -184,6 +276,42 @@
 
     #letterEffect { background-size: contain; }
 
+    #SobreMim h2{
+        font-size: 3.6em;
+    }
+
+    #SobreMim p{
+        font-size: 1.35em;
+    }
+
+    .about-highlights{
+        grid-template-columns: 1fr;
+    }
+
+    .about-highlight{
+        min-height: auto;
+    }
+
+    #LabelLine::before,
+    #LabelLine::after{
+        width: 56px;
+    }
+
+    .label-line-group{
+        gap: 12px;
+        padding-right: 12px;
+    }
+
+    .label-word{
+        min-height: 46px;
+        min-width: 82px;
+        padding: 7px 10px;
+    }
+
+    .label-word-jp{
+        font-size: 1.25em;
+    }
+
     #screenTxt{
         font-size: 2.5em;
     }
@@ -231,6 +359,33 @@
 
     #skills{
         padding: 50px;
+    }
+
+    #SobreMim{
+        margin: 48px auto 42px;
+    }
+
+    #SobreMim h2{
+        font-size: 3em;
+    }
+
+    #SobreMim h2::after{
+        width: 52px;
+        height: 52px;
+    }
+
+    .about-photo::before{
+        inset: 16px -8px -8px 16px;
+    }
+
+    .about-photo::after{
+        right: 2px;
+        bottom: 8px;
+        font-size: 1em;
+    }
+
+    .label-line-modal-word{
+        font-size: 1.8em;
     }
 
     .video-copy h2{
