@@ -152,9 +152,34 @@
 
     #letterEffect{ height: 180px;}
 
-    .rocker{
-        transform: translateY(-20px);
-        font-size: 0.7em;
+    #Video{
+        width: 94vw;
+        margin: 32px auto 52px;
+    }
+
+    .video-copy h2{
+        font-size: 2.6em;
+    }
+
+    .video-copy p{
+        font-size: 1.25em;
+    }
+
+    .video-toolbar{
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .video-youtube-link{
+        text-align: center;
+    }
+
+    .video-language-switch{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .video-language-button{
+        padding: 8px 10px;
     }
 
     #letterEffect { background-size: contain; }
@@ -206,6 +231,18 @@
 
     #skills{
         padding: 50px;
+    }
+
+    .video-copy h2{
+        font-size: 2.1em;
+    }
+
+    .video-toolbar-label{
+        font-size: 1.15em;
+    }
+
+    .video-language-button span{
+        display: none;
     }
 
     #techsCarrosel {

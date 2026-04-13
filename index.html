@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Diogo Antonny portfólio. Um portfólio feito para mostrar um pouco mais quem é Diogo Antonny.">
-    <meta name="keywords" content="HTML, CSS, JavaScript, Portfólio, portfolio, Diogo Antonny">
+    <meta name="description" content="Diogo Antonny portfólio. Um portfólio feito para mostrar um pouco mais quem é Diogo Antonny." data-i18n-attr="content:meta.description">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Portfólio, portfolio, Diogo Antonny" data-i18n-attr="content:meta.keywords">
     <meta name="author" content="Diogo Antonny">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="6BAG_qPoH0DKFk3M-evvVQwqhSY0OupXP7xaIaYOz10" />
     <title>Diogo Antonny</title>
-    <link rel="stylesheet" href="css/button.css">
+    <link rel="alternate" hreflang="pt-BR" href="./">
+    <link rel="alternate" hreflang="en" href="./?lang=en">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mediaQueries.css">
     <link rel="stylesheet" href="css/carrossel.css">
@@ -24,39 +25,61 @@
     </div>
     <header>
        <div id="line">
-            <div>HELLO WORLD<span id="underline">_</span> 你好世界</div>
+            <div>HELLO WORLD<span id="underline">_</span> こんにちは世界</div>
             <h1>I'M DIOGO ANTONNY</h1>
             <h2 class="fade-in">FULL-STACK DEVELOPER</h2>
        </div>
        <div id="letterEffect">
        </div>
-    </header>   
+    </header>
     <div id="GreenLine">
         <nav>
-            <a href="#SobreMim">SOBRE</a>
-            <a href="#skills">HABILIDADES</a>
-            <a href="#projetos">PROJETOS</a>
-            <a href="#Academico">FORMAÇÕES</a>
-            <a href="#ExpProfissionais">PROFISSIONAL</a>
-            <a href="#Curiosidades">CURIOSIDADES</a>
-            <a href="assets/pages/en.html"><img id="flag" src="assets/images/UnitedStatesFlag.webp" alt="Bandeira dos Estados Unidos."></a>
+            <a href="#SobreMim" data-i18n="nav.about">SOBRE</a>
+            <a href="#skills" data-i18n="nav.skills">HABILIDADES</a>
+            <a href="#projetos" data-i18n="nav.projects">PROJETOS</a>
+            <a href="#Academico" data-i18n="nav.education">FORMAÇÕES</a>
+            <a href="#ExpProfissionais" data-i18n="nav.experience">PROFISSIONAL</a>
+            <a href="#Curiosidades" data-i18n="nav.curiosities">CURIOSIDADES</a>
+            <button id="languageToggle" class="language-toggle" type="button" aria-label="Mudar para inglês" data-i18n-attr="aria-label:language.toggleAria">
+                <img id="flag" src="assets/images/UnitedStatesFlag.webp" alt="Bandeira dos Estados Unidos." data-i18n-attr="src:language.flagSrc; alt:language.flagAlt">
+            </button>
         </nav>
     </div>
     <main>
-        <section id="Video" >
-            <iframe src="https://www.youtube.com/embed/YXwcNZW_7K8?si=LOBsdr6Fp05HxM7v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <label class="rocker">
-                <input id="languageVideoButton" type="checkbox" checked>
-                <span class="switch-left">BR</span>
-                <span class="switch-right">EN</span>
-            </label>
+        <section id="Video" aria-labelledby="videoTitle">
+            <div class="video-copy">
+                <span class="video-eyebrow" data-i18n="video.eyebrow">Apresentação</span>
+                <h2 id="videoTitle" data-i18n="video.heading">Conheça meu trabalho em vídeo</h2>
+                <p data-i18n="video.description">Escolha o idioma do vídeo e veja uma apresentação rápida sobre minha trajetória, minhas experiências e o que venho construindo.</p>
+            </div>
+            <div class="video-player">
+                <iframe src="about:blank" title="Vídeo de apresentação em português" data-i18n-attr="title:video.title" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <a class="video-preview-link" href="https://www.youtube.com/watch?v=YXwcNZW_7K8" target="_blank" rel="noopener" data-video-preview hidden>
+                    <img src="https://img.youtube.com/vi/YXwcNZW_7K8/hqdefault.jpg" alt="Prévia do vídeo de apresentação em português" data-video-preview-image data-i18n-attr="alt:video.previewAlt">
+                    <span data-i18n="video.openOnYouTube">Abrir no YouTube</span>
+                </a>
+            </div>
+            <div class="video-toolbar" role="group" aria-label="Idioma do vídeo" data-i18n-attr="aria-label:video.languageGroupLabel">
+                <span class="video-toolbar-label" data-i18n="video.languageLabel">Idioma do vídeo</span>
+                <div class="video-language-switch">
+                    <button class="video-language-button is-active" type="button" data-video-language="pt" aria-pressed="true">
+                        <strong>BR</strong>
+                        <span data-i18n="video.portuguese">Português</span>
+                    </button>
+                    <button class="video-language-button" type="button" data-video-language="en" aria-pressed="false">
+                        <strong>EN</strong>
+                        <span data-i18n="video.english">Inglês</span>
+                    </button>
+                </div>
+                <a class="video-youtube-link" href="https://www.youtube.com/watch?v=YXwcNZW_7K8" target="_blank" rel="noopener" data-video-link data-i18n="video.openOnYouTube">Abrir no YouTube</a>
+            </div>
         </section>
         <section id="SobreMim">
-            <img class="foto" src="assets/images/DiogoImage1.webp" alt="Foto do Diogo Antonny">
+            <img class="foto" src="assets/images/DiogoImage1.webp" alt="Foto do Diogo Antonny" data-i18n-attr="alt:images.profileAlt">
             <div id="text">
-                <h2>Sobre mim</h2>
-                <p>Olá! Meu nome é Diogo Antonny e sou desenvolvedor de software com mais de três anos de experiência em tecnologia. Atualmente, curso Análise e Desenvolvimento de Sistemas na faculdade Impacta. Tenho proficiência em Português (Brasil) e Inglês.</p>
-                <p>Apaixonado por tecnologia, estou sempre aprimorando minhas habilidades e buscando projetos nos quais possa contribuir e evoluir continuamente.</p>
+                <h2 data-i18n="about.title">Sobre mim</h2>
+                <p data-i18n="about.intro">Olá! Meu nome é Diogo Antonny e sou desenvolvedor de software com mais de três anos de experiência em tecnologia. Atualmente, curso Análise e Desenvolvimento de Sistemas na faculdade Impacta. Tenho proficiência em Português (Brasil) e Inglês.</p>
+                <p data-i18n="about.description">Apaixonado por tecnologia, estou sempre aprimorando minhas habilidades e buscando projetos nos quais possa contribuir e evoluir continuamente.</p>
             </div>
         </section>
         <div id="LabelLine">
@@ -64,23 +87,23 @@
         </div>
         <section id="skills">
             <div id="techsCarrosel">
-                <div class="tech"><img class="heigher" src="assets/images/figma.webp" alt="Icone do Figma"></div>
-                <div class="tech"><img src="assets/images/react.webp" alt="Icone do React"></div>
-                <div class="tech"><img src="assets/images/bootstrap.webp" alt="Icone do Bootstrap"></div>
-                <div class="tech"><img src="assets/images/js.webp" alt="Icone do Javascript"></div>
-                <div class="tech"><img src="assets/images/postgresql.webp" alt="Icone do Postgresql"></div>
-                <div class="tech"><img src="assets/images/postman.webp" alt="Icone do Postman"></div>
-                <div class="tech"><img src="assets/images/python.webp" alt="Icone do Python"></div>
-                <div class="tech"><img src="assets/images/java.webp" alt="Icone do Java"></div>
-                <div class="tech"><img class="heigher" src="assets/images/mongodb.webp" alt="Icone do MongoDB"></div>
-                <div class="tech"><img src="assets/images/git.webp" alt="Icone do Git"></div>
-                <div class="tech"><img src="assets/images/csharp.webp" alt="Icone do C Sharp"></div>
-                <div class="tech"><img src="assets/images/aspdotnet.webp" alt="Icone do ASP .NET"></div>
+                <div class="tech"><img class="heigher" src="assets/images/figma.webp" alt="Ícone do Figma" data-i18n-attr="alt:images.figmaAlt"></div>
+                <div class="tech"><img src="assets/images/react.webp" alt="Ícone do React" data-i18n-attr="alt:images.reactAlt"></div>
+                <div class="tech"><img src="assets/images/bootstrap.webp" alt="Ícone do Bootstrap" data-i18n-attr="alt:images.bootstrapAlt"></div>
+                <div class="tech"><img src="assets/images/js.webp" alt="Ícone do Javascript" data-i18n-attr="alt:images.javascriptAlt"></div>
+                <div class="tech"><img src="assets/images/postgresql.webp" alt="Ícone do Postgresql" data-i18n-attr="alt:images.postgresqlAlt"></div>
+                <div class="tech"><img src="assets/images/postman.webp" alt="Ícone do Postman" data-i18n-attr="alt:images.postmanAlt"></div>
+                <div class="tech"><img src="assets/images/python.webp" alt="Ícone do Python" data-i18n-attr="alt:images.pythonAlt"></div>
+                <div class="tech"><img src="assets/images/java.webp" alt="Ícone do Java" data-i18n-attr="alt:images.javaAlt"></div>
+                <div class="tech"><img class="heigher" src="assets/images/mongodb.webp" alt="Ícone do MongoDB" data-i18n-attr="alt:images.mongodbAlt"></div>
+                <div class="tech"><img src="assets/images/git.webp" alt="Ícone do Git" data-i18n-attr="alt:images.gitAlt"></div>
+                <div class="tech"><img src="assets/images/csharp.webp" alt="Ícone do C Sharp" data-i18n-attr="alt:images.csharpAlt"></div>
+                <div class="tech"><img src="assets/images/aspdotnet.webp" alt="Ícone do ASP .NET" data-i18n-attr="alt:images.aspdotnetAlt"></div>
             </div>
             <div id="display">
-                    <h2>Skills</h2>
+                    <h2 data-i18n="skills.title">Skills</h2>
                     <div id="screen">
-                        <img src="assets/images/display.webp" alt="Imagem de um display.">
+                        <img src="assets/images/display.webp" alt="Imagem de um display." data-i18n-attr="alt:images.displayAlt">
                         <span id="screenTxt">JAVASCRIPT</span>
                     </div>
             </div>
@@ -91,159 +114,159 @@
                     <div class="projeto">
                         <div class="projTxt">
                             <h3><a href="https://diogojp202.github.io/ProjetoAmparoAoRS/" target="_blank" class="projLink">Projeto Amparo Ao RS</a></h3>
-                            <p>Esta plataforma web foi desenvolvida para auxiliar a população do Rio Grande do Sul durante as inundações que assolaram o estado, além de oferecer um canal de informações para aqueles que querem ajudar.</p>
-                            <span class="tecs">HTML, CSS, NodeJS</span>
+                            <p data-i18n="projects.amparo.description">Esta plataforma web foi desenvolvida para auxiliar a população do Rio Grande do Sul durante as inundações que assolaram o estado, além de oferecer um canal de informações para aqueles que querem ajudar.</p>
+                            <span class="tecs" data-i18n="projects.amparo.techs">HTML, CSS, NodeJS</span>
                         </div>
                         <div class="projImg">
-                            <img class="imgProjetos" src="assets/images/AMPARO AO RS.webp" alt="Notebook e Celular com capa de um projeto chamado 'Projeto Amparo Ao RS'.">
+                            <img class="imgProjetos" src="assets/images/AMPARO AO RS.webp" alt="Notebook e Celular com capa de um projeto chamado 'Projeto Amparo Ao RS'." data-i18n-attr="alt:images.amparoAlt">
                         </div>
                     </div>
                     <div class="projeto">
                         <div class="projTxt">
                             <h3><a href="https://vel-desktop.vercel.app/" target="_blank" class="projLink">VEL</a></h3>
-                            <p>Uma plataforma dedicada à melhoria da gestão de empresas de entregas rápidas, ajudando entregadores e restaurantes a controlar melhor seus negócios. Nosso objetivo é oferecer uma estrada mais suave e direções claras para o sucesso! </p>
-                            <span class="tecs">React, AWS, JAVA, Springboot, MySQL e Docker.</span>
+                            <p data-i18n="projects.vel.description">Uma plataforma dedicada à melhoria da gestão de empresas de entregas rápidas, ajudando entregadores e restaurantes a controlar melhor seus negócios. Nosso objetivo é oferecer uma estrada mais suave e direções claras para o sucesso!</p>
+                            <span class="tecs" data-i18n="projects.vel.techs">React, AWS, JAVA, Springboot, MySQL e Docker.</span>
                         </div>
                         <div class="projImg">
-                            <img class="imgProjetos" src="assets/images/VEL.webp" alt="Projeto VEL.">
+                            <img class="imgProjetos" src="assets/images/VEL.webp" alt="Projeto VEL." data-i18n-attr="alt:images.velAlt">
                         </div>
                     </div>
                     <div class="projeto">
                         <div class="projTxt">
                             <h3><a href="https://cemiterioszonasulsp.com.br/" target="_blank" class="projLink">Cemiterios e Crematorios Zona Sul</a></h3>
-                            <p>Landing Page de um site sobre jazigos e crematórios. Ficou em primeiro lugar de pesquisas de cemitérios ou crematórios da zona sul.</p>
-                            <span class="tecs">HTML, CSS, Javascript e SEO.</span>
+                            <p data-i18n="projects.cemiterios.description">Landing Page de um site sobre jazigos e crematórios. Ficou em primeiro lugar de pesquisas de cemitérios ou crematórios da zona sul.</p>
+                            <span class="tecs" data-i18n="projects.cemiterios.techs">HTML, CSS, Javascript e SEO.</span>
                         </div>
                         <div class="projImg">
-                            <img class="imgProjetos" src="assets/images/CEMITERIOS.webp" alt="Projeto Cemiterios e Crematorios Zona Sul.">
+                            <img class="imgProjetos" src="assets/images/CEMITERIOS.webp" alt="Projeto Cemiterios e Crematorios Zona Sul." data-i18n-attr="alt:images.cemiteriosAlt">
                         </div>
                     </div>
                     <div class="projeto">
                         <div class="projTxt">
                             <h3><a href="https://diogojp202.github.io/CuboBank/" target="_blank" class="projLink">CuboBank</a></h3>
-                            <p>Projeto de ajustes e melhorias de um caixa eletrônico com muitas funcionalidades e armazenamento de dados em cache.</p>
-                            <span class="tecs">HTML, CSS e Javascript.</span>
+                            <p data-i18n="projects.cubobank.description">Projeto de ajustes e melhorias de um caixa eletrônico com muitas funcionalidades e armazenamento de dados em cache.</p>
+                            <span class="tecs" data-i18n="projects.cubobank.techs">HTML, CSS e Javascript.</span>
                         </div>
                         <div class="projImg">
-                            <img class="imgProjetos" src="assets/images/CUBO BANK.webp" alt="Projeto CuboBank.">
+                            <img class="imgProjetos" src="assets/images/CUBO BANK.webp" alt="Projeto CuboBank." data-i18n-attr="alt:images.cubobankAlt">
                         </div>
                     </div>
                     <div class="projeto">
                         <div class="projTxt">
                             <h3><a href="https://diogojp202.github.io/FreedonLents/" target="_blank" class="projLink">FreedonLents</a></h3>
-                            <p>Landing page com um design voltado a chamar a atenção do usuário para uma compra, visando responsividade em multiplas telas e plataformas.</p>
-                            <span class="tecs">HTML, CSS e Javascript.</span>
+                            <p data-i18n="projects.freedonlents.description">Landing page com um design voltado a chamar a atenção do usuário para uma compra, visando responsividade em multiplas telas e plataformas.</p>
+                            <span class="tecs" data-i18n="projects.freedonlents.techs">HTML, CSS e Javascript.</span>
                         </div>
                         <div class="projImg">
-                            <img class="imgProjetos" src="assets/images/FREEDOM LENS.webp" alt="Projeto FreedonLents.">
+                            <img class="imgProjetos" src="assets/images/FREEDOM LENS.webp" alt="Projeto FreedonLents." data-i18n-attr="alt:images.freedonlentsAlt">
                         </div>
                     </div>
                     <div class="projeto">
                         <div class="projTxt">
-                            <h3><a href="https://projeto-dark-souls-3.vercel.app/" target="_blank" class="projLink">Projeto Dark Souls 3</a></h3>
-                            <p>O site mostra todos os Bosses do game e mostra uma breve introdução e algumas de suas características.</p>
-                            <span class="tecs">HTML, CSS e Javascript.</span>
+                            <h3><a href="https://projeto-dark-souls-3.vercel.app/" target="_blank" class="projLink" data-i18n="projects.darkSouls.name">Projeto Dark Souls 3</a></h3>
+                            <p data-i18n="projects.darkSouls.description">O site mostra todos os Bosses do game e mostra uma breve introdução e algumas de suas características.</p>
+                            <span class="tecs" data-i18n="projects.darkSouls.techs">HTML, CSS e Javascript.</span>
                         </div>
                         <div class="projImg">
-                            <img class="imgProjetos" src="assets/images/DARK_SOULS_3.webp" alt="Projeto Dark Souls 3.">
+                            <img class="imgProjetos" src="assets/images/DARK_SOULS_3.webp" alt="Projeto Dark Souls 3." data-i18n-attr="alt:images.darkSoulsAlt">
                         </div>
                     </div>
                     <div class="projeto">
                         <div class="projTxt">
                             <h3><a href="https://diogojp202.github.io/MultiversoNews/" target="_blank" class="projLink">Old School Comics</a></h3>
-                            <p>Sites de notícias com um design voltado a cartoons old school prento e branco, visando responsividade em multiplas telas e plataformas.</p>
-                            <span class="tecs">HTML, CSS e Javascript.</span>
+                            <p data-i18n="projects.oldSchool.description">Sites de notícias com um design voltado a cartoons old school prento e branco, visando responsividade em multiplas telas e plataformas.</p>
+                            <span class="tecs" data-i18n="projects.oldSchool.techs">HTML, CSS e Javascript.</span>
                         </div>
                         <div class="projImg">
-                            <img class="imgProjetos" src="assets/images/MULTIVERSO NEWS.webp" alt="Projeto MultiversoNews.">
+                            <img class="imgProjetos" src="assets/images/MULTIVERSO NEWS.webp" alt="Projeto MultiversoNews." data-i18n-attr="alt:images.oldSchoolAlt">
                         </div>
                     </div>
                 </div>
-                <img src="assets/images/GREEN_ARROW.webp" class="prev" alt="Arrow" onclick="moveSlide(-1)">
-                <img src="assets/images/GREEN_ARROW.webp" class="next" alt="Arrow" onclick="moveSlide(1)">
+                <img src="assets/images/GREEN_ARROW.webp" class="prev" alt="Seta anterior" data-i18n-attr="alt:images.prevArrowAlt">
+                <img src="assets/images/GREEN_ARROW.webp" class="next" alt="Próxima seta" data-i18n-attr="alt:images.nextArrowAlt">
             </div>
         </section>
         <section id="Academico">
-            <h2>Vida Acadêmica</h2>
+            <h2 data-i18n="education.title">Vida Acadêmica</h2>
             <div class="ExpCad">
-                <img src="assets/images/GLOBE_icon.webp" alt="Icone do globo" class="iconsExpCad"> 
-                <h3>ANÁLISE E DESENVOLVIMENTO DE SISTEMAS</h3>
-                <P>Faculdade Impacta</P>
-                <p class="data">08/2024 à 12/2026</p>
-                <img src="assets/images/mature_esr_icon.webp" alt="Icone Mature ESR" class="iconsExpCad" id="mature">
+                <img src="assets/images/GLOBE_icon.webp" alt="Ícone do globo" class="iconsExpCad" data-i18n-attr="alt:images.globeAlt">
+                <h3 data-i18n="education.ads.title">ANÁLISE E DESENVOLVIMENTO DE SISTEMAS</h3>
+                <P data-i18n="education.ads.school">Faculdade Impacta</P>
+                <p class="data" data-i18n="education.ads.date">08/2024 à 12/2026</p>
+                <img src="assets/images/mature_esr_icon.webp" alt="Ícone Mature ESR" class="iconsExpCad" id="mature" data-i18n-attr="alt:images.matureAlt">
             </div>
             <div class="ExpCad" id="ad1">
-                <img src="assets/images/Triangulo_Warning_icon.webp" alt="Icone de alerta" class="iconsExpCad">
-                <h3>DESENVOLVEDOR FULL-STACK JAVA</h3>
-                <P>Senac São Paulo - Instituto Proa</P>
-                <p class="data">08/2024 à 12/2026</p>
-                <img src="assets/images/atomo_icon.webp" alt="Icone de atomo" class="iconsExpCad">
+                <img src="assets/images/Triangulo_Warning_icon.webp" alt="Ícone de alerta" class="iconsExpCad" data-i18n-attr="alt:images.warningAlt">
+                <h3 data-i18n="education.java.title">DESENVOLVEDOR FULL-STACK JAVA</h3>
+                <P data-i18n="education.java.school">Senac São Paulo - Instituto Proa</P>
+                <p class="data" data-i18n="education.java.date">08/2024 à 12/2026</p>
+                <img src="assets/images/atomo_icon.webp" alt="Ícone de átomo" class="iconsExpCad" data-i18n-attr="alt:images.atomAlt">
             </div>
             <div class="ExpCad">
-                <img src="assets/images/AIM_Icon.webp" alt="Icone de uma alvo" class="iconsExpCad" id="aim">
-                <h3>TÉCNICO EM ELETRÔNICA</h3>
-                <P>Etec Aprígio Gonzaga</P>
-                <p class="data">01/2020 à 12/2022</p>
-                <img src="assets/images/CD-AUDIO_icon.webp" alt="Icone do CD-AUDIO" class="iconsExpCad" id="disc">
+                <img src="assets/images/AIM_Icon.webp" alt="Ícone de um alvo" class="iconsExpCad" id="aim" data-i18n-attr="alt:images.targetAlt">
+                <h3 data-i18n="education.electronics.title">TÉCNICO EM ELETRÔNICA</h3>
+                <P data-i18n="education.electronics.school">Etec Aprígio Gonzaga</P>
+                <p class="data" data-i18n="education.electronics.date">01/2020 à 12/2022</p>
+                <img src="assets/images/CD-AUDIO_icon.webp" alt="Ícone do CD-AUDIO" class="iconsExpCad" id="disc" data-i18n-attr="alt:images.cdAlt">
             </div>
             <div id="premio">
-                <img id="trofeu" src="assets/images/Trofeu_Proa.webp" alt="Imagem do trofeu Aluno Destaque PROA 2024">
+                <img id="trofeu" src="assets/images/Trofeu_Proa.webp" alt="Imagem do troféu Aluno Destaque PROA 2024" data-i18n-attr="alt:images.trophyAlt">
                 <div id="txts">
-                    <h3>Premiação</h3>
-                    <h4>Aluno Destaque  <br> PROA 2024</h4>
+                    <h3 data-i18n="education.award.label">Premiação</h3>
+                    <h4 data-i18n-html="education.award.title">Aluno Destaque <br> PROA 2024</h4>
                 </div>
             </div>
         </section>
         <section id="ExpProfissionais">
-            <h2>Experiências Profissionais</h2>
+            <h2 data-i18n="experience.title">Experiências Profissionais</h2>
             <div class="ExpProf">
-                <span>12/2024 - Atual</span>
-                <h3>Estágiario de desenvolvimento de software - <a class="linkA" href="https://www.rbinvestimentos.com/">RB Investimentos</a></h3>
-                <p>Atuei na área de desenvolvimento da empresa, trabalhando com queries SQL, agendamento de dados, análise de grandes volumes de informação e geração de relatórios a partir de requisições SQL. Além disso, participei do desenvolvimento de software e aplicações web, utilizando a arquitetura MVC e tecnologias da Microsoft, como .NET e C#. Também contribuí para a implementação de inteligência artificial nos processos da empresa, focando em automação e inovação.</p>
+                <span data-i18n="experience.rb.date">12/2024 - Atual</span>
+                <h3><span data-i18n="experience.rb.role">Estágiario de desenvolvimento de software</span> - <a class="linkA" href="https://www.rbinvestimentos.com/">RB Investimentos</a></h3>
+                <p data-i18n="experience.rb.description">Atuei na área de desenvolvimento da empresa, trabalhando com queries SQL, agendamento de dados, análise de grandes volumes de informação e geração de relatórios a partir de requisições SQL. Além disso, participei do desenvolvimento de software e aplicações web, utilizando a arquitetura MVC e tecnologias da Microsoft, como .NET e C#. Também contribuí para a implementação de inteligência artificial nos processos da empresa, focando em automação e inovação.</p>
             </div>
             <div class="ExpProf">
-                <span>02/2024 - 07/2024</span>
-                <h3>Desenvolvedor Full Stack e Scrum Master - <a class="linkA" href="https://vel-desktop.vercel.app/sobrenos">VEL</a></h3>
-                <p>Atuei como Scrum Master no Projeto Demoday do Instituto PROA, organizando tarefas, motivando a equipe e utilizando metodologias ágeis como Scrum e Matriz GUT. Gerenciei informações no Trello, conduzi dailys em inglês e promovi dinâmicas para fortalecer o grupo. Além da gestão, desenvolvi o front-end em React, auxiliei na criação de APIs em Java com Spring Boot e no banco de dados MySQL.</p>
+                <span data-i18n="experience.vel.date">02/2024 - 07/2024</span>
+                <h3><span data-i18n="experience.vel.role">Desenvolvedor Full Stack e Scrum Master</span> - <a class="linkA" href="https://vel-desktop.vercel.app/sobrenos">VEL</a></h3>
+                <p data-i18n="experience.vel.description">Atuei como Scrum Master no Projeto Demoday do Instituto PROA, organizando tarefas, motivando a equipe e utilizando metodologias ágeis como Scrum e Matriz GUT. Gerenciei informações no Trello, conduzi dailys em inglês e promovi dinâmicas para fortalecer o grupo. Além da gestão, desenvolvi o front-end em React, auxiliei na criação de APIs em Java com Spring Boot e no banco de dados MySQL.</p>
             </div>
             <div class="ExpProf">
-                <span>01/2022 - Atual</span>
-                <h3>Desenvolvedor Freelancer</h3>
-                <p>Ao longo da minha trajetória, trabalhei diretamente com clientes, desenvolvendo landing pages e páginas web que não apenas impressionam visualmente, mas também entregam resultados. Criei sites 100% responsivos, rápidos e otimizados para SEO, garantindo uma experiência de usuário excepcional e alta conversão de visitantes em clientes.</p>
+                <span data-i18n="experience.freelance.date">01/2022 - Atual</span>
+                <h3 data-i18n="experience.freelance.role">Desenvolvedor Freelancer</h3>
+                <p data-i18n="experience.freelance.description">Ao longo da minha trajetória, trabalhei diretamente com clientes, desenvolvendo landing pages e páginas web que não apenas impressionam visualmente, mas também entregam resultados. Criei sites 100% responsivos, rápidos e otimizados para SEO, garantindo uma experiência de usuário excepcional e alta conversão de visitantes em clientes.</p>
             </div>
             <div class="ExpProf">
-                <span>01/2023 - 12/2023</span>
-                <h3>Aprendiz TI - <a class="linkA" href="https://www.concentrix.com/pt-br/">Concentrix</a></h3>
-                <p>Fui responsável pela gestão de VLANs via DHCP, verificação de pontos de rede e organização da infraestrutura de TI. Atuei no gerenciamento de computadores e usuários, manutenção de hardware e software, além da automação de tarefas. Participei de reuniões bilíngues e lidei com tickets, formatação e instalação de sistemas.</p>
+                <span data-i18n="experience.concentrix.date">01/2023 - 12/2023</span>
+                <h3><span data-i18n="experience.concentrix.role">Aprendiz TI</span> - <a class="linkA" href="https://www.concentrix.com/pt-br/">Concentrix</a></h3>
+                <p data-i18n="experience.concentrix.description">Fui responsável pela gestão de VLANs via DHCP, verificação de pontos de rede e organização da infraestrutura de TI. Atuei no gerenciamento de computadores e usuários, manutenção de hardware e software, além da automação de tarefas. Participei de reuniões bilíngues e lidei com tickets, formatação e instalação de sistemas.</p>
             </div>
         </section>
         <section id="Curiosidades">
-            <h2>Curiosidades</h2>
+            <h2 data-i18n="curiosities.title">Curiosidades</h2>
             <div class="curiosidades">
                 <div class="Games curiosidade">
-                    <h3>Games</h3>
-                    <p>Sou apaixonado por jogos desafiadores e sou um gamedev. Pretendo um dia publicar meus próprios jogos.</p>
+                    <h3 data-i18n="curiosities.games.title">Games</h3>
+                    <p data-i18n="curiosities.games.description">Sou apaixonado por jogos desafiadores e sou um gamedev. Pretendo um dia publicar meus próprios jogos.</p>
                 </div>
                 <div class="Linguas curiosidade">
-                    <h3>Línguas</h3>
-                    <p>Adoro estudar e falar outras líguas estrangeiras como inglês e mandarin. Tenho o sonho de explorar o mundo.</p>  
+                    <h3 data-i18n="curiosities.languages.title">Línguas</h3>
+                    <p data-i18n="curiosities.languages.description">Adoro estudar e falar outras línguas estrangeiras como inglês e mandarin. Tenho o sonho de explorar o mundo.</p>
                 </div>
                 <div class="FotoDiogo curiosidade">
-                    <img class="foto" src="assets/images/coffee_diogo.webp" style="border-radius: 50%;" alt="Foto do Diogo segurando uma xícara de café.">
+                    <img class="foto" src="assets/images/coffee_diogo.webp" style="border-radius: 50%;" alt="Foto do Diogo segurando uma xícara de café." data-i18n-attr="alt:images.coffeeAlt">
                 </div>
                 <div class="Musica curiosidade">
-                    <h3>Música</h3>
-                    <p>Música faz parte da minha vida, gosto de ouvir e tocar. É algo que me inspira e me estimula.</p>
+                    <h3 data-i18n="curiosities.music.title">Música</h3>
+                    <p data-i18n="curiosities.music.description">Música faz parte da minha vida, gosto de ouvir e tocar. É algo que me inspira e me estimula.</p>
                 </div>
                 <div class="Esportes curiosidade">
-                    <h3>Esportes</h3>
-                    <p>Adoro práticar esportes como skateboarding, calistenia e nadar. É algo indispensável na minha vida.</p>
+                    <h3 data-i18n="curiosities.sports.title">Esportes</h3>
+                    <p data-i18n="curiosities.sports.description">Adoro práticar esportes como skateboarding, calistenia e nadar. É algo indispensável na minha vida.</p>
                 </div>
               </div>
         </section>
         <section id="EntrarEmContato">
-            <h2>Fale comigo e vamos construir algo incrível!</h2>
-            <a target="_blank" href="https://www.linkedin.com/in/diogo-antonny/">Entre em Contato</a>
+            <h2 data-i18n="contact.title">Fale comigo e vamos construir algo incrível!</h2>
+            <a target="_blank" href="https://www.linkedin.com/in/diogo-antonny/" data-i18n="contact.button">Entre em Contato</a>
         </section>
     </main>
     <footer>
@@ -252,29 +275,29 @@
                 <ul>
                     <li>
                         <a target="_blank" href="https://www.linkedin.com/in/diogo-antonny/">
-                            <img src="assets/images/linkedin.webp" alt="Icone Linkedin">
+                            <img src="assets/images/linkedin.webp" alt="Ícone Linkedin" data-i18n-attr="alt:images.linkedinAlt">
                         </a>
                     </li>
                     <li>
                         <a target="_blank" href="https://github.com/DiogoJP202/">
-                            <img src="assets/images/github.webp" alt="Icone Github">
+                            <img src="assets/images/github.webp" alt="Ícone Github" data-i18n-attr="alt:images.githubAlt">
                         </a>
                     </li>
                     <li>
                         <a target="_blank" href="https://linktr.ee/diogoantonny">
-                            <img src="assets/images/linktree.webp" alt="Icone Linktree">
+                            <img src="assets/images/linktree.webp" alt="Ícone Linktree" data-i18n-attr="alt:images.linktreeAlt">
                         </a>
                     </li>
                     <li>
                         <a target="_blank" href="https://judge.beecrowd.com/pt/profile/1039293">
-                            <img src="assets/images/beecrowd.webp" alt="Icone Becrowd">
+                            <img src="assets/images/beecrowd.webp" alt="Ícone Beecrowd" data-i18n-attr="alt:images.beecrowdAlt">
                         </a>
                     </li>
                 </ul>
             </div>
-            <img src="assets/images/git_character.webp" alt="Personagem do Github baseado no Diogo.">
+            <img src="assets/images/git_character.webp" alt="Personagem do Github baseado no Diogo." data-i18n-attr="alt:images.gitCharacterAlt">
         </div>
-        <p>&copy; Diogo Antonny - 2025. Todos os direitos reservados.</p>
+        <p data-i18n="footer.copyright">&copy; Diogo Antonny - 2025. Todos os direitos reservados.</p>
     </footer>
     <script src="js/index.js"></script>
 </body>
