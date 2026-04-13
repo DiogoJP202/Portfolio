@@ -812,6 +812,8 @@ const translations = {
             button: 'Entre em Contato'
         },
         footer: {
+            navigation: 'Navegação',
+            connect: 'Conecte Comigo',
             copyright: '© Diogo Antonny - 2025. Todos os direitos reservados.'
         },
         images: {
@@ -1040,6 +1042,8 @@ const translations = {
             button: 'Get in Touch'
         },
         footer: {
+            navigation: 'Navigation',
+            connect: 'Connect With Me',
             copyright: '© Diogo Antonny - 2025. All rights reserved.'
         },
         images: {
