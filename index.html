@@ -234,27 +234,44 @@
                 </div>
             </aside>
         </section>
-        <section id="ExpProfissionais">
-            <h2 data-i18n="experience.title">Experiências Profissionais</h2>
-            <div class="ExpProf">
-                <span data-i18n="experience.rb.date">12/2024 - Atual</span>
-                <h3><span data-i18n="experience.rb.role">Estágiario de desenvolvimento de software</span> - <a class="linkA" href="https://www.rbinvestimentos.com/">RB Investimentos</a></h3>
-                <p data-i18n="experience.rb.description">Atuei na área de desenvolvimento da empresa, trabalhando com queries SQL, agendamento de dados, análise de grandes volumes de informação e geração de relatórios a partir de requisições SQL. Além disso, participei do desenvolvimento de software e aplicações web, utilizando a arquitetura MVC e tecnologias da Microsoft, como .NET e C#. Também contribuí para a implementação de inteligência artificial nos processos da empresa, focando em automação e inovação.</p>
+        <section id="ExpProfissionais" aria-labelledby="experienceTitle">
+            <div class="experience-header">
+                <span class="section-kicker" data-i18n="experience.kicker">Trajetória</span>
+                <div>
+                    <h2 id="experienceTitle" data-i18n="experience.title">Experiências Profissionais</h2>
+                    <p data-i18n="experience.description">Minha trajetória junta desenvolvimento de software, dados, automações, liderança de produto e suporte técnico.</p>
+                </div>
             </div>
-            <div class="ExpProf">
-                <span data-i18n="experience.vel.date">02/2024 - 07/2024</span>
-                <h3><span data-i18n="experience.vel.role">Desenvolvedor Full Stack e Scrum Master</span> - <a class="linkA" href="https://vel-desktop.vercel.app/sobrenos">VEL</a></h3>
-                <p data-i18n="experience.vel.description">Atuei como Scrum Master no Projeto Demoday do Instituto PROA, organizando tarefas, motivando a equipe e utilizando metodologias ágeis como Scrum e Matriz GUT. Gerenciei informações no Trello, conduzi dailys em inglês e promovi dinâmicas para fortalecer o grupo. Além da gestão, desenvolvi o front-end em React, auxiliei na criação de APIs em Java com Spring Boot e no banco de dados MySQL.</p>
-            </div>
-            <div class="ExpProf">
-                <span data-i18n="experience.freelance.date">01/2022 - Atual</span>
-                <h3 data-i18n="experience.freelance.role">Desenvolvedor Freelancer</h3>
-                <p data-i18n="experience.freelance.description">Ao longo da minha trajetória, trabalhei diretamente com clientes, desenvolvendo landing pages e páginas web que não apenas impressionam visualmente, mas também entregam resultados. Criei sites 100% responsivos, rápidos e otimizados para SEO, garantindo uma experiência de usuário excepcional e alta conversão de visitantes em clientes.</p>
-            </div>
-            <div class="ExpProf">
-                <span data-i18n="experience.concentrix.date">01/2023 - 12/2023</span>
-                <h3><span data-i18n="experience.concentrix.role">Aprendiz TI</span> - <a class="linkA" href="https://www.concentrix.com/pt-br/">Concentrix</a></h3>
-                <p data-i18n="experience.concentrix.description">Fui responsável pela gestão de VLANs via DHCP, verificação de pontos de rede e organização da infraestrutura de TI. Atuei no gerenciamento de computadores e usuários, manutenção de hardware e software, além da automação de tarefas. Participei de reuniões bilíngues e lidei com tickets, formatação e instalação de sistemas.</p>
+            <div class="experience-shell">
+                <article class="experience-feature" aria-live="polite">
+                    <div class="experience-feature-top">
+                        <div class="experience-feature-icon">
+                            <img src="assets/images/GLOBE_icon.webp" alt="" data-experience-icon>
+                        </div>
+                        <div>
+                            <span class="experience-category" data-experience-category>Atual</span>
+                            <h3 data-experience-role>Estagiário de desenvolvimento de software</h3>
+                            <strong data-experience-company>RB Investimentos</strong>
+                        </div>
+                    </div>
+                    <p data-experience-description>Atuo na área de desenvolvimento com queries SQL, agendamento de dados, análise de grandes volumes de informação e geração de relatórios. Também participo do desenvolvimento de aplicações web em MVC, .NET e C#, além de iniciativas de automação e inteligência artificial.</p>
+                    <div class="experience-meta">
+                        <div>
+                            <span data-i18n="experience.periodLabel">Período</span>
+                            <b data-experience-date>12/2024 - Atual</b>
+                        </div>
+                        <div>
+                            <span data-i18n="experience.resultLabel">Destaque</span>
+                            <b data-experience-result>Dados, relatórios e automações no mercado financeiro</b>
+                        </div>
+                    </div>
+                    <div class="experience-tags" data-experience-tags></div>
+                    <a class="experience-action" href="https://www.rbinvestimentos.com/" target="_blank" rel="noopener noreferrer" data-experience-link>
+                        <span data-i18n="experience.viewCompany">Ver empresa</span>
+                        <strong aria-hidden="true">↗</strong>
+                    </a>
+                </article>
+                <div class="experience-timeline" data-experience-list aria-label="Linha do tempo profissional" data-i18n-attr="aria-label:experience.timelineLabel"></div>
             </div>
         </section>
         <section id="Curiosidades">

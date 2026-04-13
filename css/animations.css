@@ -39,23 +39,6 @@
     }
 }
 
-.linkA{ 
-    text-decoration: none;
-    animation: linkAnimation 1s alternate-reverse infinite ease-in-out; 
-}
-
-.linkA:hover{
-    text-decoration: underline;
-}
-
-@keyframes linkAnimation {
-    from {
-        color: var(--color1);
-    } to {
-        color: #16f75254;
-    }
-}
-
 #EntrarEmContato a{
     animation: pulse 2s infinite alternate-reverse ease-in-out;
 }

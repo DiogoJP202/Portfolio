@@ -501,6 +501,129 @@ const EDUCATION_DATA = [
     }
 ];
 
+const EXPERIENCE_DATA = [
+    {
+        id: 'rb',
+        icon: 'assets/images/GLOBE_icon.webp',
+        url: 'https://www.rbinvestimentos.com/',
+        category: {
+            pt: 'Atual',
+            en: 'Current'
+        },
+        company: {
+            pt: 'RB Investimentos',
+            en: 'RB Investimentos'
+        },
+        role: {
+            pt: 'Estagiário de desenvolvimento de software',
+            en: 'Software Development Intern'
+        },
+        date: {
+            pt: '12/2024 - Atual',
+            en: '12/2024 - Present'
+        },
+        description: {
+            pt: 'Atuo na área de desenvolvimento com queries SQL, agendamento de dados, análise de grandes volumes de informação e geração de relatórios. Também participo do desenvolvimento de aplicações web em MVC, .NET e C#, além de iniciativas de automação e inteligência artificial.',
+            en: 'I work in development with SQL queries, data scheduling, large-volume information analysis, and report generation. I also contribute to MVC, .NET, and C# web applications, as well as automation and artificial intelligence initiatives.'
+        },
+        result: {
+            pt: 'Dados, relatórios e automações no mercado financeiro',
+            en: 'Data, reports, and automations for the financial market'
+        },
+        tags: ['SQL', 'C#', '.NET', 'MVC', 'Reports', 'Automation']
+    },
+    {
+        id: 'vel',
+        icon: 'assets/images/AIM_Icon.webp',
+        url: 'https://vel-desktop.vercel.app/sobrenos',
+        category: {
+            pt: 'Produto',
+            en: 'Product'
+        },
+        company: {
+            pt: 'VEL',
+            en: 'VEL'
+        },
+        role: {
+            pt: 'Desenvolvedor Full Stack e Scrum Master',
+            en: 'Full Stack Developer and Scrum Master'
+        },
+        date: {
+            pt: '02/2024 - 07/2024',
+            en: '02/2024 - 07/2024'
+        },
+        description: {
+            pt: 'Atuei como Scrum Master no projeto de Demoday do Instituto PROA, organizando tarefas, conduzindo dailys em inglês e fortalecendo o ritmo do time. Também desenvolvi front-end em React, apoiei APIs em Java com Spring Boot e trabalhei no banco MySQL.',
+            en: 'I worked as Scrum Master on the Instituto PROA Demoday project, organizing tasks, leading daily meetings in English, and strengthening the team rhythm. I also built React front-end features, supported Java APIs with Spring Boot, and worked with MySQL.'
+        },
+        result: {
+            pt: 'Entrega full-stack com liderança ágil',
+            en: 'Full-stack delivery with agile leadership'
+        },
+        tags: ['React', 'Java', 'Spring Boot', 'MySQL', 'Scrum', 'Trello']
+    },
+    {
+        id: 'freelance',
+        icon: 'assets/images/star_icon.webp',
+        url: '',
+        category: {
+            pt: 'Freelance',
+            en: 'Freelance'
+        },
+        company: {
+            pt: 'Projetos para clientes',
+            en: 'Client projects'
+        },
+        role: {
+            pt: 'Desenvolvedor Full-Stack Freelancer',
+            en: 'Freelance Full-Stack Developer'
+        },
+        date: {
+            pt: '01/2022 - Atual',
+            en: '01/2022 - Present'
+        },
+        description: {
+            pt: 'Atuação independente no desenvolvimento de soluções web, desde a prospecção e levantamento de requisitos até a entrega final. Crio sistemas para negócios locais, instituições e organizações, com foco em automação de processos, digitalização de operações e substituição de controles manuais por plataformas estruturadas, escaláveis e fáceis de usar.',
+            en: 'Independent work developing web solutions from prospecting and requirements discovery to final delivery. I build systems for local businesses, institutions, and organizations, focusing on process automation, operation digitization, and replacing manual controls with structured, scalable, easy-to-use platforms.'
+        },
+        result: {
+            pt: 'Sistemas de gestão, automações e sites com foco em adoção real',
+            en: 'Management systems, automations, and websites focused on real adoption'
+        },
+        tags: ['Full-stack', 'Automation', 'Management Systems', 'SEO', 'Hosting', 'Client Discovery']
+    },
+    {
+        id: 'concentrix',
+        icon: 'assets/images/Triangulo_Warning_icon.webp',
+        url: 'https://www.concentrix.com/pt-br/',
+        category: {
+            pt: 'Infraestrutura',
+            en: 'Infrastructure'
+        },
+        company: {
+            pt: 'Concentrix',
+            en: 'Concentrix'
+        },
+        role: {
+            pt: 'Aprendiz TI',
+            en: 'IT Apprentice'
+        },
+        date: {
+            pt: '01/2023 - 12/2023',
+            en: '01/2023 - 12/2023'
+        },
+        description: {
+            pt: 'Atuei com gestão de VLANs via DHCP, verificação de pontos de rede, organização de infraestrutura, manutenção de hardware e software, automação de tarefas e atendimento de tickets em um ambiente bilíngue.',
+            en: 'I worked with VLAN management via DHCP, network point checks, infrastructure organization, hardware and software maintenance, task automation, and ticket handling in a bilingual environment.'
+        },
+        result: {
+            pt: 'Base sólida em suporte, redes e operação',
+            en: 'Solid foundation in support, networks, and operations'
+        },
+        tags: ['DHCP', 'VLAN', 'Support', 'Hardware', 'Tickets', 'Automation']
+    }
+];
+
 const translations = {
     pt: {
         meta: {
@@ -633,10 +756,17 @@ const translations = {
             }
         },
         experience: {
+            kicker: 'Trajetória',
             title: 'Experiências Profissionais',
+            description: 'Minha trajetória junta desenvolvimento de software, dados, automações, liderança de produto e suporte técnico.',
+            timelineLabel: 'Linha do tempo profissional',
+            periodLabel: 'Período',
+            resultLabel: 'Destaque',
+            viewCompany: 'Ver empresa',
+            selectAria: 'Selecionar experiência',
             rb: {
                 date: '12/2024 - Atual',
-                role: 'Estágiario de desenvolvimento de software',
+                role: 'Estagiário de desenvolvimento de software',
                 description: 'Atuei na área de desenvolvimento da empresa, trabalhando com queries SQL, agendamento de dados, análise de grandes volumes de informação e geração de relatórios a partir de requisições SQL. Além disso, participei do desenvolvimento de software e aplicações web, utilizando a arquitetura MVC e tecnologias da Microsoft, como .NET e C#. Também contribuí para a implementação de inteligência artificial nos processos da empresa, focando em automação e inovação.'
             },
             vel: {
@@ -646,8 +776,8 @@ const translations = {
             },
             freelance: {
                 date: '01/2022 - Atual',
-                role: 'Desenvolvedor Freelancer',
-                description: 'Ao longo da minha trajetória, trabalhei diretamente com clientes, desenvolvendo landing pages e páginas web que não apenas impressionam visualmente, mas também entregam resultados. Criei sites 100% responsivos, rápidos e otimizados para SEO, garantindo uma experiência de usuário excepcional e alta conversão de visitantes em clientes.'
+                role: 'Desenvolvedor Full-Stack Freelancer',
+                description: 'Atuação independente no desenvolvimento de soluções web, desde a prospecção e levantamento de requisitos até a entrega final. Crio sistemas para negócios locais, instituições e organizações, com foco em automação de processos, digitalização de operações e substituição de controles manuais por plataformas estruturadas, escaláveis e fáceis de usar.'
             },
             concentrix: {
                 date: '01/2023 - 12/2023',
@@ -851,7 +981,14 @@ const translations = {
             }
         },
         experience: {
+            kicker: 'Career',
             title: 'Professional Experiences',
+            description: 'My career combines software development, data, automations, product leadership, and technical support.',
+            timelineLabel: 'Professional timeline',
+            periodLabel: 'Period',
+            resultLabel: 'Highlight',
+            viewCompany: 'View company',
+            selectAria: 'Select experience',
             rb: {
                 date: '12/2024 - Present',
                 role: 'Software Development Intern',
@@ -864,8 +1001,8 @@ const translations = {
             },
             freelance: {
                 date: '01/2022 - Present',
-                role: 'Freelance Developer',
-                description: 'Throughout my journey, I have worked directly with clients, developing landing pages and web pages that not only impress visually but also deliver results. I created 100% responsive, fast, and SEO-optimized websites, ensuring an exceptional user experience and high conversion rates.'
+                role: 'Freelance Full-Stack Developer',
+                description: 'Independent work developing web solutions from prospecting and requirements discovery to final delivery. I build systems for local businesses, institutions, and organizations, focusing on process automation, operation digitization, and replacing manual controls with structured, scalable, easy-to-use platforms.'
             },
             concentrix: {
                 date: '01/2023 - 12/2023',
@@ -948,6 +1085,7 @@ let activeSkillId = 'javascript';
 let activeProjectFilter = 'all';
 let activeProjectId = 'amparo';
 let activeEducationId = 'ads';
+let activeExperienceId = 'rb';
 
 function normalizeLanguage(language) {
     if (!language) {
@@ -1190,6 +1328,7 @@ function applyLanguage(language, options = {}) {
     updateSkillExplorer();
     updateProjectExplorer();
     updateEducationTimeline();
+    updateExperienceTimeline();
     syncVideoWithLanguage(nextLanguage);
 
     if (options.persist !== false) {
@@ -1700,6 +1839,110 @@ function setupEducation() {
     updateEducationTimeline();
 }
 
+function getLocalizedExperienceField(experienceItem, field) {
+    return experienceItem[field]?.[currentLanguage] || experienceItem[field]?.[DEFAULT_LANGUAGE] || '';
+}
+
+function renderExperienceFeature(experienceItem) {
+    const feature = document.querySelector('.experience-feature');
+
+    if (!feature || !experienceItem) {
+        return;
+    }
+
+    const experienceIcon = feature.querySelector('[data-experience-icon]');
+    const experienceLink = feature.querySelector('[data-experience-link]');
+    const company = getLocalizedExperienceField(experienceItem, 'company');
+
+    experienceIcon.src = experienceItem.icon;
+    experienceIcon.alt = '';
+    feature.querySelector('[data-experience-category]').textContent = getLocalizedExperienceField(experienceItem, 'category');
+    feature.querySelector('[data-experience-role]').textContent = getLocalizedExperienceField(experienceItem, 'role');
+    feature.querySelector('[data-experience-company]').textContent = company;
+    feature.querySelector('[data-experience-description]').textContent = getLocalizedExperienceField(experienceItem, 'description');
+    feature.querySelector('[data-experience-date]').textContent = getLocalizedExperienceField(experienceItem, 'date');
+    feature.querySelector('[data-experience-result]').textContent = getLocalizedExperienceField(experienceItem, 'result');
+    feature.querySelector('[data-experience-tags]').innerHTML = experienceItem.tags.map((tag) => `<span>${tag}</span>`).join('');
+
+    if (experienceLink) {
+        experienceLink.hidden = !experienceItem.url;
+        experienceLink.href = experienceItem.url || '#';
+        experienceLink.setAttribute('aria-label', `${getTranslation(currentLanguage, 'experience.viewCompany')}: ${company}`);
+    }
+}
+
+function renderExperienceTimeline() {
+    const list = document.querySelector('[data-experience-list]');
+
+    if (!list) {
+        return;
+    }
+
+    list.innerHTML = EXPERIENCE_DATA
+        .map((experienceItem, index) => {
+            const role = getLocalizedExperienceField(experienceItem, 'role');
+
+            return `
+                <button class="experience-card ${experienceItem.id === activeExperienceId ? 'is-active' : ''}" type="button" data-experience-id="${experienceItem.id}" aria-pressed="${experienceItem.id === activeExperienceId}" aria-label="${getTranslation(currentLanguage, 'experience.selectAria')}: ${role}">
+                    <span class="experience-card-step">${String(index + 1).padStart(2, '0')}</span>
+                    <span class="experience-card-content">
+                        <strong>${getLocalizedExperienceField(experienceItem, 'company')}</strong>
+                        <small>${role}</small>
+                        <em>${getLocalizedExperienceField(experienceItem, 'date')}</em>
+                    </span>
+                </button>
+            `;
+        })
+        .join('');
+}
+
+function updateExperienceTimeline() {
+    const section = document.querySelector('#ExpProfissionais');
+
+    if (!section) {
+        return;
+    }
+
+    if (!EXPERIENCE_DATA.some((experienceItem) => experienceItem.id === activeExperienceId)) {
+        activeExperienceId = EXPERIENCE_DATA[0].id;
+    }
+
+    renderExperienceTimeline();
+    renderExperienceFeature(EXPERIENCE_DATA.find((experienceItem) => experienceItem.id === activeExperienceId) || EXPERIENCE_DATA[0]);
+}
+
+function setupExperience() {
+    const section = document.querySelector('#ExpProfissionais');
+
+    if (!section) {
+        return;
+    }
+
+    section.addEventListener('click', (event) => {
+        const experienceButton = event.target.closest('[data-experience-id]');
+
+        if (experienceButton) {
+            activeExperienceId = experienceButton.dataset.experienceId;
+            updateExperienceTimeline();
+        }
+    });
+
+    section.addEventListener('pointerover', (event) => {
+        if (event.pointerType === 'touch') {
+            return;
+        }
+
+        const experienceButton = event.target.closest('[data-experience-id]');
+
+        if (experienceButton && experienceButton.dataset.experienceId !== activeExperienceId) {
+            activeExperienceId = experienceButton.dataset.experienceId;
+            updateExperienceTimeline();
+        }
+    });
+
+    updateExperienceTimeline();
+}
+
 // Language Video Button Functionality
 function setupLanguageButton() {
     const videoButtons = document.querySelectorAll('[data-video-language]');
@@ -1729,6 +1972,7 @@ function init() {
     setupSkills();
     setupProjects();
     setupEducation();
+    setupExperience();
     setupLanguageButton();
 }
 

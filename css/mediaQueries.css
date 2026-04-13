@@ -62,6 +62,18 @@
     .education-timeline::before{
         display: none;
     }
+
+    .experience-shell{
+        grid-template-columns: 1fr;
+    }
+
+    .experience-timeline{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .experience-timeline::before{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1107px){
@@ -434,7 +446,49 @@
     .education-award h3{
         font-size: 2.9em;
     }
-    
+
+    #ExpProfissionais{
+        padding: 64px 4vw;
+    }
+
+    .experience-header{
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .experience-header h2{
+        font-size: 3.6em;
+    }
+
+    .experience-header p{
+        font-size: 1.25em;
+    }
+
+    .experience-feature{
+        min-height: auto;
+        padding: 24px;
+    }
+
+    .experience-feature-top{
+        grid-template-columns: 1fr;
+    }
+
+    .experience-feature h3{
+        font-size: 2.8em;
+    }
+
+    .experience-feature > p{
+        font-size: 1.25em;
+    }
+
+    .experience-meta{
+        grid-template-columns: 1fr;
+    }
+
+    .experience-timeline{
+        grid-template-columns: 1fr;
+    }
+
 }
 
 @media screen and (max-width: 500px){
@@ -577,7 +631,40 @@
         font-size: 2.35em;
     }
 
-    #Curiosidades h2, #ExpProfissionais h2{
+    #ExpProfissionais{
+        padding: 52px 4vw;
+    }
+
+    .experience-header h2{
+        font-size: 3em;
+    }
+
+    .experience-feature{
+        padding: 18px;
+    }
+
+    .experience-feature-icon{
+        width: 76px;
+        height: 76px;
+    }
+
+    .experience-feature h3{
+        font-size: 2.25em;
+    }
+
+    .experience-card{
+        grid-template-columns: 38px minmax(0, 1fr);
+        gap: 9px;
+        min-height: 104px;
+        padding: 10px;
+    }
+
+    .experience-card-step{
+        width: 34px;
+        height: 34px;
+    }
+
+    #Curiosidades h2{
         font-size: 4em !important;
     }
 
