@@ -254,7 +254,7 @@
                             <strong data-experience-company>RB Investimentos</strong>
                         </div>
                     </div>
-                    <p data-experience-description>Atuo na área de desenvolvimento com queries SQL, agendamento de dados, análise de grandes volumes de informação e geração de relatórios. Também participo do desenvolvimento de aplicações web em MVC, .NET e C#, além de iniciativas de automação e inteligência artificial.</p>
+                    <p data-experience-description>Atuo no desenvolvimento e manutenção de sistemas internos para o mercado financeiro com C#, .NET e SQL Server. Especializado em automação de processos que reduzem operações de horas para minutos (~95% de ganho de eficiência). Participo da integração com APIs financeiras (B3 e fornecedores), análise e resolução de incidentes em produção. Responsabilidades incluem: desenvolvimento de aplicações ASP.NET Core MVC, otimização de SQL Server, automações para processamento de dados, interfaces internas para operação e documentação técnica.</p>
                     <div class="experience-meta">
                         <div>
                             <span data-i18n="experience.periodLabel">Período</span>
@@ -274,33 +274,133 @@
                 <div class="experience-timeline" data-experience-list aria-label="Linha do tempo profissional" data-i18n-attr="aria-label:experience.timelineLabel"></div>
             </div>
         </section>
-        <section id="Curiosidades">
-            <h2 data-i18n="curiosities.title">Curiosidades</h2>
-            <div class="curiosidades">
-                <div class="Games curiosidade">
+        <section id="Curiosidades" aria-labelledby="curiositiesTitle">
+            <div class="curiosities-header">
+                <span class="section-kicker">Pessoal</span>
+                <div>
+                    <h2 id="curiositiesTitle" data-i18n="curiosities.title">Curiosidades</h2>
+                    <p data-i18n="curiosities.description" style="display: none;">Conhece um pouco mais sobre o que me move e inspira além do código.</p>
+                </div>
+            </div>
+            <div class="curiosities-shell">
+                <article class="curiosity-card games-card" data-curiosity="games">
+                    <div class="curiosity-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="16" cy="20" r="2" fill="currentColor"/>
+                            <circle cx="32" cy="20" r="2" fill="currentColor"/>
+                            <path d="M18 28c2 2 4 2 6 2s4 0 6-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3 data-i18n="curiosities.games.title">Games</h3>
                     <p data-i18n="curiosities.games.description">Sou apaixonado por jogos desafiadores e sou um gamedev. Pretendo um dia publicar meus próprios jogos.</p>
-                </div>
-                <div class="Linguas curiosidade">
+                    <div class="curiosity-accent"></div>
+                </article>
+
+                <article class="curiosity-card languages-card" data-curiosity="languages">
+                    <div class="curiosity-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 18h16M16 24h16M16 30h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3 data-i18n="curiosities.languages.title">Línguas</h3>
                     <p data-i18n="curiosities.languages.description">Adoro estudar e falar outras línguas estrangeiras como inglês e mandarin. Tenho o sonho de explorar o mundo.</p>
+                    <div class="curiosity-accent"></div>
+                </article>
+
+                <div class="curiosity-center">
+                    <div class="curiosity-photo-wrapper">
+                        <img class="curiosity-photo" src="assets/images/coffee_diogo.webp" alt="Foto do Diogo segurando uma xícara de café." data-i18n-attr="alt:images.coffeeAlt">
+                        <div class="curiosity-photo-frame"></div>
+                    </div>
                 </div>
-                <div class="FotoDiogo curiosidade">
-                    <img class="foto" src="assets/images/coffee_diogo.webp" style="border-radius: 50%;" alt="Foto do Diogo segurando uma xícara de café." data-i18n-attr="alt:images.coffeeAlt">
-                </div>
-                <div class="Musica curiosidade">
+
+                <article class="curiosity-card music-card" data-curiosity="music">
+                    <div class="curiosity-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="18" cy="32" r="6" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="36" cy="24" r="6" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 12v14M24 12c0-3 2-5 4-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M42 12v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3 data-i18n="curiosities.music.title">Música</h3>
                     <p data-i18n="curiosities.music.description">Música faz parte da minha vida, gosto de ouvir e tocar. É algo que me inspira e me estimula.</p>
-                </div>
-                <div class="Esportes curiosidade">
+                    <div class="curiosity-accent"></div>
+                </article>
+
+                <article class="curiosity-card sports-card" data-curiosity="sports">
+                    <div class="curiosity-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 16c-2 2-2 6 0 8M28 16c2 2 2 6 0 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M24 28v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3 data-i18n="curiosities.sports.title">Esportes</h3>
-                    <p data-i18n="curiosities.sports.description">Adoro práticar esportes como skateboarding, calistenia e nadar. É algo indispensável na minha vida.</p>
-                </div>
-              </div>
+                    <p data-i18n="curiosities.sports.description">Adoro praticar esportes como skateboarding, calistenia e nadar. É algo indispensável na minha vida.</p>
+                    <div class="curiosity-accent"></div>
+                </article>
+            </div>
         </section>
-        <section id="EntrarEmContato">
-            <h2 data-i18n="contact.title">Fale comigo e vamos construir algo incrível!</h2>
-            <a target="_blank" href="https://www.linkedin.com/in/diogo-antonny/" data-i18n="contact.button">Entre em Contato</a>
+        <section id="EntrarEmContato" aria-labelledby="contactTitle">
+            <div class="contact-header">
+                <span class="section-kicker">Próximo Passo</span>
+                <h2 id="contactTitle" data-i18n="contact.title">Fale comigo e vamos construir algo incrível!</h2>
+                <p class="contact-subtitle" data-i18n="contact.subtitle">Sempre aberto para novas oportunidades, projetos e conversas sobre tecnologia.</p>
+            </div>
+            <div class="contact-shell">
+                <div class="contact-channels">
+                    <a href="https://www.linkedin.com/in/diogo-antonny/" target="_blank" rel="noopener noreferrer" class="contact-channel" aria-label="Conectar no LinkedIn">
+                        <div class="contact-channel-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.25-.129.599-.129.948v5.439h-3.554s.05-8.814 0-9.725h3.554v1.375c.427-.659 1.191-1.595 2.897-1.595 2.117 0 3.704 1.383 3.704 4.357v5.588zM5.337 8.855c-1.144 0-1.915-.762-1.915-1.715 0-.959.77-1.715 1.954-1.715 1.187 0 1.915.756 1.938 1.715 0 .953-.751 1.715-1.977 1.715zm1.946 11.597H3.391V9.727h3.892v10.725zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-channel-content">
+                            <strong>LinkedIn</strong>
+                            <span>Conecte comigo</span>
+                        </div>
+                        <div class="contact-channel-arrow" aria-hidden="true">↗</div>
+                    </a>
+
+                    <a href="https://github.com/DiogoJP202/" target="_blank" rel="noopener noreferrer" class="contact-channel" aria-label="Seguir no GitHub">
+                        <div class="contact-channel-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-channel-content">
+                            <strong>GitHub</strong>
+                            <span>Veja meus projetos</span>
+                        </div>
+                        <div class="contact-channel-arrow" aria-hidden="true">↗</div>
+                    </a>
+
+                    <a href="https://linktr.ee/diogoantonny" target="_blank" rel="noopener noreferrer" class="contact-channel" aria-label="Acessar todos os links">
+                        <div class="contact-channel-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                            </svg>
+                        </div>
+                        <div class="contact-channel-content">
+                            <strong>Linktree</strong>
+                            <span>Mais opções</span>
+                        </div>
+                        <div class="contact-channel-arrow" aria-hidden="true">↗</div>
+                    </a>
+                </div>
+
+                <div class="contact-cta">
+                    <p data-i18n="contact.description">Procurando um desenvolvedor para seu projeto? Vamos conversar!</p>
+                    <a href="https://www.linkedin.com/in/diogo-antonny/" target="_blank" rel="noopener noreferrer" class="contact-button" data-i18n="contact.button">
+                        <span>Entre em Contato</span>
+                        <strong aria-hidden="true">↗</strong>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
     <footer>

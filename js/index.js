@@ -523,8 +523,8 @@ const EXPERIENCE_DATA = [
             en: '12/2024 - Present'
         },
         description: {
-            pt: 'Atuo na área de desenvolvimento com queries SQL, agendamento de dados, análise de grandes volumes de informação e geração de relatórios. Também participo do desenvolvimento de aplicações web em MVC, .NET e C#, além de iniciativas de automação e inteligência artificial.',
-            en: 'I work in development with SQL queries, data scheduling, large-volume information analysis, and report generation. I also contribute to MVC, .NET, and C# web applications, as well as automation and artificial intelligence initiatives.'
+            pt: 'Atuo no desenvolvimento e manutenção de sistemas internos para o mercado financeiro com C#, .NET e SQL Server. Especializado em automação de processos que reduzem operações de horas para minutos (~95% de ganho de eficiência). Participo da integração com APIs financeiras (B3 e fornecedores), análise e resolução de incidentes em produção. Responsabilidades incluem: desenvolvimento de aplicações ASP.NET Core MVC, otimização de SQL Server, automações para processamento de dados, interfaces internas para operação e documentação técnica.',
+            en: 'I develop and maintain internal systems for the financial market using C#, .NET, and SQL Server. Specialized in process automation, reducing operations from hours to minutes (~95% efficiency gain). I participate in integration with financial APIs (B3 and providers), production incident analysis and resolution. Responsibilities include: ASP.NET Core MVC applications, SQL Server optimization, data processing automation, internal operation interfaces, and technical documentation.'
         },
         result: {
             pt: 'Dados, relatórios e automações no mercado financeiro',
@@ -553,8 +553,8 @@ const EXPERIENCE_DATA = [
             en: '02/2024 - 07/2024'
         },
         description: {
-            pt: 'Atuei como Scrum Master no projeto de Demoday do Instituto PROA, organizando tarefas, conduzindo dailys em inglês e fortalecendo o ritmo do time. Também desenvolvi front-end em React, apoiei APIs em Java com Spring Boot e trabalhei no banco MySQL.',
-            en: 'I worked as Scrum Master on the Instituto PROA Demoday project, organizing tasks, leading daily meetings in English, and strengthening the team rhythm. I also built React front-end features, supported Java APIs with Spring Boot, and worked with MySQL.'
+            pt: 'Atuação como Scrum Master e desenvolvedor full stack em equipe multidisciplinar, liderando a organização do fluxo de trabalho e contribuindo diretamente no desenvolvimento. Estruturei e conduzi o processo ágil com cerimônias (dailys, planejamento, sprints), gestão de backlog em Trello com Matriz GUT e alinhamento contínuo do time. Desenvolvi frontend em React integrado ao backend via APIs, apoiei desenvolvimento de APIs REST com Java e Spring Boot, e participei da modelagem MySQL. Diferenciais: liderança em ambiente de pressão com prazos curtos, promoção de engajamento com dailys em inglês, combinação de liderança técnica e desenvolvimento prático.',
+            en: 'I worked as Scrum Master and full-stack developer in a multidisciplinary team, leading workflow organization and directly contributing to development. I structured and conducted the agile process with ceremonies (dailys, planning, sprints), backlog management in Trello with GUT Matrix, and continuous team alignment. I developed React frontend integrated with backend via APIs, supported REST API development with Java and Spring Boot, and participated in MySQL modeling. Highlights: leadership in high-pressure environments with tight deadlines, engagement promotion with English dailys, combining technical leadership and hands-on development.'
         },
         result: {
             pt: 'Entrega full-stack com liderança ágil',
@@ -583,8 +583,8 @@ const EXPERIENCE_DATA = [
             en: '01/2022 - Present'
         },
         description: {
-            pt: 'Atuação independente no desenvolvimento de soluções web, desde a prospecção e levantamento de requisitos até a entrega final. Crio sistemas para negócios locais, instituições e organizações, com foco em automação de processos, digitalização de operações e substituição de controles manuais por plataformas estruturadas, escaláveis e fáceis de usar.',
-            en: 'Independent work developing web solutions from prospecting and requirements discovery to final delivery. I build systems for local businesses, institutions, and organizations, focusing on process automation, operation digitization, and replacing manual controls with structured, scalable, easy-to-use platforms.'
+            pt: 'Atuação independente no desenvolvimento de soluções web, desde a prospecção de clientes até a entrega final. Crio sistemas para diferentes contextos (negócios locais, instituições e organizações) com forte atuação em automação de processos, digitalização de operações e substituição de controles manuais por sistemas estruturados. Principais entregas: plataformas de gestão com controle de usuários, estoque e operações internas (escola de taiko, igreja e outras); automação de fluxos baseados em planilhas; landing pages e sites com foco em performance, usabilidade e conversão; soluções para usuários não técnicos garantindo simplicidade e adoção. Ciclo completo: levantamento de requisitos, planejamento de prazos, desenvolvimento frontend/backend, suporte em hospedagem e infraestrutura, comunicação direta durante todo o projeto.',
+            en: 'Independent work developing web solutions from client prospecting to final delivery. I build systems for different contexts (local businesses, institutions, and organizations) with strong focus on process automation, operations digitization, and replacing manual controls with structured systems. Key deliverables: management platforms with user controls, inventory, and internal operations (taiko school, church, and others); automation of spreadsheet-based workflows; landing pages and sites focused on performance, usability, and conversion; solutions designed for non-technical users ensuring simplicity and adoption. Full cycle: requirements gathering, timeline planning, frontend/backend development, hosting and infrastructure support, direct communication throughout the project.'
         },
         result: {
             pt: 'Sistemas de gestão, automações e sites com foco em adoção real',
@@ -613,8 +613,8 @@ const EXPERIENCE_DATA = [
             en: '01/2023 - 12/2023'
         },
         description: {
-            pt: 'Atuei com gestão de VLANs via DHCP, verificação de pontos de rede, organização de infraestrutura, manutenção de hardware e software, automação de tarefas e atendimento de tickets em um ambiente bilíngue.',
-            en: 'I worked with VLAN management via DHCP, network point checks, infrastructure organization, hardware and software maintenance, task automation, and ticket handling in a bilingual environment.'
+            pt: 'Atuação em infraestrutura de TI, suporte técnico e automação de processos com foco em organização, manutenção e operação de ambientes corporativos. Responsável por gerenciamento e configuração de redes (VLANs e DHCP), organização e mapeamento de ambientes corporativos, gestão de usuários e máquinas em cenários complexos. Principais atividades: manutenção de desktops e laptops (hardware/software), instalação e configuração de sistemas operacionais, organização e identificação de cabeamento em datacenters. Diferenciais: automação de rotinas técnicas para otimização operacional, atendimento de tickets e resolução de problemas técnicos, participação em reuniões bilíngues, apoio na estruturação de infraestrutura para novos clientes.',
+            en: 'I worked on IT infrastructure, technical support, and process automation with focus on organizing, maintaining, and operating corporate environments. Responsible for network management and configuration (VLANs and DHCP), infrastructure mapping and organization, user and machine management in complex scenarios. Main activities: desktop and laptop maintenance (hardware/software), installation and configuration of operating systems, cabling organization and identification in datacenters. Highlights: automation of technical routines for operational optimization, ticket handling and technical problem resolution, participation in bilingual meetings, support for infrastructure structuring of new clients.'
         },
         result: {
             pt: 'Base sólida em suporte, redes e operação',
@@ -772,21 +772,22 @@ const translations = {
             vel: {
                 date: '02/2024 - 07/2024',
                 role: 'Desenvolvedor Full Stack e Scrum Master',
-                description: 'Atuei como Scrum Master no Projeto Demoday do Instituto PROA, organizando tarefas, motivando a equipe e utilizando metodologias ágeis como Scrum e Matriz GUT. Gerenciei informações no Trello, conduzi dailys em inglês e promovi dinâmicas para fortalecer o grupo. Além da gestão, desenvolvi o front-end em React, auxiliei na criação de APIs em Java com Spring Boot e no banco de dados MySQL.'
+                description: 'Atuação como Scrum Master e desenvolvedor full stack em equipe multidisciplinar, liderando a organização do fluxo de trabalho e contribuindo diretamente no desenvolvimento da solução. Responsável por estruturar e conduzir o processo ágil, garantindo alinhamento do time, priorização eficiente e entrega dentro dos prazos. Principais responsabilidades: condução de cerimônias ágeis (dailys, planejamento, sprints), gestão e priorização de backlog em Trello com Matriz GUT, organização do fluxo de trabalho e distribuição de tarefas. No desenvolvimento: frontend em React integrado ao backend via APIs, apoio em APIs REST com Java e Spring Boot, participação na modelagem e implementação MySQL. Diferenciais: liderança em ambiente de pressão com prazos curtos, promoção de engajamento e comunicação com dailys em inglês, combinação de liderança técnica e desenvolvimento prático.'
             },
             freelance: {
                 date: '01/2022 - Atual',
                 role: 'Desenvolvedor Full-Stack Freelancer',
-                description: 'Atuação independente no desenvolvimento de soluções web, desde a prospecção e levantamento de requisitos até a entrega final. Crio sistemas para negócios locais, instituições e organizações, com foco em automação de processos, digitalização de operações e substituição de controles manuais por plataformas estruturadas, escaláveis e fáceis de usar.'
+                description: 'Atuação independente no desenvolvimento de soluções web, desde a prospecção de clientes até a entrega final. Crio sistemas para diferentes contextos (negócios locais, instituições e organizações) com forte atuação em automação de processos, digitalização de operações e substituição de controles manuais por sistemas estruturados. Principais entregas: plataformas de gestão com controle de usuários, estoque e operações internas (escola de taiko, igreja e outras); automação de fluxos baseados em planilhas; landing pages e sites com foco em performance, usabilidade e conversão; soluções para usuários não técnicos garantindo simplicidade e adoção. Ciclo completo: levantamento de requisitos, planejamento de prazos, desenvolvimento frontend/backend, suporte em hospedagem e infraestrutura, comunicação direta durante todo o projeto.'
             },
             concentrix: {
                 date: '01/2023 - 12/2023',
                 role: 'Aprendiz TI',
-                description: 'Fui responsável pela gestão de VLANs via DHCP, verificação de pontos de rede e organização da infraestrutura de TI. Atuei no gerenciamento de computadores e usuários, manutenção de hardware e software, além da automação de tarefas. Participei de reuniões bilíngues e lidei com tickets, formatação e instalação de sistemas.'
+                description: 'Atuação em infraestrutura de TI, suporte técnico e automação de processos com foco em organização, manutenção e operação de ambientes corporativos. Responsável por gerenciamento e configuração de redes (VLANs e DHCP), organização e mapeamento de ambientes corporativos, gestão de usuários e máquinas em cenários complexos. Principais atividades: manutenção de desktops e laptops (hardware/software), instalação e configuração de sistemas operacionais, organização e identificação de cabeamento em datacenters. Diferenciais: automação de rotinas técnicas para otimização operacional, atendimento de tickets e resolução de problemas técnicos, participação em reuniões bilíngues, apoio na estruturação de infraestrutura para novos clientes e operações.'
             }
         },
         curiosities: {
             title: 'Curiosidades',
+            description: 'Conhece um pouco mais sobre o que me move e inspira além do código.',
             games: {
                 title: 'Games',
                 description: 'Sou apaixonado por jogos desafiadores e sou um gamedev. Pretendo um dia publicar meus próprios jogos.'
@@ -806,6 +807,8 @@ const translations = {
         },
         contact: {
             title: 'Fale comigo e vamos construir algo incrível!',
+            subtitle: 'Sempre aberto para novas oportunidades, projetos e conversas sobre tecnologia.',
+            description: 'Procurando um desenvolvedor para seu projeto? Vamos conversar!',
             button: 'Entre em Contato'
         },
         footer: {
@@ -997,21 +1000,22 @@ const translations = {
             vel: {
                 date: '02/2024 - 07/2024',
                 role: 'Full Stack Developer and Scrum Master',
-                description: 'I worked as a Scrum Master in the Instituto PROA Demoday Project, organizing tasks, motivating the team, and using agile methodologies such as Scrum and the GUT Matrix. I managed information on Trello, conducted daily meetings in English, and promoted activities to strengthen the group. Besides management, I developed the front-end in React, assisted in creating APIs in Java with Spring Boot, and worked with MySQL databases.'
+                description: 'I worked as Scrum Master and full-stack developer in a multidisciplinary team, leading workflow organization and directly contributing to solution development. Responsible for structuring and conducting the agile process, ensuring team alignment, efficient prioritization, and delivery within established timelines. Main responsibilities: conducting agile ceremonies (dailys, planning, sprints), backlog management and prioritization in Trello with GUT Matrix, workflow organization and task distribution. Development work: React frontend integrated with backend via APIs, support for REST APIs with Java and Spring Boot, participation in MySQL modeling and implementation. Highlights: leadership in high-pressure environments with tight deadlines, engagement and communication promotion with English dailys, combining technical leadership and hands-on development.'
             },
             freelance: {
                 date: '01/2022 - Present',
                 role: 'Freelance Full-Stack Developer',
-                description: 'Independent work developing web solutions from prospecting and requirements discovery to final delivery. I build systems for local businesses, institutions, and organizations, focusing on process automation, operation digitization, and replacing manual controls with structured, scalable, easy-to-use platforms.'
+                description: 'Independent work developing web solutions from client prospecting to final delivery. I build systems for different contexts (local businesses, institutions, and organizations) with strong focus on process automation, operations digitization, and replacing manual controls with structured systems. Key deliverables: management platforms with user controls, inventory, and internal operations (taiko school, church, and others); automation of spreadsheet-based workflows; landing pages and sites focused on performance, usability, and conversion; solutions designed for non-technical users ensuring simplicity and adoption. Full cycle: requirements gathering, timeline planning, frontend/backend development, hosting and infrastructure support, direct communication throughout the project.'
             },
             concentrix: {
                 date: '01/2023 - 12/2023',
                 role: 'IT Apprentice',
-                description: 'I was responsible for VLAN management via DHCP, network point verification, and IT infrastructure organization. I worked on computer and user management, hardware and software maintenance, as well as task automation. I participated in bilingual meetings and handled tickets, formatting, and system installations.'
+                description: 'I worked on IT infrastructure, technical support, and process automation with focus on organizing, maintaining, and operating corporate environments. Responsible for network management and configuration (VLANs and DHCP), infrastructure mapping and organization, user and machine management in complex scenarios. Main activities: desktop and laptop maintenance (hardware/software), installation and configuration of operating systems, cabling organization and identification in datacenters. Highlights: automation of technical routines for operational optimization, ticket handling and technical problem resolution, participation in bilingual meetings, support for infrastructure structuring of new clients and operations.'
             }
         },
         curiosities: {
             title: 'Curiosities',
+            description: 'Get to know a little more about what drives and inspires me beyond code.',
             games: {
                 title: 'Games',
                 description: 'I am passionate about challenging games and I am a game developer. I intend to publish my own games one day.'
@@ -1031,6 +1035,8 @@ const translations = {
         },
         contact: {
             title: "Contact me and let's build something amazing!",
+            subtitle: 'Always open to new opportunities, projects, and conversations about technology.',
+            description: 'Looking for a developer for your project? Let\'s talk!',
             button: 'Get in Touch'
         },
         footer: {
