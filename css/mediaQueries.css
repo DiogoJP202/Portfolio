@@ -18,35 +18,29 @@
         padding: 6px 8px;
     }
 
-    #skills{
-        display: flex;
-        flex-direction: column-reverse;
+    .skills-shell{
+        grid-template-columns: 1fr;
+    }
+
+    .skill-detail{
+        min-height: auto;
+    }
+
+    .skill-detail-main{
+        grid-template-columns: 104px 1fr;
         align-items: center;
     }
 
-    #display{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .skills-grid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    #display > #screen{
-        align-items: center;
-        justify-content: center;
+    .projects-shell{
+        grid-template-columns: 1fr;
     }
 
-    #display > #screen > img{
-        width: 110%;
-        bottom: 0;
-        left: 0%;
-    }
-    #display > #screen #screenTxt{
-        text-align: center;
-    }
-
-    #techsCarrosel{
-        left: 17%;
-        bottom: -100px;
+    .project-list{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -235,7 +229,7 @@
 
 @media screen and (max-width: 710px){
     #skills{
-        padding: 0;
+        padding: 64px 4vw;
     }
 
     #line h1, #line{ font-size: 1.7em; }
@@ -312,40 +306,65 @@
         font-size: 1.25em;
     }
 
-    #screenTxt{
-        font-size: 2.5em;
+    .skills-header h2{
+        font-size: 3.6em;
     }
 
-    #techsCarrosel{
-        position: relative;
-        left: 20%;
-        bottom: -100px;
-        width: 50%;
-        height: 255px;
-        transform-style: preserve-3d;
-        transition: transform 1s;
-        transform: rotateX(-15deg);
-    }
-    
-    .tech{
-        width: 50px;
-        height: 50px;
-    }
-    
-    .tech > img{
-        width: 50%;
-    }
-    
-    .tech > .heigher{
-        width: 35%;
+    .skills-header p{
+        font-size: 1.25em;
     }
 
-    .projeto{
-        flex-direction: column;
+    .skill-detail-main{
+        grid-template-columns: 1fr;
     }
 
-    .projeto .projTxt, .projeto .projImg{
-        width: 100%;
+    .skills-grid{
+        grid-template-columns: 1fr;
+    }
+
+    #projetos{
+        padding: 64px 4vw;
+    }
+
+    .projects-header{
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .projects-header h2{
+        font-size: 3.6em;
+    }
+
+    .projects-header p{
+        font-size: 1.25em;
+    }
+
+    .project-feature-media{
+        min-height: 220px;
+    }
+
+    .project-feature-content{
+        padding: 22px;
+    }
+
+    .project-feature h3{
+        font-size: 2.8em;
+    }
+
+    .project-feature p{
+        font-size: 1.25em;
+    }
+
+    .project-meta{
+        grid-template-columns: 1fr;
+    }
+
+    .project-filters{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project-list{
+        grid-template-columns: 1fr;
     }
     
 }
@@ -358,7 +377,7 @@
     #letterEffect{ height: 150px;}
 
     #skills{
-        padding: 50px;
+        padding: 52px 4vw;
     }
 
     #SobreMim{
@@ -400,8 +419,52 @@
         display: none;
     }
 
-    #techsCarrosel {
-        bottom: -115px;
+    .skills-header h2{
+        font-size: 3em;
+    }
+
+    .skills-filters{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .skill-filter{
+        padding: 7px 8px;
+    }
+
+    .skill-detail h3{
+        font-size: 2.25em;
+    }
+
+    #projetos{
+        padding: 52px 4vw;
+    }
+
+    .projects-header h2{
+        font-size: 3em;
+    }
+
+    .project-feature h3{
+        font-size: 2.35em;
+    }
+
+    .project-feature-content{
+        padding: 18px;
+    }
+
+    .project-filters{
+        grid-template-columns: 1fr;
+    }
+
+    .project-card{
+        grid-template-columns: 34px 78px minmax(0, 1fr);
+        gap: 9px;
+        min-height: 94px;
+    }
+
+    .project-card-image{
+        width: 78px;
+        height: 58px;
     }
 
     .ExpCad{

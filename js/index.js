@@ -61,6 +61,358 @@ const LABEL_LINE_WORDS = [
         }
     }
 ];
+const SKILL_FILTERS = ['all', 'frontend', 'backend', 'database', 'tools'];
+const PROJECT_FILTERS = ['all', 'impact', 'product', 'client', 'creative'];
+const SKILLS_DATA = [
+    {
+        id: 'javascript',
+        name: 'JavaScript',
+        icon: 'assets/images/js.webp',
+        category: 'frontend',
+        level: 92,
+        levelKey: 'advanced',
+        tags: ['DOM', 'APIs', 'Automations'],
+        description: {
+            pt: 'Base do meu trabalho no front-end: interações, consumo de APIs, automações e lógica para interfaces dinâmicas.',
+            en: 'The foundation of my front-end work: interactions, API consumption, automations, and logic for dynamic interfaces.'
+        }
+    },
+    {
+        id: 'react',
+        name: 'React',
+        icon: 'assets/images/react.webp',
+        category: 'frontend',
+        level: 86,
+        levelKey: 'advanced',
+        tags: ['Components', 'State', 'SPA'],
+        description: {
+            pt: 'Uso React para componentizar interfaces, organizar estado e criar experiências web mais escaláveis.',
+            en: 'I use React to componentize interfaces, organize state, and build more scalable web experiences.'
+        }
+    },
+    {
+        id: 'bootstrap',
+        name: 'Bootstrap',
+        icon: 'assets/images/bootstrap.webp',
+        category: 'frontend',
+        level: 78,
+        levelKey: 'intermediate',
+        tags: ['Responsive UI', 'Grid', 'Components'],
+        description: {
+            pt: 'Ferramenta útil para acelerar layouts responsivos e criar bases visuais consistentes quando o projeto pede velocidade.',
+            en: 'A useful tool for speeding up responsive layouts and creating consistent visual foundations when a project needs speed.'
+        }
+    },
+    {
+        id: 'figma',
+        name: 'Figma',
+        icon: 'assets/images/figma.webp',
+        category: 'tools',
+        level: 76,
+        levelKey: 'intermediate',
+        tags: ['UI', 'Prototype', 'Design'],
+        description: {
+            pt: 'Uso para planejar telas, validar fluxos e transformar ideias em interfaces antes de partir para o código.',
+            en: 'I use it to plan screens, validate flows, and turn ideas into interfaces before moving into code.'
+        }
+    },
+    {
+        id: 'csharp',
+        name: 'C#',
+        icon: 'assets/images/csharp.webp',
+        category: 'backend',
+        level: 88,
+        levelKey: 'advanced',
+        tags: ['OOP', '.NET', 'MVC'],
+        description: {
+            pt: 'Uma das minhas principais linguagens para desenvolvimento back-end, aplicações web e soluções em ambiente Microsoft.',
+            en: 'One of my main languages for back-end development, web applications, and solutions in the Microsoft ecosystem.'
+        }
+    },
+    {
+        id: 'aspdotnet',
+        name: 'ASP .NET',
+        icon: 'assets/images/aspdotnet.webp',
+        category: 'backend',
+        level: 84,
+        levelKey: 'advanced',
+        tags: ['MVC', 'Web Apps', 'APIs'],
+        description: {
+            pt: 'Uso ASP .NET para construir aplicações MVC, fluxos internos e soluções web voltadas a regras de negócio.',
+            en: 'I use ASP .NET to build MVC applications, internal flows, and web solutions focused on business rules.'
+        }
+    },
+    {
+        id: 'java',
+        name: 'Java',
+        icon: 'assets/images/java.webp',
+        category: 'backend',
+        level: 78,
+        levelKey: 'intermediate',
+        tags: ['OOP', 'Spring Boot', 'APIs'],
+        description: {
+            pt: 'Tenho experiência com Java em APIs, orientação a objetos e projetos com Spring Boot.',
+            en: 'I have experience with Java in APIs, object-oriented programming, and Spring Boot projects.'
+        }
+    },
+    {
+        id: 'python',
+        name: 'Python',
+        icon: 'assets/images/python.webp',
+        category: 'backend',
+        level: 82,
+        levelKey: 'advanced',
+        tags: ['Automation', 'Scripts', 'Data'],
+        description: {
+            pt: 'Uso Python para automações, scripts, coleta de dados e soluções rápidas para problemas repetitivos.',
+            en: 'I use Python for automations, scripts, data collection, and quick solutions for repetitive problems.'
+        }
+    },
+    {
+        id: 'postgresql',
+        name: 'PostgreSQL',
+        icon: 'assets/images/postgresql.webp',
+        category: 'database',
+        level: 84,
+        levelKey: 'advanced',
+        tags: ['SQL', 'Reports', 'Queries'],
+        description: {
+            pt: 'Trabalho com consultas SQL, análise de dados, relatórios e estruturação de informações para tomada de decisão.',
+            en: 'I work with SQL queries, data analysis, reports, and structuring information for decision-making.'
+        }
+    },
+    {
+        id: 'mongodb',
+        name: 'MongoDB',
+        icon: 'assets/images/mongodb.webp',
+        category: 'database',
+        level: 72,
+        levelKey: 'intermediate',
+        tags: ['NoSQL', 'Documents', 'Data Modeling'],
+        description: {
+            pt: 'Uso MongoDB para modelagem flexível de dados e aplicações que se beneficiam de documentos NoSQL.',
+            en: 'I use MongoDB for flexible data modeling and applications that benefit from NoSQL documents.'
+        }
+    },
+    {
+        id: 'git',
+        name: 'Git',
+        icon: 'assets/images/git.webp',
+        category: 'tools',
+        level: 88,
+        levelKey: 'advanced',
+        tags: ['Versioning', 'Branches', 'Collaboration'],
+        description: {
+            pt: 'Uso Git para versionamento, organização de entregas, trabalho em equipe e histórico claro de evolução.',
+            en: 'I use Git for version control, delivery organization, teamwork, and a clear history of progress.'
+        }
+    },
+    {
+        id: 'postman',
+        name: 'Postman',
+        icon: 'assets/images/postman.webp',
+        category: 'tools',
+        level: 80,
+        levelKey: 'intermediate',
+        tags: ['APIs', 'Tests', 'Requests'],
+        description: {
+            pt: 'Uso Postman para testar APIs, documentar requests e validar integrações antes de levar ao produto.',
+            en: 'I use Postman to test APIs, document requests, and validate integrations before bringing them into the product.'
+        }
+    }
+];
+
+const PROJECTS_DATA = [
+    {
+        id: 'amparo',
+        category: 'impact',
+        url: 'https://diogojp202.github.io/ProjetoAmparoAoRS/',
+        image: 'assets/images/AMPARO AO RS.webp',
+        techs: ['HTML', 'CSS', 'NodeJS'],
+        name: {
+            pt: 'Projeto Amparo Ao RS',
+            en: 'Projeto Amparo Ao RS'
+        },
+        description: {
+            pt: 'Plataforma web criada para apoiar a população do Rio Grande do Sul durante as enchentes, reunindo informação útil para quem precisava de ajuda e para quem queria contribuir.',
+            en: 'A web platform built to support people in Rio Grande do Sul during the floods, gathering useful information for those who needed help and for those who wanted to contribute.'
+        },
+        role: {
+            pt: 'Front-end e estrutura informativa',
+            en: 'Front-end and information structure'
+        },
+        result: {
+            pt: 'Projeto de impacto social com navegação direta',
+            en: 'Social impact project with direct navigation'
+        },
+        alt: {
+            pt: "Notebook e celular com capa do Projeto Amparo Ao RS.",
+            en: 'Notebook and phone displaying the Projeto Amparo Ao RS cover.'
+        }
+    },
+    {
+        id: 'vel',
+        category: 'product',
+        url: 'https://vel-desktop.vercel.app/',
+        image: 'assets/images/VEL.webp',
+        techs: ['React', 'AWS', 'Java', 'Spring Boot', 'MySQL', 'Docker'],
+        name: {
+            pt: 'VEL',
+            en: 'VEL'
+        },
+        description: {
+            pt: 'Produto para melhorar a gestão de empresas de entregas rápidas, conectando entregadores, restaurantes e organização operacional em uma experiência mais clara.',
+            en: 'A product designed to improve fast delivery business management, connecting couriers, restaurants, and operational organization in a clearer experience.'
+        },
+        role: {
+            pt: 'Full-stack e Scrum Master',
+            en: 'Full-stack and Scrum Master'
+        },
+        result: {
+            pt: 'Produto completo apresentado no Demoday PROA',
+            en: 'Complete product presented at PROA Demoday'
+        },
+        alt: {
+            pt: 'Projeto VEL em uma composição de telas.',
+            en: 'VEL project shown in a screen composition.'
+        }
+    },
+    {
+        id: 'cemiterios',
+        category: 'client',
+        url: 'https://cemiterioszonasulsp.com.br/',
+        image: 'assets/images/CEMITERIOS.webp',
+        techs: ['HTML', 'CSS', 'JavaScript', 'SEO'],
+        name: {
+            pt: 'Cemitérios e Crematórios Zona Sul',
+            en: 'Cemiterios e Crematorios Zona Sul'
+        },
+        description: {
+            pt: 'Landing page para busca local de jazigos e crematórios, construída com foco em clareza, responsividade e presença orgânica.',
+            en: 'A landing page for local searches about burial plots and crematoriums, built with clarity, responsiveness, and organic presence in mind.'
+        },
+        role: {
+            pt: 'Landing page, responsivo e SEO',
+            en: 'Landing page, responsive UI, and SEO'
+        },
+        result: {
+            pt: 'Primeiras posições em buscas locais',
+            en: 'Top positions in local searches'
+        },
+        alt: {
+            pt: 'Projeto Cemitérios e Crematórios Zona Sul.',
+            en: 'Cemiterios e Crematorios Zona Sul project.'
+        }
+    },
+    {
+        id: 'cubobank',
+        category: 'product',
+        url: 'https://diogojp202.github.io/CuboBank/',
+        image: 'assets/images/CUBO BANK.webp',
+        techs: ['HTML', 'CSS', 'JavaScript'],
+        name: {
+            pt: 'CuboBank',
+            en: 'CuboBank'
+        },
+        description: {
+            pt: 'Simulação de caixa eletrônico com fluxo de operações, ajustes de interface, múltiplas funcionalidades e persistência de dados em cache.',
+            en: 'An ATM simulation with operation flows, interface improvements, multiple features, and cached data persistence.'
+        },
+        role: {
+            pt: 'Interface, regras de tela e cache',
+            en: 'Interface, screen logic, and cache'
+        },
+        result: {
+            pt: 'Experiência bancária interativa no navegador',
+            en: 'Interactive banking experience in the browser'
+        },
+        alt: {
+            pt: 'Projeto CuboBank.',
+            en: 'CuboBank project.'
+        }
+    },
+    {
+        id: 'freedom-lens',
+        category: 'client',
+        url: 'https://diogojp202.github.io/FreedonLents/',
+        image: 'assets/images/FREEDOM LENS.webp',
+        techs: ['HTML', 'CSS', 'JavaScript'],
+        name: {
+            pt: 'Freedom Lens',
+            en: 'Freedom Lens'
+        },
+        description: {
+            pt: 'Landing page visual para venda, pensada para destacar o produto, manter boa leitura em diferentes telas e conduzir o usuário com poucos atritos.',
+            en: 'A visual sales landing page designed to highlight the product, keep good readability across screens, and guide users with low friction.'
+        },
+        role: {
+            pt: 'UI, responsividade e página de venda',
+            en: 'UI, responsiveness, and sales page'
+        },
+        result: {
+            pt: 'Experiência focada em conversão',
+            en: 'Conversion-focused experience'
+        },
+        alt: {
+            pt: 'Projeto Freedom Lens.',
+            en: 'Freedom Lens project.'
+        }
+    },
+    {
+        id: 'dark-souls',
+        category: 'creative',
+        url: 'https://projeto-dark-souls-3.vercel.app/',
+        image: 'assets/images/DARK_SOULS_3.webp',
+        techs: ['HTML', 'CSS', 'JavaScript'],
+        name: {
+            pt: 'Projeto Dark Souls 3',
+            en: 'Dark Souls 3 Project'
+        },
+        description: {
+            pt: 'Site temático que apresenta os bosses do jogo com uma breve introdução, características e atmosfera visual inspirada no universo de Dark Souls.',
+            en: 'A themed website presenting the game bosses with a brief introduction, characteristics, and a visual mood inspired by the Dark Souls universe.'
+        },
+        role: {
+            pt: 'Interface temática e catálogo visual',
+            en: 'Themed interface and visual catalog'
+        },
+        result: {
+            pt: 'Projeto criativo com foco em atmosfera',
+            en: 'Creative project focused on atmosphere'
+        },
+        alt: {
+            pt: 'Projeto Dark Souls 3.',
+            en: 'Dark Souls 3 project.'
+        }
+    },
+    {
+        id: 'old-school',
+        category: 'creative',
+        url: 'https://diogojp202.github.io/MultiversoNews/',
+        image: 'assets/images/MULTIVERSO NEWS.webp',
+        techs: ['HTML', 'CSS', 'JavaScript'],
+        name: {
+            pt: 'Old School Comics',
+            en: 'Old School Comics'
+        },
+        description: {
+            pt: 'Site de notícias com direção visual inspirada em cartoons old school preto e branco, com layout responsivo e personalidade mais editorial.',
+            en: 'A news website with a visual direction inspired by black-and-white old-school cartoons, responsive layout, and a more editorial personality.'
+        },
+        role: {
+            pt: 'Direção visual e front-end',
+            en: 'Visual direction and front-end'
+        },
+        result: {
+            pt: 'Identidade forte para conteúdo editorial',
+            en: 'Strong identity for editorial content'
+        },
+        alt: {
+            pt: 'Projeto Old School Comics.',
+            en: 'Old School Comics project.'
+        }
+    }
+];
 
 const translations = {
     pt: {
@@ -129,37 +481,39 @@ const translations = {
             }
         },
         skills: {
-            title: 'Skills'
+            kicker: 'Stack técnico',
+            title: 'Habilidades',
+            description: 'Tecnologias que uso para criar interfaces, APIs, automações, consultas, integrações e produtos web com foco em clareza e entrega.',
+            filtersLabel: 'Filtrar tecnologias',
+            levelLabel: 'Domínio',
+            selectAria: 'Selecionar tecnologia',
+            categories: {
+                all: 'Todas',
+                frontend: 'Front-end',
+                backend: 'Back-end',
+                database: 'Dados',
+                tools: 'Ferramentas'
+            },
+            levels: {
+                advanced: 'Avançado',
+                intermediate: 'Intermediário'
+            }
         },
         projects: {
-            amparo: {
-                description: 'Esta plataforma web foi desenvolvida para auxiliar a população do Rio Grande do Sul durante as inundações que assolaram o estado, além de oferecer um canal de informações para aqueles que querem ajudar.',
-                techs: 'HTML, CSS, NodeJS'
-            },
-            vel: {
-                description: 'Uma plataforma dedicada à melhoria da gestão de empresas de entregas rápidas, ajudando entregadores e restaurantes a controlar melhor seus negócios. Nosso objetivo é oferecer uma estrada mais suave e direções claras para o sucesso!',
-                techs: 'React, AWS, JAVA, Springboot, MySQL e Docker.'
-            },
-            cemiterios: {
-                description: 'Landing Page de um site sobre jazigos e crematórios. Ficou em primeiro lugar de pesquisas de cemitérios ou crematórios da zona sul.',
-                techs: 'HTML, CSS, Javascript e SEO.'
-            },
-            cubobank: {
-                description: 'Projeto de ajustes e melhorias de um caixa eletrônico com muitas funcionalidades e armazenamento de dados em cache.',
-                techs: 'HTML, CSS e Javascript.'
-            },
-            freedonlents: {
-                description: 'Landing page com um design voltado a chamar a atenção do usuário para uma compra, visando responsividade em múltiplas telas e plataformas.',
-                techs: 'HTML, CSS e Javascript.'
-            },
-            darkSouls: {
-                name: 'Projeto Dark Souls 3',
-                description: 'O site mostra todos os bosses do game e uma breve introdução com algumas de suas características.',
-                techs: 'HTML, CSS e Javascript.'
-            },
-            oldSchool: {
-                description: 'Site de notícias com um design voltado a cartoons old school preto e branco, visando responsividade em múltiplas telas e plataformas.',
-                techs: 'HTML, CSS e Javascript.'
+            kicker: 'Portfólio',
+            title: 'Projetos',
+            description: 'Uma seleção de projetos com foco em impacto, produto, experiência visual e entrega técnica.',
+            filtersLabel: 'Filtrar projetos',
+            roleLabel: 'Minha atuação',
+            resultLabel: 'Destaque',
+            viewProject: 'Ver projeto',
+            selectAria: 'Selecionar projeto',
+            categories: {
+                all: 'Todos',
+                impact: 'Impacto',
+                product: 'Produto',
+                client: 'Clientes',
+                creative: 'Criativos'
             }
         },
         education: {
@@ -338,37 +692,39 @@ const translations = {
             }
         },
         skills: {
-            title: 'Skills'
+            kicker: 'Technical stack',
+            title: 'Skills',
+            description: 'Technologies I use to build interfaces, APIs, automations, queries, integrations, and web products with clarity and delivery in mind.',
+            filtersLabel: 'Filter technologies',
+            levelLabel: 'Level',
+            selectAria: 'Select technology',
+            categories: {
+                all: 'All',
+                frontend: 'Front-end',
+                backend: 'Back-end',
+                database: 'Data',
+                tools: 'Tools'
+            },
+            levels: {
+                advanced: 'Advanced',
+                intermediate: 'Intermediate'
+            }
         },
         projects: {
-            amparo: {
-                description: 'This web platform was developed to assist the population of Rio Grande do Sul during the floods that affected the state, as well as to provide an information channel for those who want to help.',
-                techs: 'HTML, CSS, NodeJS'
-            },
-            vel: {
-                description: 'A platform dedicated to improving the management of fast delivery companies, helping couriers and restaurants better control their businesses. Our goal is to offer a smoother road and clear directions to success!',
-                techs: 'React, AWS, JAVA, Spring Boot, MySQL, and Docker.'
-            },
-            cemiterios: {
-                description: 'Landing page for a website about burial plots and crematoriums. Ranked first in searches for cemeteries or crematoriums in the southern zone.',
-                techs: 'HTML, CSS, Javascript, and SEO.'
-            },
-            cubobank: {
-                description: 'Project focused on adjustments and improvements for an ATM with many functionalities and data caching.',
-                techs: 'HTML, CSS, and Javascript.'
-            },
-            freedonlents: {
-                description: 'Landing page with a design aimed at capturing user attention for a purchase, ensuring responsiveness across multiple screens and platforms.',
-                techs: 'HTML, CSS, and Javascript.'
-            },
-            darkSouls: {
-                name: 'Dark Souls 3 Project',
-                description: 'The website displays all the bosses from the game, providing a brief introduction and some of their characteristics.',
-                techs: 'HTML, CSS, and Javascript.'
-            },
-            oldSchool: {
-                description: 'News website with a design inspired by old-school black and white cartoons, ensuring responsiveness across multiple screens and platforms.',
-                techs: 'HTML, CSS, and Javascript.'
+            kicker: 'Portfolio',
+            title: 'Projects',
+            description: 'A selected set of projects focused on impact, product thinking, visual experience, and technical delivery.',
+            filtersLabel: 'Filter projects',
+            roleLabel: 'My role',
+            resultLabel: 'Highlight',
+            viewProject: 'View project',
+            selectAria: 'Select project',
+            categories: {
+                all: 'All',
+                impact: 'Impact',
+                product: 'Product',
+                client: 'Clients',
+                creative: 'Creative'
             }
         },
         education: {
@@ -486,6 +842,10 @@ const translations = {
 let currentLanguage = DEFAULT_LANGUAGE;
 let currentVideoLanguage = DEFAULT_LANGUAGE;
 let activeLabelLineWord = null;
+let activeSkillFilter = 'all';
+let activeSkillId = 'javascript';
+let activeProjectFilter = 'all';
+let activeProjectId = 'amparo';
 
 function normalizeLanguage(language) {
     if (!language) {
@@ -725,6 +1085,8 @@ function applyLanguage(language, options = {}) {
     }
 
     updateLabelLineModal();
+    updateSkillExplorer();
+    updateProjectExplorer();
     syncVideoWithLanguage(nextLanguage);
 
     if (options.persist !== false) {
@@ -877,40 +1239,266 @@ function setupLabelLine() {
     });
 }
 
-// Typing Effect Functionality
-async function setupWritingEffect() {
-    const words = ['JAVASCRIPT', 'C#', 'PYTHON', 'JAVA', 'HTML', 'CSS', 'NODEJS', 'REACT', 'BOOTSTRAP', 'ASP .NET', 'FIGMA', 'GIT', 'POSTGRESQL', 'MONGODB', 'SQL SERVER', 'REGEX', 'POSTMAN'];
-    const location = document.querySelector('#screenTxt');
-    const speed = 100;
+function getSkillCategoryLabel(category) {
+    return getTranslation(currentLanguage, `skills.categories.${category}`);
+}
 
-    if (!location) {
+function getSkillLevelLabel(levelKey) {
+    return getTranslation(currentLanguage, `skills.levels.${levelKey}`);
+}
+
+function getActiveSkillList() {
+    if (activeSkillFilter === 'all') {
+        return SKILLS_DATA;
+    }
+
+    return SKILLS_DATA.filter((skill) => skill.category === activeSkillFilter);
+}
+
+function renderSkillDetail(skill) {
+    const skillDetail = document.querySelector('.skill-detail');
+
+    if (!skillDetail || !skill) {
         return;
     }
 
-    const typeWriter = (word) => {
-        return new Promise((resolve) => {
-            let i = 0;
-            const interval = setInterval(() => {
-                if (i < word.length) {
-                    location.innerHTML += word.charAt(i);
-                    i++;
-                } else {
-                    clearInterval(interval);
-                    resolve();
-                }
-            }, speed);
-        });
-    };
+    skillDetail.querySelector('[data-skill-category]').textContent = getSkillCategoryLabel(skill.category);
+    skillDetail.querySelector('[data-skill-icon]').src = skill.icon;
+    skillDetail.querySelector('[data-skill-icon]').alt = '';
+    skillDetail.querySelector('[data-skill-name]').textContent = skill.name;
+    skillDetail.querySelector('[data-skill-description]').textContent = skill.description[currentLanguage] || skill.description[DEFAULT_LANGUAGE];
+    skillDetail.querySelector('[data-skill-level-label]').textContent = getSkillLevelLabel(skill.levelKey);
+    skillDetail.querySelector('[data-skill-meter]').style.width = `${skill.level}%`;
 
-    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    const tags = skillDetail.querySelector('[data-skill-tags]');
+    tags.innerHTML = skill.tags.map((tag) => `<span>${tag}</span>`).join('');
+}
 
-    while (true) {
-        for (const word of words) {
-            location.innerHTML = '';
-            await typeWriter(word);
-            await delay(3000);
-        }
+function renderSkillFilters() {
+    const filters = document.querySelector('[data-skills-filters]');
+
+    if (!filters) {
+        return;
     }
+
+    filters.innerHTML = SKILL_FILTERS
+        .map((filter) => `
+            <button class="skill-filter ${filter === activeSkillFilter ? 'is-active' : ''}" type="button" data-skill-filter="${filter}" aria-pressed="${filter === activeSkillFilter}">
+                ${getSkillCategoryLabel(filter)}
+            </button>
+        `)
+        .join('');
+}
+
+function renderSkillGrid() {
+    const grid = document.querySelector('[data-skills-grid]');
+
+    if (!grid) {
+        return;
+    }
+
+    const visibleSkills = getActiveSkillList();
+
+    if (!visibleSkills.some((skill) => skill.id === activeSkillId)) {
+        activeSkillId = visibleSkills[0]?.id || SKILLS_DATA[0].id;
+    }
+
+    grid.innerHTML = visibleSkills
+        .map((skill) => `
+            <button class="skill-card ${skill.id === activeSkillId ? 'is-active' : ''}" type="button" data-skill-id="${skill.id}" aria-pressed="${skill.id === activeSkillId}" aria-label="${getTranslation(currentLanguage, 'skills.selectAria')}: ${skill.name}">
+                <span class="skill-card-icon"><img src="${skill.icon}" alt=""></span>
+                <span class="skill-card-name">${skill.name}</span>
+                <span class="skill-card-category">${getSkillCategoryLabel(skill.category)}</span>
+            </button>
+        `)
+        .join('');
+}
+
+function updateSkillExplorer() {
+    const section = document.querySelector('#skills');
+
+    if (!section) {
+        return;
+    }
+
+    renderSkillFilters();
+    renderSkillGrid();
+    renderSkillDetail(SKILLS_DATA.find((skill) => skill.id === activeSkillId) || SKILLS_DATA[0]);
+}
+
+function setupSkills() {
+    const section = document.querySelector('#skills');
+
+    if (!section) {
+        return;
+    }
+
+    section.addEventListener('click', (event) => {
+        const filterButton = event.target.closest('[data-skill-filter]');
+        const skillButton = event.target.closest('[data-skill-id]');
+
+        if (filterButton) {
+            activeSkillFilter = filterButton.dataset.skillFilter;
+            updateSkillExplorer();
+            return;
+        }
+
+        if (skillButton) {
+            activeSkillId = skillButton.dataset.skillId;
+            updateSkillExplorer();
+        }
+    });
+
+    updateSkillExplorer();
+}
+
+function getProjectCategoryLabel(category) {
+    return getTranslation(currentLanguage, `projects.categories.${category}`);
+}
+
+function getLocalizedProjectField(project, field) {
+    return project[field]?.[currentLanguage] || project[field]?.[DEFAULT_LANGUAGE] || '';
+}
+
+function getActiveProjectList() {
+    if (activeProjectFilter === 'all') {
+        return PROJECTS_DATA;
+    }
+
+    return PROJECTS_DATA.filter((project) => project.category === activeProjectFilter);
+}
+
+function getProjectFilterCount(filter) {
+    if (filter === 'all') {
+        return PROJECTS_DATA.length;
+    }
+
+    return PROJECTS_DATA.filter((project) => project.category === filter).length;
+}
+
+function renderProjectFeature(project) {
+    const feature = document.querySelector('.project-feature');
+
+    if (!feature || !project) {
+        return;
+    }
+
+    const projectName = getLocalizedProjectField(project, 'name');
+    const projectImage = feature.querySelector('[data-project-image]');
+    const projectLink = feature.querySelector('[data-project-link]');
+
+    projectImage.src = project.image;
+    projectImage.alt = getLocalizedProjectField(project, 'alt');
+    feature.querySelector('[data-project-category]').textContent = getProjectCategoryLabel(project.category);
+    feature.querySelector('[data-project-name]').textContent = projectName;
+    feature.querySelector('[data-project-description]').textContent = getLocalizedProjectField(project, 'description');
+    feature.querySelector('[data-project-role]').textContent = getLocalizedProjectField(project, 'role');
+    feature.querySelector('[data-project-result]').textContent = getLocalizedProjectField(project, 'result');
+    feature.querySelector('[data-project-techs]').innerHTML = project.techs.map((tech) => `<span>${tech}</span>`).join('');
+
+    projectLink.href = project.url;
+    projectLink.setAttribute('aria-label', `${getTranslation(currentLanguage, 'projects.viewProject')}: ${projectName}`);
+}
+
+function renderProjectFilters() {
+    const filters = document.querySelector('[data-project-filters]');
+
+    if (!filters) {
+        return;
+    }
+
+    filters.innerHTML = PROJECT_FILTERS
+        .map((filter) => `
+            <button class="project-filter ${filter === activeProjectFilter ? 'is-active' : ''}" type="button" data-project-filter="${filter}" aria-pressed="${filter === activeProjectFilter}">
+                <span>${getProjectCategoryLabel(filter)}</span>
+                <strong>${getProjectFilterCount(filter)}</strong>
+            </button>
+        `)
+        .join('');
+}
+
+function renderProjectList() {
+    const list = document.querySelector('[data-project-list]');
+
+    if (!list) {
+        return;
+    }
+
+    const visibleProjects = getActiveProjectList();
+
+    if (!visibleProjects.some((project) => project.id === activeProjectId)) {
+        activeProjectId = visibleProjects[0]?.id || PROJECTS_DATA[0].id;
+    }
+
+    list.innerHTML = visibleProjects
+        .map((project, index) => {
+            const projectName = getLocalizedProjectField(project, 'name');
+            const projectTechs = project.techs.slice(0, 3).join(' / ');
+
+            return `
+                <button class="project-card ${project.id === activeProjectId ? 'is-active' : ''}" type="button" data-project-id="${project.id}" aria-pressed="${project.id === activeProjectId}" aria-label="${getTranslation(currentLanguage, 'projects.selectAria')}: ${projectName}">
+                    <span class="project-card-index">${String(index + 1).padStart(2, '0')}</span>
+                    <span class="project-card-image"><img src="${project.image}" alt=""></span>
+                    <span class="project-card-content">
+                        <strong>${projectName}</strong>
+                        <small>${getProjectCategoryLabel(project.category)}</small>
+                        <em>${projectTechs}</em>
+                    </span>
+                </button>
+            `;
+        })
+        .join('');
+}
+
+function updateProjectExplorer() {
+    const section = document.querySelector('#projetos');
+
+    if (!section) {
+        return;
+    }
+
+    renderProjectFilters();
+    renderProjectList();
+    renderProjectFeature(PROJECTS_DATA.find((project) => project.id === activeProjectId) || PROJECTS_DATA[0]);
+}
+
+function setupProjects() {
+    const section = document.querySelector('#projetos');
+
+    if (!section) {
+        return;
+    }
+
+    section.addEventListener('click', (event) => {
+        const filterButton = event.target.closest('[data-project-filter]');
+        const projectButton = event.target.closest('[data-project-id]');
+
+        if (filterButton) {
+            activeProjectFilter = filterButton.dataset.projectFilter;
+            updateProjectExplorer();
+            return;
+        }
+
+        if (projectButton) {
+            activeProjectId = projectButton.dataset.projectId;
+            updateProjectExplorer();
+        }
+    });
+
+    section.addEventListener('pointerover', (event) => {
+        if (event.pointerType === 'touch') {
+            return;
+        }
+
+        const projectButton = event.target.closest('[data-project-id]');
+
+        if (projectButton && projectButton.dataset.projectId !== activeProjectId) {
+            activeProjectId = projectButton.dataset.projectId;
+            updateProjectExplorer();
+        }
+    });
+
+    updateProjectExplorer();
 }
 
 // Language Video Button Functionality
@@ -934,45 +1522,14 @@ function setupLanguageButton() {
     });
 }
 
-// Slider Functionality
-function setupSlider() {
-    let slideIndex = 0;
-    const slides = document.querySelector('.slider');
-    const totalSlides = document.querySelectorAll('.projeto').length;
-
-    if (!slides || !totalSlides) {
-        return { moveSlide: () => {} };
-    }
-
-    const moveSlide = (n) => {
-        slideIndex += n;
-
-        if (slideIndex >= totalSlides) {
-            slideIndex = 0;
-        } else if (slideIndex < 0) {
-            slideIndex = totalSlides - 1;
-        }
-
-        slides.style.transform = `translateX(${-slideIndex * 100}%)`;
-    };
-
-    return { moveSlide };
-}
-
 // Initialize all functionalities
 function init() {
     setupSiteLanguage();
     setupHamburgerMenu();
     setupLabelLine();
-    setupWritingEffect();
+    setupSkills();
+    setupProjects();
     setupLanguageButton();
-
-    const { moveSlide } = setupSlider();
-    const previousButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-
-    previousButton?.addEventListener('click', () => moveSlide(-1));
-    nextButton?.addEventListener('click', () => moveSlide(1));
 }
 
 init();

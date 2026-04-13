@@ -4,11 +4,6 @@
     animation: piscando 0.9s infinite ease-in;
 }
 
-#screenTxt::after{
-    content: "_";
-    animation: piscando 0.9s infinite ease-in;
-}
-
 @keyframes piscando {
     from{
         opacity: 0;
@@ -51,11 +46,6 @@
 
 .linkA:hover{
     text-decoration: underline;
-}
-
-.projLink{
-    text-decoration: none;
-    animation: linkAnimation 1s alternate-reverse infinite ease-in-out !important; 
 }
 
 @keyframes linkAnimation {

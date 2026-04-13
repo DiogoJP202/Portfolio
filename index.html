@@ -12,9 +12,7 @@
     <link rel="alternate" hreflang="en" href="./?lang=en">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mediaQueries.css">
-    <link rel="stylesheet" href="css/carrossel.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/sliders.css">
     <link rel="shortcut icon" href="assets/images/star_icon.webp" type="image/x-icon">
 </head>
 <body>
@@ -118,105 +116,81 @@
         <div id="LabelLine" aria-label="Letreiro de conceitos em japonês" data-i18n-attr="aria-label:labelLine.aria">
             <div id="inside"></div>
         </div>
-        <section id="skills">
-            <div id="techsCarrosel">
-                <div class="tech"><img class="heigher" src="assets/images/figma.webp" alt="Ícone do Figma" data-i18n-attr="alt:images.figmaAlt"></div>
-                <div class="tech"><img src="assets/images/react.webp" alt="Ícone do React" data-i18n-attr="alt:images.reactAlt"></div>
-                <div class="tech"><img src="assets/images/bootstrap.webp" alt="Ícone do Bootstrap" data-i18n-attr="alt:images.bootstrapAlt"></div>
-                <div class="tech"><img src="assets/images/js.webp" alt="Ícone do Javascript" data-i18n-attr="alt:images.javascriptAlt"></div>
-                <div class="tech"><img src="assets/images/postgresql.webp" alt="Ícone do Postgresql" data-i18n-attr="alt:images.postgresqlAlt"></div>
-                <div class="tech"><img src="assets/images/postman.webp" alt="Ícone do Postman" data-i18n-attr="alt:images.postmanAlt"></div>
-                <div class="tech"><img src="assets/images/python.webp" alt="Ícone do Python" data-i18n-attr="alt:images.pythonAlt"></div>
-                <div class="tech"><img src="assets/images/java.webp" alt="Ícone do Java" data-i18n-attr="alt:images.javaAlt"></div>
-                <div class="tech"><img class="heigher" src="assets/images/mongodb.webp" alt="Ícone do MongoDB" data-i18n-attr="alt:images.mongodbAlt"></div>
-                <div class="tech"><img src="assets/images/git.webp" alt="Ícone do Git" data-i18n-attr="alt:images.gitAlt"></div>
-                <div class="tech"><img src="assets/images/csharp.webp" alt="Ícone do C Sharp" data-i18n-attr="alt:images.csharpAlt"></div>
-                <div class="tech"><img src="assets/images/aspdotnet.webp" alt="Ícone do ASP .NET" data-i18n-attr="alt:images.aspdotnetAlt"></div>
+        <section id="skills" aria-labelledby="skillsTitle">
+            <div class="skills-header">
+                <span class="section-kicker" data-i18n="skills.kicker">Stack técnico</span>
+                <div>
+                    <h2 id="skillsTitle" data-i18n="skills.title">Habilidades</h2>
+                    <p data-i18n="skills.description">Tecnologias que uso para criar interfaces, APIs, automações, consultas, integrações e produtos web com foco em clareza e entrega.</p>
+                </div>
             </div>
-            <div id="display">
-                    <h2 data-i18n="skills.title">Skills</h2>
-                    <div id="screen">
-                        <img src="assets/images/display.webp" alt="Imagem de um display." data-i18n-attr="alt:images.displayAlt">
-                        <span id="screenTxt">JAVASCRIPT</span>
+            <div class="skills-shell">
+                <aside class="skill-detail" aria-live="polite">
+                    <span class="skill-detail-category" data-skill-category></span>
+                    <div class="skill-detail-main">
+                        <div class="skill-detail-icon">
+                            <img src="" alt="" data-skill-icon>
+                        </div>
+                        <div>
+                            <h3 data-skill-name></h3>
+                            <p data-skill-description></p>
+                        </div>
                     </div>
+                    <div class="skill-level">
+                        <div>
+                            <span data-i18n="skills.levelLabel">Domínio</span>
+                            <strong data-skill-level-label></strong>
+                        </div>
+                        <div class="skill-meter" aria-hidden="true">
+                            <span data-skill-meter></span>
+                        </div>
+                    </div>
+                    <div class="skill-tags" data-skill-tags></div>
+                </aside>
+                <div class="skills-interactive">
+                    <div class="skills-filters" data-skills-filters aria-label="Filtrar tecnologias" data-i18n-attr="aria-label:skills.filtersLabel"></div>
+                    <div class="skills-grid" data-skills-grid></div>
+                </div>
             </div>
         </section>
-        <section id="projetos">
-            <div class="slider-container">
-                <div class="slider">
-                    <div class="projeto">
-                        <div class="projTxt">
-                            <h3><a href="https://diogojp202.github.io/ProjetoAmparoAoRS/" target="_blank" class="projLink">Projeto Amparo Ao RS</a></h3>
-                            <p data-i18n="projects.amparo.description">Esta plataforma web foi desenvolvida para auxiliar a população do Rio Grande do Sul durante as inundações que assolaram o estado, além de oferecer um canal de informações para aqueles que querem ajudar.</p>
-                            <span class="tecs" data-i18n="projects.amparo.techs">HTML, CSS, NodeJS</span>
-                        </div>
-                        <div class="projImg">
-                            <img class="imgProjetos" src="assets/images/AMPARO AO RS.webp" alt="Notebook e Celular com capa de um projeto chamado 'Projeto Amparo Ao RS'." data-i18n-attr="alt:images.amparoAlt">
-                        </div>
-                    </div>
-                    <div class="projeto">
-                        <div class="projTxt">
-                            <h3><a href="https://vel-desktop.vercel.app/" target="_blank" class="projLink">VEL</a></h3>
-                            <p data-i18n="projects.vel.description">Uma plataforma dedicada à melhoria da gestão de empresas de entregas rápidas, ajudando entregadores e restaurantes a controlar melhor seus negócios. Nosso objetivo é oferecer uma estrada mais suave e direções claras para o sucesso!</p>
-                            <span class="tecs" data-i18n="projects.vel.techs">React, AWS, JAVA, Springboot, MySQL e Docker.</span>
-                        </div>
-                        <div class="projImg">
-                            <img class="imgProjetos" src="assets/images/VEL.webp" alt="Projeto VEL." data-i18n-attr="alt:images.velAlt">
-                        </div>
-                    </div>
-                    <div class="projeto">
-                        <div class="projTxt">
-                            <h3><a href="https://cemiterioszonasulsp.com.br/" target="_blank" class="projLink">Cemiterios e Crematorios Zona Sul</a></h3>
-                            <p data-i18n="projects.cemiterios.description">Landing Page de um site sobre jazigos e crematórios. Ficou em primeiro lugar de pesquisas de cemitérios ou crematórios da zona sul.</p>
-                            <span class="tecs" data-i18n="projects.cemiterios.techs">HTML, CSS, Javascript e SEO.</span>
-                        </div>
-                        <div class="projImg">
-                            <img class="imgProjetos" src="assets/images/CEMITERIOS.webp" alt="Projeto Cemiterios e Crematorios Zona Sul." data-i18n-attr="alt:images.cemiteriosAlt">
-                        </div>
-                    </div>
-                    <div class="projeto">
-                        <div class="projTxt">
-                            <h3><a href="https://diogojp202.github.io/CuboBank/" target="_blank" class="projLink">CuboBank</a></h3>
-                            <p data-i18n="projects.cubobank.description">Projeto de ajustes e melhorias de um caixa eletrônico com muitas funcionalidades e armazenamento de dados em cache.</p>
-                            <span class="tecs" data-i18n="projects.cubobank.techs">HTML, CSS e Javascript.</span>
-                        </div>
-                        <div class="projImg">
-                            <img class="imgProjetos" src="assets/images/CUBO BANK.webp" alt="Projeto CuboBank." data-i18n-attr="alt:images.cubobankAlt">
-                        </div>
-                    </div>
-                    <div class="projeto">
-                        <div class="projTxt">
-                            <h3><a href="https://diogojp202.github.io/FreedonLents/" target="_blank" class="projLink">FreedonLents</a></h3>
-                            <p data-i18n="projects.freedonlents.description">Landing page com um design voltado a chamar a atenção do usuário para uma compra, visando responsividade em multiplas telas e plataformas.</p>
-                            <span class="tecs" data-i18n="projects.freedonlents.techs">HTML, CSS e Javascript.</span>
-                        </div>
-                        <div class="projImg">
-                            <img class="imgProjetos" src="assets/images/FREEDOM LENS.webp" alt="Projeto FreedonLents." data-i18n-attr="alt:images.freedonlentsAlt">
-                        </div>
-                    </div>
-                    <div class="projeto">
-                        <div class="projTxt">
-                            <h3><a href="https://projeto-dark-souls-3.vercel.app/" target="_blank" class="projLink" data-i18n="projects.darkSouls.name">Projeto Dark Souls 3</a></h3>
-                            <p data-i18n="projects.darkSouls.description">O site mostra todos os Bosses do game e mostra uma breve introdução e algumas de suas características.</p>
-                            <span class="tecs" data-i18n="projects.darkSouls.techs">HTML, CSS e Javascript.</span>
-                        </div>
-                        <div class="projImg">
-                            <img class="imgProjetos" src="assets/images/DARK_SOULS_3.webp" alt="Projeto Dark Souls 3." data-i18n-attr="alt:images.darkSoulsAlt">
-                        </div>
-                    </div>
-                    <div class="projeto">
-                        <div class="projTxt">
-                            <h3><a href="https://diogojp202.github.io/MultiversoNews/" target="_blank" class="projLink">Old School Comics</a></h3>
-                            <p data-i18n="projects.oldSchool.description">Sites de notícias com um design voltado a cartoons old school prento e branco, visando responsividade em multiplas telas e plataformas.</p>
-                            <span class="tecs" data-i18n="projects.oldSchool.techs">HTML, CSS e Javascript.</span>
-                        </div>
-                        <div class="projImg">
-                            <img class="imgProjetos" src="assets/images/MULTIVERSO NEWS.webp" alt="Projeto MultiversoNews." data-i18n-attr="alt:images.oldSchoolAlt">
-                        </div>
-                    </div>
+        <section id="projetos" aria-labelledby="projectsTitle">
+            <div class="projects-header">
+                <span class="section-kicker" data-i18n="projects.kicker">Portfólio</span>
+                <div>
+                    <h2 id="projectsTitle" data-i18n="projects.title">Projetos</h2>
+                    <p data-i18n="projects.description">Uma seleção de projetos com foco em impacto, produto, experiência visual e entrega técnica.</p>
                 </div>
-                <img src="assets/images/GREEN_ARROW.webp" class="prev" alt="Seta anterior" data-i18n-attr="alt:images.prevArrowAlt">
-                <img src="assets/images/GREEN_ARROW.webp" class="next" alt="Próxima seta" data-i18n-attr="alt:images.nextArrowAlt">
+            </div>
+            <div class="projects-shell">
+                <article class="project-feature" aria-live="polite">
+                    <div class="project-feature-media">
+                        <img src="" alt="" data-project-image>
+                    </div>
+                    <div class="project-feature-content">
+                        <span class="project-category" data-project-category></span>
+                        <h3 data-project-name></h3>
+                        <p data-project-description></p>
+                        <div class="project-meta">
+                            <div>
+                                <span data-i18n="projects.roleLabel">Minha atuação</span>
+                                <strong data-project-role></strong>
+                            </div>
+                            <div>
+                                <span data-i18n="projects.resultLabel">Destaque</span>
+                                <strong data-project-result></strong>
+                            </div>
+                        </div>
+                        <div class="project-techs" data-project-techs></div>
+                        <a class="project-action" href="#" target="_blank" rel="noopener noreferrer" data-project-link>
+                            <span data-i18n="projects.viewProject">Ver projeto</span>
+                            <strong aria-hidden="true">↗</strong>
+                        </a>
+                    </div>
+                </article>
+                <div class="projects-browse">
+                    <div class="project-filters" data-project-filters aria-label="Filtrar projetos" data-i18n-attr="aria-label:projects.filtersLabel"></div>
+                    <div class="project-list" data-project-list></div>
+                </div>
             </div>
         </section>
         <section id="Academico">
