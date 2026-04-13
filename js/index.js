@@ -414,6 +414,93 @@ const PROJECTS_DATA = [
     }
 ];
 
+const EDUCATION_DATA = [
+    {
+        id: 'ads',
+        icon: 'assets/images/GLOBE_icon.webp',
+        category: {
+            pt: 'Graduação',
+            en: 'Degree'
+        },
+        title: {
+            pt: 'Análise e Desenvolvimento de Sistemas',
+            en: 'Systems Analysis and Development'
+        },
+        school: {
+            pt: 'Faculdade Impacta',
+            en: 'Impacta College'
+        },
+        date: {
+            pt: '08/2024 à 12/2026',
+            en: '08/2024 to 12/2026'
+        },
+        focus: {
+            pt: 'Sistemas, web e arquitetura',
+            en: 'Systems, web, and architecture'
+        },
+        description: {
+            pt: 'Formação que consolida minha base em engenharia de software, análise de requisitos, desenvolvimento web, banco de dados e construção de soluções escaláveis.',
+            en: 'A degree that strengthens my foundation in software engineering, requirements analysis, web development, databases, and scalable solution design.'
+        }
+    },
+    {
+        id: 'java',
+        icon: 'assets/images/atomo_icon.webp',
+        category: {
+            pt: 'Full-stack',
+            en: 'Full-stack'
+        },
+        title: {
+            pt: 'Desenvolvedor Full-stack Java',
+            en: 'Full-stack Java Developer'
+        },
+        school: {
+            pt: 'Senac São Paulo - Instituto Proa',
+            en: 'Senac São Paulo - Instituto Proa'
+        },
+        date: {
+            pt: '08/2024 à 12/2026',
+            en: '08/2024 to 12/2026'
+        },
+        focus: {
+            pt: 'Java, React, APIs e agilidade',
+            en: 'Java, React, APIs, and agility'
+        },
+        description: {
+            pt: 'Formação prática voltada a produto, front-end, back-end, banco de dados e trabalho em equipe, conectando código com entrega real.',
+            en: 'A practical program focused on product thinking, front-end, back-end, databases, and teamwork, connecting code with real delivery.'
+        }
+    },
+    {
+        id: 'electronics',
+        icon: 'assets/images/AIM_Icon.webp',
+        category: {
+            pt: 'Técnico',
+            en: 'Technical'
+        },
+        title: {
+            pt: 'Técnico em Eletrônica',
+            en: 'Electronics Technician'
+        },
+        school: {
+            pt: 'Etec Aprígio Gonzaga',
+            en: 'Etec Aprígio Gonzaga'
+        },
+        date: {
+            pt: '01/2020 à 12/2022',
+            en: '01/2020 to 12/2022'
+        },
+        focus: {
+            pt: 'Lógica, hardware e diagnóstico',
+            en: 'Logic, hardware, and diagnostics'
+        },
+        description: {
+            pt: 'Minha origem técnica trouxe repertório em lógica, eletrônica, manutenção, leitura de problemas e atenção aos detalhes antes mesmo do desenvolvimento web.',
+            en: 'My technical background gave me experience in logic, electronics, maintenance, problem reading, and attention to detail before web development.'
+        }
+    }
+];
+
 const translations = {
     pt: {
         meta: {
@@ -517,7 +604,13 @@ const translations = {
             }
         },
         education: {
+            kicker: 'Formação',
             title: 'Vida Acadêmica',
+            description: 'Minha base acadêmica combina desenvolvimento de sistemas, formação full-stack e uma origem técnica em eletrônica.',
+            timelineLabel: 'Linha do tempo acadêmica',
+            periodLabel: 'Período',
+            focusLabel: 'Foco',
+            selectAria: 'Selecionar formação',
             ads: {
                 title: 'ANÁLISE E DESENVOLVIMENTO DE SISTEMAS',
                 school: 'Faculdade Impacta',
@@ -535,7 +628,8 @@ const translations = {
             },
             award: {
                 label: 'Premiação',
-                title: 'Aluno Destaque <br> PROA 2024'
+                title: 'Aluno Destaque <br> PROA 2024',
+                description: 'Reconhecimento pela evolução técnica, colaboração e entrega durante a formação no Instituto PROA.'
             }
         },
         experience: {
@@ -728,7 +822,13 @@ const translations = {
             }
         },
         education: {
+            kicker: 'Education',
             title: 'Academic Life',
+            description: 'My academic foundation combines systems development, full-stack training, and a technical background in electronics.',
+            timelineLabel: 'Academic timeline',
+            periodLabel: 'Period',
+            focusLabel: 'Focus',
+            selectAria: 'Select education item',
             ads: {
                 title: 'SYSTEMS ANALYSIS AND DEVELOPMENT',
                 school: 'Impacta College',
@@ -746,7 +846,8 @@ const translations = {
             },
             award: {
                 label: 'Award',
-                title: 'Outstanding Student <br> PROA 2024'
+                title: 'Outstanding Student <br> PROA 2024',
+                description: 'Recognition for technical growth, collaboration, and delivery during the Instituto PROA program.'
             }
         },
         experience: {
@@ -846,6 +947,7 @@ let activeSkillFilter = 'all';
 let activeSkillId = 'javascript';
 let activeProjectFilter = 'all';
 let activeProjectId = 'amparo';
+let activeEducationId = 'ads';
 
 function normalizeLanguage(language) {
     if (!language) {
@@ -1087,6 +1189,7 @@ function applyLanguage(language, options = {}) {
     updateLabelLineModal();
     updateSkillExplorer();
     updateProjectExplorer();
+    updateEducationTimeline();
     syncVideoWithLanguage(nextLanguage);
 
     if (options.persist !== false) {
@@ -1501,6 +1604,102 @@ function setupProjects() {
     updateProjectExplorer();
 }
 
+function getLocalizedEducationField(educationItem, field) {
+    return educationItem[field]?.[currentLanguage] || educationItem[field]?.[DEFAULT_LANGUAGE] || '';
+}
+
+function renderEducationFeature(educationItem) {
+    const feature = document.querySelector('.education-feature');
+
+    if (!feature || !educationItem) {
+        return;
+    }
+
+    const educationIcon = feature.querySelector('[data-education-icon]');
+
+    educationIcon.src = educationItem.icon;
+    educationIcon.alt = '';
+    feature.querySelector('[data-education-category]').textContent = getLocalizedEducationField(educationItem, 'category');
+    feature.querySelector('[data-education-title]').textContent = getLocalizedEducationField(educationItem, 'title');
+    feature.querySelector('[data-education-school]').textContent = getLocalizedEducationField(educationItem, 'school');
+    feature.querySelector('[data-education-description]').textContent = getLocalizedEducationField(educationItem, 'description');
+    feature.querySelector('[data-education-date]').textContent = getLocalizedEducationField(educationItem, 'date');
+    feature.querySelector('[data-education-focus]').textContent = getLocalizedEducationField(educationItem, 'focus');
+}
+
+function renderEducationTimeline() {
+    const list = document.querySelector('[data-education-list]');
+
+    if (!list) {
+        return;
+    }
+
+    list.innerHTML = EDUCATION_DATA
+        .map((educationItem, index) => {
+            const title = getLocalizedEducationField(educationItem, 'title');
+
+            return `
+                <button class="education-card ${educationItem.id === activeEducationId ? 'is-active' : ''}" type="button" data-education-id="${educationItem.id}" aria-pressed="${educationItem.id === activeEducationId}" aria-label="${getTranslation(currentLanguage, 'education.selectAria')}: ${title}">
+                    <span class="education-card-step">${String(index + 1).padStart(2, '0')}</span>
+                    <span class="education-card-icon"><img src="${educationItem.icon}" alt=""></span>
+                    <span class="education-card-content">
+                        <strong>${title}</strong>
+                        <small>${getLocalizedEducationField(educationItem, 'school')}</small>
+                        <em>${getLocalizedEducationField(educationItem, 'date')}</em>
+                    </span>
+                </button>
+            `;
+        })
+        .join('');
+}
+
+function updateEducationTimeline() {
+    const section = document.querySelector('#Academico');
+
+    if (!section) {
+        return;
+    }
+
+    if (!EDUCATION_DATA.some((educationItem) => educationItem.id === activeEducationId)) {
+        activeEducationId = EDUCATION_DATA[0].id;
+    }
+
+    renderEducationTimeline();
+    renderEducationFeature(EDUCATION_DATA.find((educationItem) => educationItem.id === activeEducationId) || EDUCATION_DATA[0]);
+}
+
+function setupEducation() {
+    const section = document.querySelector('#Academico');
+
+    if (!section) {
+        return;
+    }
+
+    section.addEventListener('click', (event) => {
+        const educationButton = event.target.closest('[data-education-id]');
+
+        if (educationButton) {
+            activeEducationId = educationButton.dataset.educationId;
+            updateEducationTimeline();
+        }
+    });
+
+    section.addEventListener('pointerover', (event) => {
+        if (event.pointerType === 'touch') {
+            return;
+        }
+
+        const educationButton = event.target.closest('[data-education-id]');
+
+        if (educationButton && educationButton.dataset.educationId !== activeEducationId) {
+            activeEducationId = educationButton.dataset.educationId;
+            updateEducationTimeline();
+        }
+    });
+
+    updateEducationTimeline();
+}
+
 // Language Video Button Functionality
 function setupLanguageButton() {
     const videoButtons = document.querySelectorAll('[data-video-language]');
@@ -1529,6 +1728,7 @@ function init() {
     setupLabelLine();
     setupSkills();
     setupProjects();
+    setupEducation();
     setupLanguageButton();
 }
 

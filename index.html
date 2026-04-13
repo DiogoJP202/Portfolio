@@ -193,36 +193,46 @@
                 </div>
             </div>
         </section>
-        <section id="Academico">
-            <h2 data-i18n="education.title">Vida Acadêmica</h2>
-            <div class="ExpCad">
-                <img src="assets/images/GLOBE_icon.webp" alt="Ícone do globo" class="iconsExpCad" data-i18n-attr="alt:images.globeAlt">
-                <h3 data-i18n="education.ads.title">ANÁLISE E DESENVOLVIMENTO DE SISTEMAS</h3>
-                <P data-i18n="education.ads.school">Faculdade Impacta</P>
-                <p class="data" data-i18n="education.ads.date">08/2024 à 12/2026</p>
-                <img src="assets/images/mature_esr_icon.webp" alt="Ícone Mature ESR" class="iconsExpCad" id="mature" data-i18n-attr="alt:images.matureAlt">
-            </div>
-            <div class="ExpCad" id="ad1">
-                <img src="assets/images/Triangulo_Warning_icon.webp" alt="Ícone de alerta" class="iconsExpCad" data-i18n-attr="alt:images.warningAlt">
-                <h3 data-i18n="education.java.title">DESENVOLVEDOR FULL-STACK JAVA</h3>
-                <P data-i18n="education.java.school">Senac São Paulo - Instituto Proa</P>
-                <p class="data" data-i18n="education.java.date">08/2024 à 12/2026</p>
-                <img src="assets/images/atomo_icon.webp" alt="Ícone de átomo" class="iconsExpCad" data-i18n-attr="alt:images.atomAlt">
-            </div>
-            <div class="ExpCad">
-                <img src="assets/images/AIM_Icon.webp" alt="Ícone de um alvo" class="iconsExpCad" id="aim" data-i18n-attr="alt:images.targetAlt">
-                <h3 data-i18n="education.electronics.title">TÉCNICO EM ELETRÔNICA</h3>
-                <P data-i18n="education.electronics.school">Etec Aprígio Gonzaga</P>
-                <p class="data" data-i18n="education.electronics.date">01/2020 à 12/2022</p>
-                <img src="assets/images/CD-AUDIO_icon.webp" alt="Ícone do CD-AUDIO" class="iconsExpCad" id="disc" data-i18n-attr="alt:images.cdAlt">
-            </div>
-            <div id="premio">
-                <img id="trofeu" src="assets/images/Trofeu_Proa.webp" alt="Imagem do troféu Aluno Destaque PROA 2024" data-i18n-attr="alt:images.trophyAlt">
-                <div id="txts">
-                    <h3 data-i18n="education.award.label">Premiação</h3>
-                    <h4 data-i18n-html="education.award.title">Aluno Destaque <br> PROA 2024</h4>
+        <section id="Academico" aria-labelledby="educationTitle">
+            <div class="education-header">
+                <span class="section-kicker" data-i18n="education.kicker">Formação</span>
+                <div>
+                    <h2 id="educationTitle" data-i18n="education.title">Vida Acadêmica</h2>
+                    <p data-i18n="education.description">Minha base acadêmica combina desenvolvimento de sistemas, formação full-stack e uma origem técnica em eletrônica.</p>
                 </div>
             </div>
+            <div class="education-shell">
+                <article class="education-feature" aria-live="polite">
+                    <div class="education-feature-icon">
+                        <img src="assets/images/GLOBE_icon.webp" alt="" data-education-icon>
+                    </div>
+                    <span class="education-feature-category" data-education-category>Graduação</span>
+                    <h3 data-education-title>Análise e Desenvolvimento de Sistemas</h3>
+                    <strong data-education-school>Faculdade Impacta</strong>
+                    <p data-education-description>Formação que consolida minha base em engenharia de software, análise de requisitos, desenvolvimento web, banco de dados e construção de soluções escaláveis.</p>
+                    <div class="education-feature-meta">
+                        <div>
+                            <span data-i18n="education.periodLabel">Período</span>
+                            <b data-education-date>08/2024 à 12/2026</b>
+                        </div>
+                        <div>
+                            <span data-i18n="education.focusLabel">Foco</span>
+                            <b data-education-focus>Sistemas, web e arquitetura</b>
+                        </div>
+                    </div>
+                </article>
+                <div class="education-timeline" data-education-list aria-label="Linha do tempo acadêmica" data-i18n-attr="aria-label:education.timelineLabel"></div>
+            </div>
+            <aside class="education-award">
+                <div class="education-award-media">
+                    <img id="trofeu" src="assets/images/Trofeu_Proa.webp" alt="Imagem do troféu Aluno Destaque PROA 2024" data-i18n-attr="alt:images.trophyAlt">
+                </div>
+                <div class="education-award-content">
+                    <span class="section-kicker" data-i18n="education.award.label">Premiação</span>
+                    <h3 data-i18n-html="education.award.title">Aluno Destaque <br> PROA 2024</h3>
+                    <p data-i18n="education.award.description">Reconhecimento pela evolução técnica, colaboração e entrega durante a formação no Instituto PROA.</p>
+                </div>
+            </aside>
         </section>
         <section id="ExpProfissionais">
             <h2 data-i18n="experience.title">Experiências Profissionais</h2>

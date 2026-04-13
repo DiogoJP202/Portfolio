@@ -42,6 +42,26 @@
     .project-list{
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .project-filters{
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .project-filter:first-child{
+        grid-column: auto;
+    }
+
+    .education-shell{
+        grid-template-columns: 1fr;
+    }
+
+    .education-timeline{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .education-timeline::before{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1107px){
@@ -222,9 +242,6 @@
         text-align: center;
     }
 
-    #premio{
-        flex-direction: column;
-    }
 }
 
 @media screen and (max-width: 710px){
@@ -363,8 +380,59 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .project-filter:first-child{
+        grid-column: 1 / -1;
+    }
+
     .project-list{
         grid-template-columns: 1fr;
+    }
+
+    #Academico{
+        padding: 64px 4vw;
+    }
+
+    .education-header{
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .education-header h2{
+        font-size: 3.6em;
+    }
+
+    .education-header p{
+        font-size: 1.25em;
+    }
+
+    .education-feature{
+        min-height: auto;
+        padding: 24px;
+    }
+
+    .education-feature h3{
+        font-size: 2.8em;
+    }
+
+    .education-feature > p{
+        font-size: 1.25em;
+    }
+
+    .education-feature-meta{
+        grid-template-columns: 1fr;
+    }
+
+    .education-timeline{
+        grid-template-columns: 1fr;
+    }
+
+    .education-award{
+        grid-template-columns: 1fr;
+        padding: 22px;
+    }
+
+    .education-award h3{
+        font-size: 2.9em;
     }
     
 }
@@ -467,16 +535,49 @@
         height: 58px;
     }
 
-    .ExpCad{
-        width: 100%;
-        height: auto;
-    }
-    
-    .ExpCad .iconsExpCad:last-child{
-        display: none;
+    #Academico{
+        padding: 52px 4vw;
     }
 
-    #Curiosidades h2, #ExpProfissionais h2, #Academico h2{
+    .education-header h2{
+        font-size: 3em;
+    }
+
+    .education-feature{
+        padding: 18px;
+    }
+
+    .education-feature-icon{
+        width: 76px;
+        height: 76px;
+    }
+
+    .education-feature h3{
+        font-size: 2.25em;
+    }
+
+    .education-card{
+        grid-template-columns: 38px 52px minmax(0, 1fr);
+        gap: 9px;
+        min-height: 104px;
+        padding: 10px;
+    }
+
+    .education-card-step{
+        width: 34px;
+        height: 34px;
+    }
+
+    .education-card-icon{
+        width: 52px;
+        height: 52px;
+    }
+
+    .education-award h3{
+        font-size: 2.35em;
+    }
+
+    #Curiosidades h2, #ExpProfissionais h2{
         font-size: 4em !important;
     }
 
