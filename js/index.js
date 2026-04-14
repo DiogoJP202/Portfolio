@@ -11,6 +11,14 @@ const VIDEO_THUMBNAILS = {
     pt: 'https://img.youtube.com/vi/YXwcNZW_7K8/hqdefault.jpg',
     en: 'https://img.youtube.com/vi/DI8dNYUsfCQ/hqdefault.jpg'
 };
+const SITE_BASE_URL = 'https://diogojp202.github.io/Portfolio/';
+const SITE_IMAGE_URL = `${SITE_BASE_URL}assets/images/SitePreview.jpg`;
+const PERSON_IMAGE_URL = `${SITE_BASE_URL}assets/images/DiogoImage1.webp`;
+const SOCIAL_LINKS = [
+    'https://www.linkedin.com/in/diogo-antonny/',
+    'https://github.com/DiogoJP202/',
+    'https://linktr.ee/diogoantonny'
+];
 const LABEL_LINE_WORDS = [
     {
         word: '開発',
@@ -184,7 +192,7 @@ const SKILLS_DATA = [
     {
         id: 'mongodb',
         name: 'MongoDB',
-        icon: 'assets/images/mongodb.webp',
+        icon: 'assets/images/GLOBE_icon.webp',
         category: 'database',
         level: 72,
         levelKey: 'intermediate',
@@ -245,6 +253,24 @@ const PROJECTS_DATA = [
             pt: 'Projeto de impacto social com navegação direta',
             en: 'Social impact project with direct navigation'
         },
+        caseStudy: {
+            problem: {
+                pt: 'Durante as enchentes no Rio Grande do Sul, informações de ajuda, doações e orientação estavam espalhadas e difíceis de encontrar rapidamente.',
+                en: 'During the floods in Rio Grande do Sul, help, donation, and guidance information was scattered and hard to find quickly.'
+            },
+            solution: {
+                pt: 'Criei uma plataforma web direta, responsiva e organizada por intenção de uso, conectando quem precisava de apoio com quem queria ajudar.',
+                en: 'I built a direct, responsive web platform organized by user intent, connecting people who needed support with people who wanted to help.'
+            },
+            impact: {
+                pt: 'Centralização de informações sensíveis em uma experiência simples, rápida de navegar e pensada para contexto de urgência.',
+                en: 'Sensitive information centralized in a simple, fast browsing experience designed for an urgent context.'
+            },
+            learning: {
+                pt: 'Projetos de impacto social precisam priorizar clareza, acessibilidade e decisões rápidas acima de qualquer excesso visual.',
+                en: 'Social impact projects need to prioritize clarity, accessibility, and fast decisions over any visual excess.'
+            }
+        },
         alt: {
             pt: "Notebook e celular com capa do Projeto Amparo Ao RS.",
             en: 'Notebook and phone displaying the Projeto Amparo Ao RS cover.'
@@ -271,6 +297,24 @@ const PROJECTS_DATA = [
         result: {
             pt: 'Produto completo apresentado no Demoday PROA',
             en: 'Complete product presented at PROA Demoday'
+        },
+        caseStudy: {
+            problem: {
+                pt: 'Empresas de entregas rápidas lidam com pedidos, entregadores e restaurantes em fluxos fragmentados, o que dificulta controle e tomada de decisão.',
+                en: 'Fast delivery businesses handle orders, couriers, and restaurants through fragmented workflows, making control and decision-making harder.'
+            },
+            solution: {
+                pt: 'Desenvolvemos um produto full-stack com interface em React, APIs em Java/Spring Boot e banco MySQL, organizado com práticas ágeis e divisão clara de entregas.',
+                en: 'We developed a full-stack product with a React interface, Java/Spring Boot APIs, and a MySQL database, organized with agile practices and clear delivery ownership.'
+            },
+            impact: {
+                pt: 'Entrega de um MVP completo para apresentação, conectando gestão, experiência do usuário e operação em um mesmo produto.',
+                en: 'Delivery of a complete MVP for presentation, connecting management, user experience, and operations in one product.'
+            },
+            learning: {
+                pt: 'Liderar produto exige equilibrar código, escopo, comunicação e ritmo do time sem perder a qualidade da experiência final.',
+                en: 'Leading a product requires balancing code, scope, communication, and team rhythm without losing the quality of the final experience.'
+            }
         },
         alt: {
             pt: 'Projeto VEL em uma composição de telas.',
@@ -299,6 +343,24 @@ const PROJECTS_DATA = [
             pt: 'Primeiras posições em buscas locais',
             en: 'Top positions in local searches'
         },
+        caseStudy: {
+            problem: {
+                pt: 'O negócio precisava aparecer melhor em buscas locais e apresentar um serviço sensível com informação clara, confiável e objetiva.',
+                en: 'The business needed better local search visibility and a clear, trustworthy, objective way to present a sensitive service.'
+            },
+            solution: {
+                pt: 'Construí uma landing page leve, responsiva e orientada a SEO, com conteúdo organizado para intenção de busca e leitura simples.',
+                en: 'I built a lightweight, responsive, SEO-oriented landing page with content organized around search intent and simple reading.'
+            },
+            impact: {
+                pt: 'Melhora de presença orgânica e posicionamento em buscas locais relevantes para cemitérios e crematórios na zona sul.',
+                en: 'Improved organic presence and ranking in relevant local searches for cemeteries and crematoriums in the southern zone.'
+            },
+            learning: {
+                pt: 'SEO técnico e UX precisam trabalhar juntos: velocidade, estrutura semântica e texto claro influenciam diretamente o resultado.',
+                en: 'Technical SEO and UX need to work together: speed, semantic structure, and clear copy directly influence results.'
+            }
+        },
         alt: {
             pt: 'Projeto Cemitérios e Crematórios Zona Sul.',
             en: 'Cemiterios e Crematorios Zona Sul project.'
@@ -325,6 +387,24 @@ const PROJECTS_DATA = [
         result: {
             pt: 'Experiência bancária interativa no navegador',
             en: 'Interactive banking experience in the browser'
+        },
+        caseStudy: {
+            problem: {
+                pt: 'O desafio era simular uma experiência bancária com várias operações, estados de tela e persistência sem depender de back-end.',
+                en: 'The challenge was simulating a banking experience with multiple operations, screen states, and persistence without relying on a back-end.'
+            },
+            solution: {
+                pt: 'Implementei fluxos de caixa eletrônico com JavaScript, regras de interface, validações e armazenamento em cache para manter a experiência interativa.',
+                en: 'I implemented ATM flows with JavaScript, interface rules, validations, and cached storage to keep the experience interactive.'
+            },
+            impact: {
+                pt: 'Protótipo funcional que demonstra lógica de produto, estados de uso e manipulação de dados no navegador.',
+                en: 'A functional prototype that demonstrates product logic, usage states, and browser-side data handling.'
+            },
+            learning: {
+                pt: 'Mesmo em projetos front-end, pensar em regras, estados e dados desde o início torna a experiência mais consistente.',
+                en: 'Even in front-end projects, thinking about rules, states, and data from the start makes the experience more consistent.'
+            }
         },
         alt: {
             pt: 'Projeto CuboBank.',
@@ -353,6 +433,24 @@ const PROJECTS_DATA = [
             pt: 'Experiência focada em conversão',
             en: 'Conversion-focused experience'
         },
+        caseStudy: {
+            problem: {
+                pt: 'A página precisava apresentar um produto de forma visualmente atrativa e conduzir o usuário para uma ação sem perder leitura em telas menores.',
+                en: 'The page needed to present a product in a visually attractive way and guide the user toward action without losing readability on smaller screens.'
+            },
+            solution: {
+                pt: 'Criei uma landing page responsiva com hierarquia visual clara, chamadas diretas e foco em reduzir atrito durante a navegação.',
+                en: 'I created a responsive landing page with clear visual hierarchy, direct calls to action, and a focus on reducing navigation friction.'
+            },
+            impact: {
+                pt: 'Experiência mais objetiva para venda, com foco em leitura rápida, produto em evidência e tomada de decisão.',
+                en: 'A more objective sales experience focused on quick reading, product emphasis, and decision-making.'
+            },
+            learning: {
+                pt: 'Uma boa landing page precisa equilibrar estética, velocidade, copy e responsividade para sustentar conversão.',
+                en: 'A good landing page must balance aesthetics, speed, copy, and responsiveness to support conversion.'
+            }
+        },
         alt: {
             pt: 'Projeto Freedom Lens.',
             en: 'Freedom Lens project.'
@@ -380,6 +478,24 @@ const PROJECTS_DATA = [
             pt: 'Projeto criativo com foco em atmosfera',
             en: 'Creative project focused on atmosphere'
         },
+        caseStudy: {
+            problem: {
+                pt: 'O objetivo era apresentar conteúdo de um jogo de forma organizada sem perder a atmosfera sombria e imersiva do universo original.',
+                en: 'The goal was to present game content in an organized way without losing the dark, immersive atmosphere of the original universe.'
+            },
+            solution: {
+                pt: 'Desenvolvi uma interface temática para catalogar bosses, combinando visual, texto introdutório e navegação simples.',
+                en: 'I developed a themed interface to catalog bosses, combining visuals, introductory text, and simple navigation.'
+            },
+            impact: {
+                pt: 'Projeto com identidade forte, reforçando direção visual, composição e organização de conteúdo interativo.',
+                en: 'A project with a strong identity, reinforcing visual direction, composition, and interactive content organization.'
+            },
+            learning: {
+                pt: 'Projetos criativos funcionam melhor quando a estética serve à navegação e não compete com a informação.',
+                en: 'Creative projects work best when aesthetics support navigation instead of competing with the information.'
+            }
+        },
         alt: {
             pt: 'Projeto Dark Souls 3.',
             en: 'Dark Souls 3 project.'
@@ -406,6 +522,24 @@ const PROJECTS_DATA = [
         result: {
             pt: 'Identidade forte para conteúdo editorial',
             en: 'Strong identity for editorial content'
+        },
+        caseStudy: {
+            problem: {
+                pt: 'A proposta era criar um site de notícias com personalidade visual marcante, sem sacrificar responsividade e leitura.',
+                en: 'The proposal was to create a news website with a striking visual personality without sacrificing responsiveness and readability.'
+            },
+            solution: {
+                pt: 'Usei uma direção inspirada em cartoons old school, organizada em layout editorial com contraste, ritmo visual e adaptação para diferentes telas.',
+                en: 'I used a visual direction inspired by old-school cartoons, organized in an editorial layout with contrast, visual rhythm, and adaptation across screens.'
+            },
+            impact: {
+                pt: 'Resultado com identidade memorável para conteúdo editorial, mantendo navegação clara e boa leitura.',
+                en: 'A result with a memorable identity for editorial content while keeping clear navigation and good readability.'
+            },
+            learning: {
+                pt: 'Personalidade visual precisa de sistema: tipografia, contraste e espaçamento sustentam a experiência mais que efeitos isolados.',
+                en: 'Visual personality needs a system: typography, contrast, and spacing sustain the experience more than isolated effects.'
+            }
         },
         alt: {
             pt: 'Projeto Old School Comics.',
@@ -445,7 +579,7 @@ const EDUCATION_DATA = [
     },
     {
         id: 'java',
-        icon: 'assets/images/atomo_icon.webp',
+        icon: 'assets/images/star_icon.webp',
         category: {
             pt: 'Full-stack',
             en: 'Full-stack'
@@ -473,7 +607,7 @@ const EDUCATION_DATA = [
     },
     {
         id: 'electronics',
-        icon: 'assets/images/AIM_Icon.webp',
+        icon: 'assets/images/GLOBE_icon.webp',
         category: {
             pt: 'Técnico',
             en: 'Technical'
@@ -523,18 +657,18 @@ const EXPERIENCE_DATA = [
             en: '12/2024 - Present'
         },
         description: {
-            pt: 'Atuo no desenvolvimento e manutenção de sistemas internos para o mercado financeiro com C#, .NET e SQL Server. Especializado em automação de processos que reduzem operações de horas para minutos (~95% de ganho de eficiência). Participo da integração com APIs financeiras (B3 e fornecedores), análise e resolução de incidentes em produção. Responsabilidades incluem: desenvolvimento de aplicações ASP.NET Core MVC, otimização de SQL Server, automações para processamento de dados, interfaces internas para operação e documentação técnica.',
-            en: 'I develop and maintain internal systems for the financial market using C#, .NET, and SQL Server. Specialized in process automation, reducing operations from hours to minutes (~95% efficiency gain). I participate in integration with financial APIs (B3 and providers), production incident analysis and resolution. Responsibilities include: ASP.NET Core MVC applications, SQL Server optimization, data processing automation, internal operation interfaces, and technical documentation.'
+            pt: 'Atuo no desenvolvimento e manutenção de sistemas internos para o mercado financeiro, usando C#, .NET, ASP.NET Core MVC e SQL Server para aplicações web e automações que sustentam operações críticas. Tenho forte atuação em automação de processos, reduzindo rotinas de horas para minutos (~95% de ganho) e transformando execuções manuais demoradas em fluxos automatizados. Também participo de integrações com APIs financeiras, incluindo B3 e fornecedores, além de análise de requisitos, testes técnicos, validação de dados, incidentes em produção, logs, causa raiz e documentação técnica.',
+            en: 'I develop and maintain internal systems for the financial market using C#, .NET, ASP.NET Core MVC, and SQL Server to build web applications and automations that support critical operations. I work heavily with process automation, reducing routines from hours to minutes (~95% efficiency gain) and turning long manual executions into automated flows. I also contribute to financial API integrations, including B3 and providers, as well as requirements analysis, technical testing, data validation, production incidents, logs, root cause analysis, and technical documentation.'
         },
         result: {
-            pt: 'Dados, relatórios e automações no mercado financeiro',
-            en: 'Data, reports, and automations for the financial market'
+            pt: 'Automações críticas, APIs financeiras e ganho de eficiência de ~95%',
+            en: 'Critical automations, financial APIs, and ~95% efficiency gain'
         },
-        tags: ['SQL', 'C#', '.NET', 'MVC', 'Reports', 'Automation']
+        tags: ['C#', 'ASP.NET Core MVC', 'SQL Server', 'B3 APIs', 'Automation', 'Production Incidents']
     },
     {
         id: 'vel',
-        icon: 'assets/images/AIM_Icon.webp',
+        icon: 'assets/images/star_icon.webp',
         url: 'https://vel-desktop.vercel.app/sobrenos',
         category: {
             pt: 'Produto',
@@ -594,7 +728,7 @@ const EXPERIENCE_DATA = [
     },
     {
         id: 'concentrix',
-        icon: 'assets/images/Triangulo_Warning_icon.webp',
+        icon: 'assets/images/GLOBE_icon.webp',
         url: 'https://www.concentrix.com/pt-br/',
         category: {
             pt: 'Infraestrutura',
@@ -627,14 +761,21 @@ const EXPERIENCE_DATA = [
 const translations = {
     pt: {
         meta: {
-            title: 'Diogo Antonny',
-            description: 'Diogo Antonny portfólio. Um portfólio feito para mostrar um pouco mais quem é Diogo Antonny.',
-            keywords: 'HTML, CSS, JavaScript, Portfólio, portfolio, Diogo Antonny'
+            title: 'Diogo Antonny | Desenvolvedor Full-Stack',
+            description: 'Portfólio de Diogo Antonny, desenvolvedor full-stack com experiência no mercado financeiro, automações, sistemas web, APIs, dados e produtos digitais.',
+            keywords: 'Diogo Antonny, desenvolvedor full-stack, portfolio, automação, C#, .NET, JavaScript, React, SQL Server, mercado financeiro',
+            imageAlt: 'Prévia visual do portfólio de Diogo Antonny.',
+            siteName: 'Diogo Antonny Portfolio',
+            jobTitle: 'Desenvolvedor Full-Stack',
+            schemaDescription: 'Portfólio profissional de Diogo Antonny, desenvolvedor full-stack com projetos, habilidades, formação e experiências em tecnologia.'
         },
         language: {
             toggleAria: 'Mudar para inglês',
             kicker: 'Idioma',
             nextCode: 'EN'
+        },
+        accessibility: {
+            skipToContent: 'Pular para o conteúdo principal'
         },
         video: {
             title: 'Vídeo de apresentação em português',
@@ -656,6 +797,8 @@ const translations = {
         },
         nav: {
             homeAria: 'Voltar ao topo',
+            mainAria: 'Navegação principal',
+            footerAria: 'Navegação do rodapé',
             openMenuAria: 'Abrir menu',
             closeMenuAria: 'Fechar menu',
             about: 'SOBRE',
@@ -716,6 +859,12 @@ const translations = {
             filtersLabel: 'Filtrar projetos',
             roleLabel: 'Minha atuação',
             resultLabel: 'Destaque',
+            caseStudyLabel: 'Estudo de caso',
+            problemLabel: 'Problema',
+            solutionLabel: 'Solução',
+            impactLabel: 'Impacto',
+            learningLabel: 'Aprendizado',
+            stackLabel: 'Stack',
             viewProject: 'Ver projeto',
             selectAria: 'Selecionar projeto',
             categories: {
@@ -767,7 +916,7 @@ const translations = {
             rb: {
                 date: '12/2024 - Atual',
                 role: 'Estagiário de desenvolvimento de software',
-                description: 'Atuei na área de desenvolvimento da empresa, trabalhando com queries SQL, agendamento de dados, análise de grandes volumes de informação e geração de relatórios a partir de requisições SQL. Além disso, participei do desenvolvimento de software e aplicações web, utilizando a arquitetura MVC e tecnologias da Microsoft, como .NET e C#. Também contribuí para a implementação de inteligência artificial nos processos da empresa, focando em automação e inovação.'
+                description: 'Atuo no desenvolvimento e manutenção de sistemas internos para o mercado financeiro, usando C#, .NET, ASP.NET Core MVC e SQL Server para aplicações web e automações que sustentam operações críticas. Tenho forte atuação em automação de processos, reduzindo rotinas de horas para minutos (~95% de ganho) e transformando execuções manuais demoradas em fluxos automatizados. Também participo de integrações com APIs financeiras, incluindo B3 e fornecedores, além de análise de requisitos, testes técnicos, validação de dados, incidentes em produção, logs, causa raiz e documentação técnica.'
             },
             vel: {
                 date: '02/2024 - 07/2024',
@@ -809,7 +958,10 @@ const translations = {
             title: 'Fale comigo e vamos construir algo incrível!',
             subtitle: 'Sempre aberto para novas oportunidades, projetos e conversas sobre tecnologia.',
             description: 'Procurando um desenvolvedor para seu projeto? Vamos conversar!',
-            button: 'Entre em Contato'
+            button: 'Entre em Contato',
+            linkedinAria: 'Conectar no LinkedIn',
+            githubAria: 'Seguir no GitHub',
+            linksAria: 'Acessar todos os links'
         },
         footer: {
             navigation: 'Navegação',
@@ -818,53 +970,28 @@ const translations = {
         },
         images: {
             profileAlt: 'Foto do Diogo Antonny',
-            figmaAlt: 'Ícone do Figma',
-            reactAlt: 'Ícone do React',
-            bootstrapAlt: 'Ícone do Bootstrap',
-            javascriptAlt: 'Ícone do Javascript',
-            postgresqlAlt: 'Ícone do Postgresql',
-            postmanAlt: 'Ícone do Postman',
-            pythonAlt: 'Ícone do Python',
-            javaAlt: 'Ícone do Java',
-            mongodbAlt: 'Ícone do MongoDB',
-            gitAlt: 'Ícone do Git',
-            csharpAlt: 'Ícone do C Sharp',
-            aspdotnetAlt: 'Ícone do ASP .NET',
-            displayAlt: 'Imagem de um display.',
-            amparoAlt: "Notebook e celular com capa de um projeto chamado 'Projeto Amparo Ao RS'.",
-            velAlt: 'Projeto VEL.',
-            cemiteriosAlt: 'Projeto Cemiterios e Crematorios Zona Sul.',
-            cubobankAlt: 'Projeto CuboBank.',
-            freedonlentsAlt: 'Projeto FreedonLents.',
-            darkSoulsAlt: 'Projeto Dark Souls 3.',
-            oldSchoolAlt: 'Projeto MultiversoNews.',
-            prevArrowAlt: 'Seta anterior',
-            nextArrowAlt: 'Próxima seta',
-            globeAlt: 'Ícone do globo',
-            matureAlt: 'Ícone Mature ESR',
-            warningAlt: 'Ícone de alerta',
-            atomAlt: 'Ícone de átomo',
-            targetAlt: 'Ícone de um alvo',
-            cdAlt: 'Ícone do CD-AUDIO',
             trophyAlt: 'Imagem do troféu Aluno Destaque PROA 2024',
             coffeeAlt: 'Foto do Diogo segurando uma xícara de café.',
-            linkedinAlt: 'Ícone Linkedin',
-            githubAlt: 'Ícone Github',
-            linktreeAlt: 'Ícone Linktree',
-            beecrowdAlt: 'Ícone Beecrowd',
             gitCharacterAlt: 'Personagem do Github baseado no Diogo.'
         }
     },
     en: {
         meta: {
-            title: 'Diogo Antonny',
-            description: 'Diogo Antonny portfolio. A portfolio made to show a little more about who Diogo Antonny is.',
-            keywords: 'HTML, CSS, JavaScript, portfolio, Diogo Antonny'
+            title: 'Diogo Antonny | Full-Stack Developer',
+            description: 'Diogo Antonny portfolio, full-stack developer with experience in financial market systems, automations, web applications, APIs, data, and digital products.',
+            keywords: 'Diogo Antonny, full-stack developer, portfolio, automation, C#, .NET, JavaScript, React, SQL Server, financial market',
+            imageAlt: 'Visual preview of Diogo Antonny portfolio.',
+            siteName: 'Diogo Antonny Portfolio',
+            jobTitle: 'Full-Stack Developer',
+            schemaDescription: 'Professional portfolio of Diogo Antonny, a full-stack developer with projects, skills, education, and technology experience.'
         },
         language: {
             toggleAria: 'Switch to Portuguese',
             kicker: 'Language',
             nextCode: 'PT'
+        },
+        accessibility: {
+            skipToContent: 'Skip to main content'
         },
         video: {
             title: 'Presentation video in English',
@@ -886,6 +1013,8 @@ const translations = {
         },
         nav: {
             homeAria: 'Back to top',
+            mainAria: 'Main navigation',
+            footerAria: 'Footer navigation',
             openMenuAria: 'Open menu',
             closeMenuAria: 'Close menu',
             about: 'ABOUT',
@@ -946,6 +1075,12 @@ const translations = {
             filtersLabel: 'Filter projects',
             roleLabel: 'My role',
             resultLabel: 'Highlight',
+            caseStudyLabel: 'Case study',
+            problemLabel: 'Problem',
+            solutionLabel: 'Solution',
+            impactLabel: 'Impact',
+            learningLabel: 'Learning',
+            stackLabel: 'Stack',
             viewProject: 'View project',
             selectAria: 'Select project',
             categories: {
@@ -997,7 +1132,7 @@ const translations = {
             rb: {
                 date: '12/2024 - Present',
                 role: 'Software Development Intern',
-                description: "I worked in the company's development area, handling SQL queries, data scheduling, analyzing large volumes of information, and generating reports from SQL requests. Additionally, I participated in software and web application development, utilizing the MVC architecture and Microsoft technologies such as .NET and C#. I also contributed to implementing artificial intelligence in the company's processes, focusing on automation and innovation."
+                description: 'I develop and maintain internal systems for the financial market using C#, .NET, ASP.NET Core MVC, and SQL Server to build web applications and automations that support critical operations. I work heavily with process automation, reducing routines from hours to minutes (~95% efficiency gain) and turning long manual executions into automated flows. I also contribute to financial API integrations, including B3 and providers, as well as requirements analysis, technical testing, data validation, production incidents, logs, root cause analysis, and technical documentation.'
             },
             vel: {
                 date: '02/2024 - 07/2024',
@@ -1039,7 +1174,10 @@ const translations = {
             title: "Contact me and let's build something amazing!",
             subtitle: 'Always open to new opportunities, projects, and conversations about technology.',
             description: 'Looking for a developer for your project? Let\'s talk!',
-            button: 'Get in Touch'
+            button: 'Get in Touch',
+            linkedinAria: 'Connect on LinkedIn',
+            githubAria: 'Follow on GitHub',
+            linksAria: 'Open all links'
         },
         footer: {
             navigation: 'Navigation',
@@ -1048,40 +1186,8 @@ const translations = {
         },
         images: {
             profileAlt: 'Photo of Diogo Antonny',
-            figmaAlt: 'Figma icon',
-            reactAlt: 'React icon',
-            bootstrapAlt: 'Bootstrap icon',
-            javascriptAlt: 'JavaScript icon',
-            postgresqlAlt: 'PostgreSQL icon',
-            postmanAlt: 'Postman icon',
-            pythonAlt: 'Python icon',
-            javaAlt: 'Java icon',
-            mongodbAlt: 'MongoDB icon',
-            gitAlt: 'Git icon',
-            csharpAlt: 'C# icon',
-            aspdotnetAlt: 'ASP .NET icon',
-            displayAlt: 'Display image.',
-            amparoAlt: "Notebook and phone displaying a project cover called 'Projeto Amparo Ao RS'.",
-            velAlt: 'VEL project.',
-            cemiteriosAlt: 'Cemiterios e Crematorios Zona Sul project.',
-            cubobankAlt: 'CuboBank project.',
-            freedonlentsAlt: 'FreedonLents project.',
-            darkSoulsAlt: 'Dark Souls 3 project.',
-            oldSchoolAlt: 'MultiversoNews project.',
-            prevArrowAlt: 'Previous arrow',
-            nextArrowAlt: 'Next arrow',
-            globeAlt: 'Globe icon',
-            matureAlt: 'Mature ESR icon',
-            warningAlt: 'Warning icon',
-            atomAlt: 'Atom icon',
-            targetAlt: 'Target icon',
-            cdAlt: 'CD-AUDIO icon',
             trophyAlt: 'Image of the PROA 2024 Outstanding Student trophy',
             coffeeAlt: 'Photo of Diogo holding a cup of coffee.',
-            linkedinAlt: 'LinkedIn icon',
-            githubAlt: 'GitHub icon',
-            linktreeAlt: 'Linktree icon',
-            beecrowdAlt: 'Beecrowd icon',
             gitCharacterAlt: 'GitHub character based on Diogo.'
         }
     }
@@ -1247,6 +1353,86 @@ function saveLanguagePreference(language) {
     }
 }
 
+function setMetaContent(selector, value) {
+    const element = document.querySelector(selector);
+
+    if (element && value) {
+        element.setAttribute('content', value);
+    }
+}
+
+function getLanguageUrl(language) {
+    return language === DEFAULT_LANGUAGE ? SITE_BASE_URL : `${SITE_BASE_URL}?lang=${language}`;
+}
+
+function updateStructuredData(language) {
+    const structuredData = document.querySelector('#structuredData');
+
+    if (!structuredData) {
+        return;
+    }
+
+    const languageCode = language === 'pt' ? 'pt-BR' : 'en';
+    const data = {
+        '@context': 'https://schema.org',
+        '@graph': [
+            {
+                '@type': 'Person',
+                '@id': `${SITE_BASE_URL}#person`,
+                name: 'Diogo Antonny',
+                url: SITE_BASE_URL,
+                image: PERSON_IMAGE_URL,
+                jobTitle: getTranslation(language, 'meta.jobTitle'),
+                knowsAbout: ['C#', '.NET', 'JavaScript', 'React', 'SQL Server', 'Automation', 'APIs', 'Web Development'],
+                sameAs: SOCIAL_LINKS
+            },
+            {
+                '@type': 'WebSite',
+                '@id': `${SITE_BASE_URL}#website`,
+                url: getLanguageUrl(language),
+                name: getTranslation(language, 'meta.siteName'),
+                image: SITE_IMAGE_URL,
+                description: getTranslation(language, 'meta.schemaDescription'),
+                inLanguage: languageCode,
+                author: {
+                    '@id': `${SITE_BASE_URL}#person`
+                }
+            }
+        ]
+    };
+
+    structuredData.textContent = JSON.stringify(data, null, 2);
+}
+
+function updateSeoMetadata(language) {
+    const title = getTranslation(language, 'meta.title');
+    const description = getTranslation(language, 'meta.description');
+    const imageAlt = getTranslation(language, 'meta.imageAlt');
+    const pageUrl = getLanguageUrl(language);
+    const locale = language === 'pt' ? 'pt_BR' : 'en_US';
+    const canonical = document.querySelector('link[rel="canonical"]');
+
+    document.title = title;
+    setMetaContent('meta[name="description"]', description);
+    setMetaContent('meta[name="keywords"]', getTranslation(language, 'meta.keywords'));
+    setMetaContent('meta[property="og:title"]', title);
+    setMetaContent('meta[property="og:description"]', description);
+    setMetaContent('meta[property="og:url"]', pageUrl);
+    setMetaContent('meta[property="og:image"]', SITE_IMAGE_URL);
+    setMetaContent('meta[property="og:image:alt"]', imageAlt);
+    setMetaContent('meta[property="og:locale"]', locale);
+    setMetaContent('meta[name="twitter:title"]', title);
+    setMetaContent('meta[name="twitter:description"]', description);
+    setMetaContent('meta[name="twitter:image"]', SITE_IMAGE_URL);
+    setMetaContent('meta[name="twitter:image:alt"]', imageAlt);
+
+    if (canonical) {
+        canonical.href = pageUrl;
+    }
+
+    updateStructuredData(language);
+}
+
 function syncVideoWithLanguage(language) {
     const nextVideoLanguage = normalizeLanguage(language) || DEFAULT_LANGUAGE;
     const iframeVideo = document.querySelector('#Video iframe');
@@ -1301,8 +1487,8 @@ function applyLanguage(language, options = {}) {
 
     currentLanguage = nextLanguage;
     document.documentElement.lang = nextLanguage === 'pt' ? 'pt-BR' : 'en';
-    document.title = getTranslation(nextLanguage, 'meta.title');
     document.body.dataset.language = nextLanguage;
+    updateSeoMetadata(nextLanguage);
 
     document.querySelectorAll('[data-i18n]').forEach((element) => {
         element.textContent = getTranslation(nextLanguage, element.dataset.i18n);
@@ -1388,15 +1574,6 @@ function setupHamburgerMenu() {
     };
 
     menuH.addEventListener('click', () => setMenuState(!isMenuOpen));
-
-    menuH.addEventListener('keydown', (event) => {
-        if (!['Enter', ' '].includes(event.key)) {
-            return;
-        }
-
-        event.preventDefault();
-        setMenuState(!isMenuOpen);
-    });
 
     nav.addEventListener('click', (event) => {
         if (isMobileMenu() && event.target.closest('a')) {
@@ -1558,7 +1735,7 @@ function renderSkillGrid() {
     grid.innerHTML = visibleSkills
         .map((skill) => `
             <button class="skill-card ${skill.id === activeSkillId ? 'is-active' : ''}" type="button" data-skill-id="${skill.id}" aria-pressed="${skill.id === activeSkillId}" aria-label="${getTranslation(currentLanguage, 'skills.selectAria')}: ${skill.name}">
-                <span class="skill-card-icon"><img src="${skill.icon}" alt=""></span>
+                <span class="skill-card-icon"><img src="${skill.icon}" alt="" loading="lazy" decoding="async"></span>
                 <span class="skill-card-name">${skill.name}</span>
                 <span class="skill-card-category">${getSkillCategoryLabel(skill.category)}</span>
             </button>
@@ -1612,6 +1789,10 @@ function getLocalizedProjectField(project, field) {
     return project[field]?.[currentLanguage] || project[field]?.[DEFAULT_LANGUAGE] || '';
 }
 
+function getLocalizedProjectCaseField(project, field) {
+    return project.caseStudy?.[field]?.[currentLanguage] || project.caseStudy?.[field]?.[DEFAULT_LANGUAGE] || '';
+}
+
 function getActiveProjectList() {
     if (activeProjectFilter === 'all') {
         return PROJECTS_DATA;
@@ -1641,11 +1822,17 @@ function renderProjectFeature(project) {
 
     projectImage.src = project.image;
     projectImage.alt = getLocalizedProjectField(project, 'alt');
+    projectImage.loading = 'lazy';
+    projectImage.decoding = 'async';
     feature.querySelector('[data-project-category]').textContent = getProjectCategoryLabel(project.category);
     feature.querySelector('[data-project-name]').textContent = projectName;
     feature.querySelector('[data-project-description]').textContent = getLocalizedProjectField(project, 'description');
     feature.querySelector('[data-project-role]').textContent = getLocalizedProjectField(project, 'role');
     feature.querySelector('[data-project-result]').textContent = getLocalizedProjectField(project, 'result');
+    feature.querySelector('[data-project-problem]').textContent = getLocalizedProjectCaseField(project, 'problem');
+    feature.querySelector('[data-project-solution]').textContent = getLocalizedProjectCaseField(project, 'solution');
+    feature.querySelector('[data-project-impact]').textContent = getLocalizedProjectCaseField(project, 'impact');
+    feature.querySelector('[data-project-learning]').textContent = getLocalizedProjectCaseField(project, 'learning');
     feature.querySelector('[data-project-techs]').innerHTML = project.techs.map((tech) => `<span>${tech}</span>`).join('');
 
     projectLink.href = project.url;
@@ -1690,7 +1877,7 @@ function renderProjectList() {
             return `
                 <button class="project-card ${project.id === activeProjectId ? 'is-active' : ''}" type="button" data-project-id="${project.id}" aria-pressed="${project.id === activeProjectId}" aria-label="${getTranslation(currentLanguage, 'projects.selectAria')}: ${projectName}">
                     <span class="project-card-index">${String(index + 1).padStart(2, '0')}</span>
-                    <span class="project-card-image"><img src="${project.image}" alt=""></span>
+                    <span class="project-card-image"><img src="${project.image}" alt="" loading="lazy" decoding="async"></span>
                     <span class="project-card-content">
                         <strong>${projectName}</strong>
                         <small>${getProjectCategoryLabel(project.category)}</small>
@@ -1790,7 +1977,7 @@ function renderEducationTimeline() {
             return `
                 <button class="education-card ${educationItem.id === activeEducationId ? 'is-active' : ''}" type="button" data-education-id="${educationItem.id}" aria-pressed="${educationItem.id === activeEducationId}" aria-label="${getTranslation(currentLanguage, 'education.selectAria')}: ${title}">
                     <span class="education-card-step">${String(index + 1).padStart(2, '0')}</span>
-                    <span class="education-card-icon"><img src="${educationItem.icon}" alt=""></span>
+                    <span class="education-card-icon"><img src="${educationItem.icon}" alt="" loading="lazy" decoding="async"></span>
                     <span class="education-card-content">
                         <strong>${title}</strong>
                         <small>${getLocalizedEducationField(educationItem, 'school')}</small>

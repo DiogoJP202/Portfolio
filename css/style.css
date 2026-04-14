@@ -1,12 +1,11 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 
 @font-face {
     font-family: FogtwoNo5;
     src: url(../assets/fonts/FogtwoNo5/FogtwoNo5.otf)
     format('opentype');
     font-weight: 100;
+    font-display: swap;
 }
 
 :root{
@@ -23,16 +22,56 @@
     box-sizing: border-box;
 }
 
+.skip-link{
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 999;
+    transform: translateY(-140%);
+    padding: 10px 14px;
+    border: 2px solid #16F751;
+    border-radius: 8px;
+    background-color: #050806;
+    color: #ffffff;
+    font-family: "Syne", 'Courier New', Courier, monospace;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 12px 28px #0000008a;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skip-link:focus-visible{
+    transform: translateY(0);
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.visually-hidden{
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 body{
     font-family: 'Darker Grotesque';
-    background-image: url(../assets/images/grid.webp);
+    background-image: linear-gradient(#16f7510b 1px, transparent 1px), linear-gradient(90deg, #16f75108 1px, transparent 1px);
     background-position: center center;
     background-repeat: repeat;
-    background-size: contain;
+    background-size: 44px 44px;
     background-color: #1D1D21;
 }
 
 #menuH{ 
+    border: 0;
+    font: inherit;
+    color: inherit;
     display: none; 
 }
 
@@ -535,7 +574,7 @@ nav{
 #SobreMim h2::after{
     content: "";
     display: block;
-    background-image: url(../assets/images/atomo_icon.webp);
+    background-image: url(../assets/images/star_icon.webp);
     width: 75px;
     height: 75px;
     background-position: center center;
