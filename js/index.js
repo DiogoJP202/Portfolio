@@ -279,7 +279,7 @@ const PROJECTS_DATA = [
     {
         id: 'vel',
         category: 'product',
-        url: 'https://vel-desktop.vercel.app/',
+        url: 'https://vel-sooty-nu.vercel.app/',
         image: 'assets/images/VEL.webp',
         techs: ['React', 'AWS', 'Java', 'Spring Boot', 'MySQL', 'Docker'],
         name: {
