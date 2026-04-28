@@ -4,11 +4,6 @@
     animation: piscando 0.9s infinite ease-in;
 }
 
-#screenTxt::after{
-    content: "_";
-    animation: piscando 0.9s infinite ease-in;
-}
-
 @keyframes piscando {
     from{
         opacity: 0;
@@ -33,36 +28,14 @@
 }
 
 #inside{
-    animation: letreiro 20s infinite linear alternate-reverse;
+    animation: letreiro 50s infinite linear;
 }
 
 @keyframes letreiro {
     from{
-        transform: translateX(0%);
+        transform: translateX(0);
     } to {
-        transform: translateX(-100%);
-    }
-}
-
-.linkA{ 
-    text-decoration: none;
-    animation: linkAnimation 1s alternate-reverse infinite ease-in-out; 
-}
-
-.linkA:hover{
-    text-decoration: underline;
-}
-
-.projLink{
-    text-decoration: none;
-    animation: linkAnimation 1s alternate-reverse infinite ease-in-out !important; 
-}
-
-@keyframes linkAnimation {
-    from {
-        color: var(--color1);
-    } to {
-        color: #16f75254;
+        transform: translateX(-50%);
     }
 }
 
@@ -93,5 +66,34 @@
         opacity: 1;
         clip-path: inset(0 0 0 0); /* Fully visible */
         filter: drop-shadow(0px 0px 5px );
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    #inside,
+    #underline,
+    .foto,
+    #trofeu,
+    #EntrarEmContato a,
+    .fade-in {
+        animation: none !important;
+    }
+
+    #inside {
+        transform: none !important;
+    }
+
+    .fade-in {
+        opacity: 1;
+        clip-path: none;
     }
 }
