@@ -29,8 +29,8 @@ function setupHamburgerMenu() {
 
 // Label Line Functionality
 function setupLabelLine() {
-    const ideograma1 = '全栈';
-    const ideograma2 = '电脑';
+    const ideograma1 = '技術';
+    const ideograma2 = 'ハグ';
     const ideogramsSize = 230;
     const line = document.querySelector('#inside');
 
@@ -51,36 +51,36 @@ function setupLabelLine() {
 }
 
 // Typing Effect Functionality
-async function setupWritingEffect() {
-    const words = ['JAVASCRIPT', 'C#', 'PYTHON', 'JAVA', 'HTML', 'CSS', 'NODEJS', 'REACT', 'BOOTSTRAP', 'ASP .NET', 'FIGMA', 'GIT', 'POSTGRESQL', 'MONGODB', 'SQL SERVER', 'REGEX', 'POSTMAN'];
-    const location = document.querySelector('#screenTxt');
-    const speed = 100; // Typing speed in milliseconds
+// async function setupWritingEffect() {
+//     const words = ['JAVASCRIPT', 'C#', 'PYTHON', 'JAVA', 'HTML', 'CSS', 'NODEJS', 'REACT', 'BOOTSTRAP', 'ASP .NET', 'FIGMA', 'GIT', 'POSTGRESQL', 'MONGODB', 'SQL SERVER', 'REGEX', 'POSTMAN'];
+//     const location = document.querySelector('#screenTxt');
+//     const speed = 100; // Typing speed in milliseconds
 
-    const typeWriter = (word) => {
-        return new Promise((resolve) => {
-            let i = 0;
-            const interval = setInterval(() => {
-                if (i < word.length) {
-                    location.innerHTML += word.charAt(i);
-                    i++;
-                } else {
-                    clearInterval(interval);
-                    resolve();
-                }
-            }, speed);
-        });
-    };
+//     const typeWriter = (word) => {
+//         return new Promise((resolve) => {
+//             let i = 0;
+//             const interval = setInterval(() => {
+//                 if (i < word.length) {
+//                     location.innerHTML += word.charAt(i);
+//                     i++;
+//                 } else {
+//                     clearInterval(interval);
+//                     resolve();
+//                 }
+//             }, speed);
+//         });
+//     };
 
-    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+//     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-    while (true) {
-        for (const word of words) {
-            location.innerHTML = '';
-            await typeWriter(word);
-            await delay(3000);
-        }
-    }
-}
+//     while (true) {
+//         for (const word of words) {
+//             location.innerHTML = '';
+//             await typeWriter(word);
+//             await delay(3000);
+//         }
+//     }
+// }
 
 // Language Video Button Functionality
 function setupLanguageButton() {
@@ -119,13 +119,13 @@ function setupSlider() {
 function init() {
     setupHamburgerMenu();
     setupLabelLine();
-    setupWritingEffect();
+    // setupWritingEffect();
     setupLanguageButton();
     const { moveSlide } = setupSlider();
 
     // Example usage for slider controls
-    document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
-    document.querySelector('.next').addEventListener('click', () => moveSlide(1));
+    document.querySelector('#prevBtn').addEventListener('click', () => moveSlide(-1));
+    document.querySelector('#nextBtn').addEventListener('click', () => moveSlide(1));
 }
 
 init();

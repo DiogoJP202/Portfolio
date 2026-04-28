@@ -1,0 +1,415 @@
+
+/* Seção principal */
+.contact-section {
+    position: relative;
+    min-height: 100vh;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+/* Grid de fundo tecnológico */
+.grid-background {
+    position: absolute;
+    inset: 0;
+    opacity: 0.1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    height: 100%;
+}
+
+.grid-item {
+    border: 1px solid #00ff41;
+    opacity: 0.2;
+    animation: gridPulse 3s ease-in-out infinite;
+}
+
+/* Formas geométricas flutuantes */
+.floating-shapes {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    border: 2px solid #00ff41;
+}
+
+.shape-1 {
+    top: 5rem;
+    left: 5rem;
+    width: 4rem;
+    height: 4rem;
+    transform: rotate(45deg);
+    opacity: 0.3;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.shape-2 {
+    bottom: 8rem;
+    right: 8rem;
+    width: 3rem;
+    height: 3rem;
+    background: #00ff41;
+    opacity: 0.2;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.shape-3 {
+    top: 33%;
+    right: 5rem;
+    width: 2rem;
+    height: 5rem;
+    opacity: 0.25;
+    animation: pulse 2.5s ease-in-out infinite;
+}
+
+/* Wrapper do conteúdo */
+.content-wrapper {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+/* Título principal com estilo brutalist */
+.main-heading {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 3rem;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.heading-line {
+    display: block;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.line-2 {
+    color: #00ff41;
+}
+
+.bg-accent {
+    position: absolute;
+    inset: -0.5rem;
+    z-index: -1;
+}
+
+.accent-1 {
+    background: #00ff41;
+    opacity: 0.1;
+    transform: skewX(12deg);
+}
+
+.accent-2 {
+    background: #fff;
+    opacity: 0.05;
+    transform: skewX(-12deg);
+}
+
+.accent-3 {
+    background: #00ff41;
+    opacity: 0.15;
+    transform: skewX(6deg);
+}
+
+/* Wrapper do botão */
+.button-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 2rem 0;
+}
+
+/* Efeito de brilho */
+.button-glow {
+    position: absolute;
+    inset: -1rem;
+    background: #00ff41;
+    opacity: 0.2;
+    filter: blur(40px);
+    transform: skewX(12deg);
+    transition: opacity 0.3s ease;
+}
+
+.button-wrapper:hover .button-glow {
+    opacity: 0.3;
+}
+
+/* Container do botão */
+.button-container {
+    position: relative;
+}
+
+.button-bg-1 {
+    position: absolute;
+    inset: 0;
+    background: #00ff41;
+    transform: skewX(12deg);
+}
+
+.button-bg-2 {
+    position: absolute;
+    inset: 0;
+    background: #000;
+    border: 2px solid #00ff41;
+    transform: skewX(-6deg) translateX(4px) translateY(4px);
+}
+
+/* Botão principal */
+.cta-button {
+    position: relative;
+    display: block;
+    padding: 1.5rem 3rem;
+    background: #000;
+    border: 2px solid #00ff41;
+    color: #00ff41;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 900;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background: #00ff41;
+    color: #000;
+    box-shadow: 0 0 80px rgba(0, 255, 65, 0.5);
+    transform: scale(1.05);
+}
+
+.button-text {
+    position: relative;
+    z-index: 10;
+}
+
+/* Barras de brilho internas */
+.glow-bar {
+    position: absolute;
+    width: 2rem;
+    height: 2px;
+    background: #00ff41;
+    opacity: 0.6;
+}
+
+.glow-bar-top {
+    top: 0.5rem;
+    left: 1rem;
+}
+
+.glow-bar-bottom {
+    bottom: 0.5rem;
+    right: 1rem;
+}
+
+/* Acentos dos cantos */
+.corner-accent {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #00ff41;
+}
+
+.corner-tl {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+}
+
+.corner-tr {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+}
+
+.corner-bl {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+}
+
+.corner-br {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
+
+/* Elementos de acento tecnológico */
+.tech-accents {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    opacity: 0.3;
+}
+
+.accent-bar {
+    width: 8px;
+    background: #00ff41;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.bar-1 {
+    height: 4rem;
+}
+
+.bar-2 {
+    height: 3rem;
+    animation-delay: 0.2s;
+}
+
+.bar-3 {
+    height: 5rem;
+    animation-delay: 0.4s;
+}
+
+.bar-4 {
+    height: 2rem;
+    animation-delay: 0.6s;
+}
+
+.bar-5 {
+    height: 3.5rem;
+    animation-delay: 0.8s;
+}
+
+/* Linhas de escaneamento */
+.scan-lines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.scan-line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #00ff41,
+        transparent
+    );
+    opacity: 0.3;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.scan-line-1 {
+    top: 25%;
+}
+
+.scan-line-2 {
+    top: 75%;
+    animation-delay: 1s;
+    opacity: 0.2;
+}
+
+/* Animações */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes gridPulse {
+    0%, 100% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 2rem;
+    }
+    
+    .cta-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    
+    .contact-section {
+        padding: 1rem;
+    }
+    
+    .shape-1 {
+        top: 2rem;
+        left: 2rem;
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .shape-2 {
+        bottom: 4rem;
+        right: 4rem;
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .shape-3 {
+        right: 2rem;
+        width: 1rem;
+        height: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-heading {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .cta-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .tech-accents {
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    
+    .accent-bar {
+        width: 4px;
+    }
+    
+    .bar-1 { height: 2rem; }
+    .bar-2 { height: 1.5rem; }
+    .bar-3 { height: 2.5rem; }
+    .bar-4 { height: 1rem; }
+    .bar-5 { height: 1.75rem; }
+}

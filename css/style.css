@@ -181,46 +181,6 @@ nav a{
     font-size: 2em;
 }
 
-#skills{
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    width: 100%;
-    padding: 100px 0;
-    background-color: var(--color5);
-}
-
-#display{
-    width: 50%;
-}
-
-#display > h2{
-    color: #fff;
-    font-size: 6em;
-}
-
-#display > #screen{
-    display: flex;
-    flex-direction: column;
-}
-
-#screenTxt{
-    position: absolute;
-    color: var(--color1);
-    font-size: 4em;
-    font-weight: 600;
-    letter-spacing: -1px;
-}
-
-#display > #screen > img{
-    display: block;
-    position: relative;
-    bottom: 15px;
-    left: -3%;
-    width: 100%;
-    max-width: 430px;
-    min-width: 350px;
-}
 
 #techsCarrosel{
     position: relative;
@@ -663,34 +623,6 @@ nav a{
     padding: 15px;
     width: 100%;
     border-radius: 0 30px 0 30px;
-}
-
-#EntrarEmContato{
-    display: flex;    
-    align-items: center;
-    flex-direction: column;
-}
-
-#EntrarEmContato h2{
-    color: #fff;
-    font-size: 4em;
-    text-align: center;
-}
-
-#EntrarEmContato a{
-    display: block;
-    font-size: 4em;
-    font-weight: 600;
-    color: var(--color1);
-    text-decoration: none;
-    text-align: center;
-    background-color: rgba(12, 134, 44, 0.41);
-    max-width: 550px;
-    width: 95%;
-    padding: 10px 30px;
-    margin: 30px;
-    border-radius: 35px;
-    box-shadow: 0px 0px 20px #000;
 }
 
 footer{
